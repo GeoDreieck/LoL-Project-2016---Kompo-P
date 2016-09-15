@@ -1,6 +1,6 @@
 ﻿namespace LoL_Dex_2016
 {
-    partial class Form1
+    partial class Overview
     {
         /// <summary>
         /// Required designer variable.
