@@ -1,0 +1,10 @@
+Vorliebe für 2 Spalten anstatt 3
+
+Runen | Champion | Summoner Spells | Masteries | Maps | Items | Creeps
+
+> Champions(Stats|Spells|Tips|Story) 
+> Creeps(Spawn|Buff|Gold|Stats|Tips) 
+> Summoner Spells(Stats|Aktive|Cooldown)
+> Items(Builds Into|Stats|Costs|active|passive)
+> Maps(Monster|Items|Special Features|Rule Set)
+
