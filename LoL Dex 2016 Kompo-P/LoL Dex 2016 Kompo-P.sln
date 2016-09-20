@@ -4,12 +4,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoL Dex 2016", "LoL Dex 2016\LoL Dex 2016.csproj", "{1110B688-A42E-448F-8DC2-BF7889AE9CD3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D918A802-9A53-44B8-BEBB-754E86FEEC49} = {D918A802-9A53-44B8-BEBB-754E86FEEC49}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompData", "CompData\CompData.csproj", "{68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompLogic", "CompLogic\CompLogic.csproj", "{A29C117B-6773-4671-B240-087FC0944A72}"
+	ProjectSection(ProjectDependencies) = postProject
+		{68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6} = {68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompUI", "CompUI\CompUI.csproj", "{D918A802-9A53-44B8-BEBB-754E86FEEC49}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A29C117B-6773-4671-B240-087FC0944A72} = {A29C117B-6773-4671-B240-087FC0944A72}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
