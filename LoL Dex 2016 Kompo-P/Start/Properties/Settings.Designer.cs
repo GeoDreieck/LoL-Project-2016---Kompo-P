@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LoL_Dex_2016.Properties {
+namespace Start.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

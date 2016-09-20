@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompLogic
 {
-    public class Class1
+    public class ILogic
     {
     }
 }

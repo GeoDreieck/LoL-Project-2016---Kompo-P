@@ -49,7 +49,7 @@
     <Compile Include="Champions.Designer.cs">
       <DependentUpon>Champions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
+    <Compile Include="IWindow.cs" />
     <Compile Include="Creeps.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompLogic\CompLogic.csproj">
+      <Project>{a29c117b-6773-4671-b240-087fc0944a72}</Project>
+      <Name>CompLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
