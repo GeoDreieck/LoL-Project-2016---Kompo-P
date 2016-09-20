@@ -16,7 +16,7 @@ namespace LoL_Dex_2016
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Overview());
+            Application.Run();
         }
     }
 }

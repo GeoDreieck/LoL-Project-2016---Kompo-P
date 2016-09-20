@@ -1,6 +1,6 @@
-﻿namespace LoL_Dex_2016
+﻿namespace CompUI
 {
-    partial class Overview
+    partial class Champions
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.Text = "Champions";
         }
 
         #endregion
     }
 }
-

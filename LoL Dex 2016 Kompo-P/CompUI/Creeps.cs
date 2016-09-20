@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LoL_Dex_2016
+namespace CompUI
 {
-    public partial class Overview : Form
+    public partial class Creeps : Form
     {
-        public Overview()
+        public Creeps()
         {
             InitializeComponent();
         }

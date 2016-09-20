@@ -33,6 +33,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,8 +43,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Champions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Champions.Designer.cs">
+      <DependentUpon>Champions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Creeps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creeps.Designer.cs">
+      <DependentUpon>Creeps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fields.Designer.cs">
+      <DependentUpon>Fields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items.Designer.cs">
+      <DependentUpon>Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Overwiew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Overwiew.Designer.cs">
+      <DependentUpon>Overwiew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summoner Spells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summoner Spells.Designer.cs">
+      <DependentUpon>Summoner Spells.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tipps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tipps.Designer.cs">
+      <DependentUpon>Tipps.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Overwiew.resx">
+      <DependentUpon>Overwiew.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
