@@ -37,15 +37,15 @@ namespace CompUI
         private void Runes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Runes Runes  = new Champions();
-            Runes.Show();
+            Runes ru  = new Runes();
+            ru.Show();
         }
 
         private void Items_Click(object sender, EventArgs e)
         {
             this.Hide();
             Items it = new Items();
-            Items.Show();
+            it.Show();
         }
 
         private void Fields_Click(object sender, EventArgs e)
@@ -58,21 +58,21 @@ namespace CompUI
         private void Search_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Search search = new Champions();
+            Search search = new Search();
             search.Show();
         }
 
         private void Tipps_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Tipps tipp = new Champions();
+            Tipps tipp = new Tipps();
             tipp.Show();
         }
 
         private void SummonerSpells_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Summoner_Spells sm = new Champions();
+            Summoner_Spells sm = new Summoner_Spells();
             sm.Show();
         }
 
