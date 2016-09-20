@@ -37,8 +37,8 @@ namespace CompUI
         private void Runes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Rumes  = new Champions();
-            ch.Show();
+            Runes Runes  = new Champions();
+            Runes.Show();
         }
 
         private void Items_Click(object sender, EventArgs e)
