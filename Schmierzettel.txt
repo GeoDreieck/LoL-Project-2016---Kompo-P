@@ -1,5 +1,3 @@
-Vorliebe für 2 Spalten anstatt 3
-
 Runen | Champion | Summoner Spells | Masteries | Maps | Items | Creeps
 
 > Champions(Stats|Spells|Tips|Story) 
