@@ -8,13 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CompLogic;
+
 namespace CompUI
 {
-    public partial class Champions : Form
+    public partial class Champions : Form, IForms
     {
-        public Champions()
+        #region fields
+        // Assoziation zur Komponente CompLogic
+        private ILogic _iLogic;
+        #endregion
+
+        public Champions(ILogic iLogic)
         {
             InitializeComponent();
+
+            _iLogic = iLogic;
         }
     }
 }

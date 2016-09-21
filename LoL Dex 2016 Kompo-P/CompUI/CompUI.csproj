@@ -43,15 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AFactoryIDialog.cs" />
+    <Compile Include="AFactoryIForms.cs" />
     <Compile Include="Champions.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Champions.Designer.cs">
       <DependentUpon>Champions.cs</DependentUpon>
     </Compile>
-    <Compile Include="IDialog.cs" />
-    <Compile Include="IWindow.cs" />
+    <Compile Include="IForms.cs" />
     <Compile Include="Creeps.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,10 +8,10 @@ using CompLogic;
 
 namespace CompUI
 {
-    public abstract class AFactoryIDialog
+    public abstract class AFactoryIForms
     {
 
-        public static IDialog CreateInstance(string sDataType, ILogic iLogic)
+        public static IForms CreateInstance(string sDataType, ILogic iLogic)
         {
 
             switch (sDataType)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompUI
 {
-    public interface IDialog
+    public interface IForms
     {
 
     }

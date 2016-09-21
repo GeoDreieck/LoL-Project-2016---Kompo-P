@@ -146,10 +146,10 @@ namespace Test
             _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase, _iCar);
 
             // Oberste Schicht CompUI
-            _iDialogSearch = AFactoryIDialog.CreateInstance("CDialogSearch", _iLogic, _iCar);
-            _iDialogSearchView = AFactoryIDialog.CreateInstance("CDialogSearchView", _iLogic, _iCar);
-            _iDialogSell = AFactoryIDialog.CreateInstance("CDialogSell", _iLogic, _iCar);
-            _iDialogMain = AFactoryIDialog.CreateInstance("CDialogMain", _iLogic, _iCar) as IWindow;
+            _iDialogSearch = AFactoryIForms.CreateInstance("CDialogSearch", _iLogic, _iCar);
+            _iDialogSearchView = AFactoryIForms.CreateInstance("CDialogSearchView", _iLogic, _iCar);
+            _iDialogSell = AFactoryIForms.CreateInstance("CDialogSell", _iLogic, _iCar);
+            _iDialogMain = AFactoryIForms.CreateInstance("CDialogMain", _iLogic, _iCar) as IWindow;
 
             _iDialogMain.IDialogSearch = _iDialogSearch; // Dependency injection via setter
             _iDialogMain.IDialogSearchView = _iDialogSearchView;
