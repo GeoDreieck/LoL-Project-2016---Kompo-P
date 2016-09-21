@@ -25,5 +25,10 @@ namespace CompUI
 
             _iLogic = iLogic;
         }
+
+        private void Champions_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

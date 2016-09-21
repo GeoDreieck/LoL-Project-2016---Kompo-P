@@ -1,6 +1,6 @@
 ﻿namespace CompUI
 {
-    partial class Summoner_Spells
+    partial class Summoner
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Summoner_Spells
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "Summoner_Spells";
             this.Text = "Summoner_Spells";
+            this.Load += new System.EventHandler(this.Summoner_Spells_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

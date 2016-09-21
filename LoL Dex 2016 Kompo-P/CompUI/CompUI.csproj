@@ -88,9 +88,7 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="Summoner Spells.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Summoner Spells.cs" />
     <Compile Include="Summoner Spells.Designer.cs">
       <DependentUpon>Summoner Spells.cs</DependentUpon>
     </Compile>
@@ -102,8 +100,29 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Champions.resx">
+      <DependentUpon>Champions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creeps.resx">
+      <DependentUpon>Creeps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fields.resx">
+      <DependentUpon>Fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items.resx">
+      <DependentUpon>Items.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Runes.resx">
+      <DependentUpon>Runes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summoner Spells.resx">
+      <DependentUpon>Summoner Spells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tipps.resx">
+      <DependentUpon>Tipps.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
