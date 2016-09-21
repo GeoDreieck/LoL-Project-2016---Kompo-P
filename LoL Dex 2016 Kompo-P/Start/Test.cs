@@ -18,15 +18,7 @@ namespace Test
 
         #region fields
         // CompUI
-        private IForms _champions;
-        private IForms _creeps;
-        private IForms _fields;
-        private IForms _items;
-        private IForms _overview;
-        private IForms _runes;
-        private IForms _search;
-        private IForms _summoner_spells;
-        private IForms _tipps;
+        Form _overview;
 
         // CompLogic
         private ILogic _iLogic;
@@ -85,15 +77,6 @@ namespace Test
             _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase);
 
             // Oberste Schicht CompUI
-            _champions = AFactoryIForms.CreateInstance("Champions", _iLogic);
-            _creeps = AFactoryIForms.CreateInstance("Creeps", _iLogic);
-            _fields = AFactoryIForms.CreateInstance("Fields", _iLogic);
-            _items = AFactoryIForms.CreateInstance("Items", _iLogic);
-            _overview = AFactoryIForms.CreateInstance("Overview", _iLogic);
-            _runes = AFactoryIForms.CreateInstance("Runes", _iLogic);
-            _search = AFactoryIForms.CreateInstance("Search", _iLogic);
-            _summoner_spells = AFactoryIForms.CreateInstance("Summoner_Spells", _iLogic);
-            _tipps = AFactoryIForms.CreateInstance("Tipps", _iLogic);
 
             // CDialogMain starten
             

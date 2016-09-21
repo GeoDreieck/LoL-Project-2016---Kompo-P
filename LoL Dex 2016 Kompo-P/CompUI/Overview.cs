@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CompLogic;
+
 namespace CompUI
 {
-    public partial class Overview : Form
+    public partial class Overview : Form, IForms
     {
-        public Overview()
+
+        #region fields
+        // Assoziation zur Komponente CompLogic
+        private ILogic _iLogic;
+        #endregion
+
+        public Overview(ILogic iLogic)
         {
             InitializeComponent();
+
+            _iLogic = iLogic;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,63 +34,52 @@ namespace CompUI
 
         private void Creeps_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Creeps cr = new Creeps();
+            Form cr = AFactoryIForms.CreateInstance("Creeps", _iLogic);
             cr.Show();
         }
 
         private void Masterie_Click(object sender, EventArgs e)
         {
-
+            Form cr = AFactoryIForms.CreateInstance("Masterie", _iLogic);
+            cr.Show();
         }
 
         private void Runes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Runes ru  = new Runes();
+            Form ru  = AFactoryIForms.CreateInstance("Runes", _iLogic);
             ru.Show();
         }
 
         private void Items_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Items it = new Items();
+            Form it = AFactoryIForms.CreateInstance("Items", _iLogic);
             it.Show();
         }
 
         private void Fields_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Fields field = new Fields();
+            Form field = AFactoryIForms.CreateInstance("Fields", _iLogic);
             field.Show();
-        }
-
-        private void Search_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Search search = new Search();
-            search.Show();
         }
 
         private void Tipps_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Tipps tipp = new Tipps();
+            Form tipp = AFactoryIForms.CreateInstance("Form", _iLogic);
             tipp.Show();
         }
 
         private void SummonerSpells_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Summoner_Spells sm = new Summoner_Spells();
+            Form sm = AFactoryIForms.CreateInstance("Summoner_Spells", _iLogic);
             sm.Show();
         }
 
         private void Champions_Click(object sender, EventArgs e)
         {
             
-            IForms ch = AFactoryIForms.CreateInstance("Champions", _iLogic);
+            Form ch = AFactoryIForms.CreateInstance("Champions", _iLogic);
             ch.Show();
+            
         }
 
         private void Overwiew_Load(object sender, EventArgs e)
