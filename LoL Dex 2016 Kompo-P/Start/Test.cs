@@ -75,12 +75,15 @@ namespace Test
             // Mittlere Schicht CompLogic wird es zweites erzugt
             _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase);
 
+            _overview = AFactoryIForms.CreateInstance("Overview", _iLogic);
+
             // Oberste Schicht CompUI
 
             // Overview starten
-            
-                Application.Run(_overview as Form);
-            
+
+            Application.Run(_overview as Form);
+
+            _iDatabase.Close();
         }
 
         [STAThread]
@@ -90,7 +93,6 @@ namespace Test
             Application.SetCompatibleTextRenderingDefault(false);
 
             new Test().Run2();
-            Console.ReadKey();
         }
     }
 }
