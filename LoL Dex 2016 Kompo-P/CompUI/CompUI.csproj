@@ -88,7 +88,9 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="Summoner Spells.cs" />
+    <Compile Include="Summoner Spells.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Summoner Spells.Designer.cs">
       <DependentUpon>Summoner Spells.cs</DependentUpon>
     </Compile>

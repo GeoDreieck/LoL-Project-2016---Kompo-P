@@ -1,6 +1,6 @@
 ﻿namespace CompUI
 {
-    partial class Summoner
+    partial class Summoner_Spells
     {
         /// <summary>
         /// Required designer variable.
