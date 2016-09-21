@@ -8,13 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CompLogic;
+
 namespace CompUI
 {
-    public partial class Runes : Form
+    public partial class Runes : Form, IForms
     {
-        public Runes()
+        #region fields
+        // Assoziation zur Komponente CompLogic
+        private ILogic _iLogic;
+        #endregion
+
+        public Runes(ILogic iLogic)
         {
             InitializeComponent();
+
+            _iLogic = iLogic;
+        }
+
+        private void Champions_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
