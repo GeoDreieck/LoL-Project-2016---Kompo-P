@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CompUI
 {
-    public partial class Overwiew : Form
+    public partial class Overview : Form
     {
-        public Overwiew()
+        public Overview()
         {
             InitializeComponent();
         }

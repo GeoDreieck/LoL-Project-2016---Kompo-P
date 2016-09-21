@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 
 namespace CompLogic
 {
-    public class ILogic
+
+    public interface ILogic
     {
+
+        void SelectCar(int iCar, ref DataTable dataTable);
+        void InsertCar(int iCar);
     }
 }

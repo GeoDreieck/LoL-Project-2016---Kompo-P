@@ -1,12 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CompUI
 {
-    public class IWindow
+    public interface IWindow : IDialog
     {
+        // Get/Set 
+        IDialog IDialogSearch { get; set; }
+        IDialog IDialogSearchView { get; set; }
+        IDialog IDialogSell { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace CompUI
 {
-    partial class Overwiew
+    partial class Overview
     {
         /// <summary>
         /// Required designer variable.

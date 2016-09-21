@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AFactoryILogic.cs" />
+    <Compile Include="CLogic.cs" />
     <Compile Include="ILogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
