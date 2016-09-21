@@ -78,8 +78,8 @@ namespace CompUI
 
         private void Champions_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Champions ch = new Champions();
+            
+            IForms ch = AFactoryIForms.CreateInstance("Champions", _iLogic);
             ch.Show();
         }
 

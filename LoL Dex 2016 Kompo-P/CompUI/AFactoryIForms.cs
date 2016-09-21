@@ -10,7 +10,6 @@ namespace CompUI
 {
     public abstract class AFactoryIForms
     {
-
         public static IForms CreateInstance(string sDataType, ILogic iLogic)
         {
 
