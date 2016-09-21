@@ -15,7 +15,6 @@ namespace Test
 {
     class Test
     {
-
         #region fields
         // CompUI
         Form _overview;
@@ -34,8 +33,8 @@ namespace Test
             _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionString);
             _iDatabase.Open();
 
-            // Anzahl Fahrzeuge in DB
-            int nCars = (int)_iDatabase.ExecuteScalar("SELECT COUNT(*) FROM Champions;");
+            // Anzahl Champs in DB
+            int nChamps = (int)_iDatabase.ExecuteScalar("SELECT COUNT(*) FROM Champions;");
 
             /*
             // Liste der Hersteller ---------------------------------------------------------------------------------------
@@ -78,7 +77,7 @@ namespace Test
 
             // Oberste Schicht CompUI
 
-            // CDialogMain starten
+            // Overview starten
             
                 Application.Run(_overview as Form);
             
