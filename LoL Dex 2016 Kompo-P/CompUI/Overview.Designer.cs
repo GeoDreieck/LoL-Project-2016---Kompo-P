@@ -147,18 +147,6 @@
             this.Tipps_Button.UseVisualStyleBackColor = false;
             this.Tipps_Button.Click += new System.EventHandler(this.Tipps_Click);
             // 
-            // Search_Button
-            // 
-            this.Search_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Search_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search_Button.Location = new System.Drawing.Point(265, 240);
-            this.Search_Button.Name = "Search_Button";
-            this.Search_Button.Size = new System.Drawing.Size(121, 40);
-            this.Search_Button.TabIndex = 18;
-            this.Search_Button.Text = "Search";
-            this.Search_Button.UseVisualStyleBackColor = false;
-            this.Search_Button.Click += new System.EventHandler(this.Search_Click);
-            // 
             // Overwiew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

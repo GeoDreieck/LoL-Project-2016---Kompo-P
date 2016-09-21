@@ -15,11 +15,9 @@ namespace Start
 {
     class Start
     {
-
+        /*
         #region fields
         // CompUI
-        private IWindow _iDialogMain;
-        
 
         // CompLogic
         private ILogic _iLogic;
@@ -171,5 +169,6 @@ namespace Start
             new Test().Run2();
             //  Console.ReadKey();
         }
+        */
     }
 }

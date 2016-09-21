@@ -26,7 +26,7 @@ namespace CompUI
             _iLogic = iLogic;
         }
 
-        private void Champions_Load(object sender, EventArgs e)
+        private void Creeps_Load(object sender, EventArgs e)
         {
 
         }

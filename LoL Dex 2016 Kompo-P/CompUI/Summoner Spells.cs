@@ -26,7 +26,7 @@ namespace CompUI
             _iLogic = iLogic;
         }
 
-        private void Champions_Load(object sender, EventArgs e)
+        private void Summoner_Spells_load(object sender, EventArgs e)
         {
 
         }

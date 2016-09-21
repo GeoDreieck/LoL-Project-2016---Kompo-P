@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "Summoner_Spells";
             this.Text = "Summoner_Spells";
-            this.Load += new System.EventHandler(this.Summoner_Spells_Load);
+//            this.Load += new System.EventHandler(this.Summoner_Spells_Load);
             this.ResumeLayout(false);
 
         }

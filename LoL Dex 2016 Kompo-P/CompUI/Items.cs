@@ -12,21 +12,21 @@ using CompLogic;
 
 namespace CompUI
 {
-    public partial class Item : Form, IForms
+    public partial class Items : Form, IForms
     {
         #region fields
         // Assoziation zur Komponente CompLogic
         private ILogic _iLogic;
         #endregion
 
-        public Item(ILogic iLogic)
+        public Items(ILogic iLogic)
         {
             InitializeComponent();
 
             _iLogic = iLogic;
         }
 
-        private void Champions_Load(object sender, EventArgs e)
+        private void Items_Load(object sender, EventArgs e)
         {
 
         }
