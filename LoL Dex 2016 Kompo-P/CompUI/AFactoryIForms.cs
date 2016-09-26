@@ -24,6 +24,7 @@ namespace CompUI
                 case ("Runes"):             return new Runes(iLogic);
                 case ("Summoner_Spells"):   return new Summoner_Spells(iLogic);
                 case ("Tipps"):             return new Tipps(iLogic);
+                case ("Masteries"):         return new Masteries(iLogic);
                 default: throw new Exception(string.Format("{0} kann nicht erzeugt werden", sDataType));
             }
         }

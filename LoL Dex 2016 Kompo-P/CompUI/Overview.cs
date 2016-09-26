@@ -40,7 +40,7 @@ namespace CompUI
 
         private void Masterie_Click(object sender, EventArgs e)
         {
-            Form cr = AFactoryIForms.CreateInstance("Masterie", _iLogic);
+            Form cr = AFactoryIForms.CreateInstance("Masteries", _iLogic);
             cr.Show();
         }
 
@@ -64,7 +64,7 @@ namespace CompUI
 
         private void Tipps_Click(object sender, EventArgs e)
         {
-            Form tipp = AFactoryIForms.CreateInstance("Form", _iLogic);
+            Form tipp = AFactoryIForms.CreateInstance("Tipps", _iLogic);
             tipp.Show();
         }
 

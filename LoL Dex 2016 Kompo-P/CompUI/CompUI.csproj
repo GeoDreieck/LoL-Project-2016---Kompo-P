@@ -31,9 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -68,6 +71,12 @@
     </Compile>
     <Compile Include="Items.Designer.cs">
       <DependentUpon>Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masteries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masteries.Designer.cs">
+      <DependentUpon>Masteries.cs</DependentUpon>
     </Compile>
     <Compile Include="Overview.cs">
       <SubType>Form</SubType>
@@ -107,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masteries.resx">
+      <DependentUpon>Masteries.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>

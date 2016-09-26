@@ -29,6 +29,19 @@ namespace CompUI
         private void Champions_Load(object sender, EventArgs e)
         {
 
+            
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

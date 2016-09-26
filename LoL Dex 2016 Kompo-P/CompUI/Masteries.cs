@@ -12,26 +12,21 @@ using CompLogic;
 
 namespace CompUI
 {
-    public partial class Items : Form, IForms
+    public partial class Masteries : Form, IForms
     {
         #region fields
         // Assoziation zur Komponente CompLogic
         private ILogic _iLogic;
         #endregion
 
-        public Items(ILogic iLogic)
+        public Masteries(ILogic iLogic)
         {
             InitializeComponent();
 
             _iLogic = iLogic;
         }
 
-        private void Items_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void Masteries_Load(object sender, EventArgs e)
         {
 
         }

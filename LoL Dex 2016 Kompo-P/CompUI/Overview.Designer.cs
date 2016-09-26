@@ -37,7 +37,6 @@
             this.Masterie_Button = new System.Windows.Forms.Button();
             this.Items_Button = new System.Windows.Forms.Button();
             this.Tipps_Button = new System.Windows.Forms.Button();
-            this.Search_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -147,13 +146,12 @@
             this.Tipps_Button.UseVisualStyleBackColor = false;
             this.Tipps_Button.Click += new System.EventHandler(this.Tipps_Click);
             // 
-            // Overwiew
+            // Overview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(410, 348);
-            this.Controls.Add(this.Search_Button);
             this.Controls.Add(this.Tipps_Button);
             this.Controls.Add(this.Items_Button);
             this.Controls.Add(this.Masterie_Button);
@@ -163,7 +161,7 @@
             this.Controls.Add(this.SummonerSpells_Button);
             this.Controls.Add(this.Champions_Button);
             this.Controls.Add(this.label1);
-            this.Name = "Overwiew";
+            this.Name = "Overview";
             this.Text = "Overwiew";
             this.Load += new System.EventHandler(this.Overwiew_Load);
             this.ResumeLayout(false);
@@ -182,7 +180,6 @@
         private System.Windows.Forms.Button Masterie_Button;
         private System.Windows.Forms.Button Items_Button;
         private System.Windows.Forms.Button Tipps_Button;
-        private System.Windows.Forms.Button Search_Button;
 
     }
 }
