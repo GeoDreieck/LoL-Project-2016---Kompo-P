@@ -23,54 +23,22 @@ namespace Test
         private ILogic _iLogic;
         // CompData
         private IDatabase _iDatabase;
+
         // CompUtils
         #endregion
 
-        void Run1()
-        {
-            var connectionString = Start.Properties.Settings.Default.LoL_Dex_2016_DatabaseConnectionString;
-
-            _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionString);
-            _iDatabase.Open();
-
-            // Anzahl Champs in DB
-            int nChamps = (int)_iDatabase.ExecuteScalar("SELECT COUNT(*) FROM Champions;");
-
-            /*
-            // Liste der Hersteller ---------------------------------------------------------------------------------------
-            DbDataReader dbDataReader = _iDatabase.ExecuteQuery("SELECT DISTINCT name FROM Champions ORDER BY name;");
-            // Schleife über ResultSet
-            List<object> listMake = new List<object>();
-            while (dbDataReader.Read())
-            {
-                listMake.Add(dbDataReader[0]);
-            }
-            dbDataReader.Close();
-
-            object[] objMake = listMake.ToArray(); // UI Control braucht Liste von Objekten
-
-            */
-
-            DbDataReader dbDataReader = _iDatabase.ExecuteQuery("SELECT * FROM Champions ORDER BY name;");
-            DataTable dataTable = new DataTable("Champions");
-            dataTable.Load(dbDataReader);
-            dbDataReader.Close();
-            // Anzahl Zeilen
-            int nRows = dataTable.Rows.Count;
-            int nColumns = dataTable.Columns.Count;
-            foreach (DataRow row in dataTable.Rows)
-            {
-                object o = row[0];
-            }
-
-        }
-
-
-        void Run2()
+        void Run()
         {
             // Unterste Schicht CompData wird zuerst erzeugt
             var connectionString = Start.Properties.Settings.Default.LoL_Dex_2016_DatabaseConnectionString;
             _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionString);
+            _iDatabase.Open();
+
+            DbDataReader dbDataReader;
+
+            string sql;
+
+            DataSet dataSet = new DataSet();
 
             // Mittlere Schicht CompLogic wird es zweites erzugt
             _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase);
@@ -79,8 +47,23 @@ namespace Test
 
             // Oberste Schicht CompUI
 
-            // Overview starten
+            //Daten aus der Datenbank laden
+            sql = string.Format("SELECT * FROM Champs;");
+            DataTable dataTableChamps = new DataTable("Champs");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableChamps.Load(dbDataReader);
+            dbDataReader.Close();
+            _iDatabase.AddTabletoDataSet(dataTableChamps);
 
+            sql = string.Format("SELECT * FROM Abilities;");
+            DataTable dataTableAbilities = new DataTable("Abilities");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableAbilities.Load(dbDataReader);
+            dbDataReader.Close();
+            _iDatabase.AddTabletoDataSet(dataTableAbilities);
+
+            string test = _iDatabase.DataSet().Tables["Champs"].Rows[0].ItemArray[1].ToString();
+            // Overview starten
             Application.Run(_overview as Form);
 
             _iDatabase.Close();
@@ -92,7 +75,7 @@ namespace Test
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            new Test().Run2();
+            new Test().Run();
         }
     }
 }

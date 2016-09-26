@@ -20,6 +20,15 @@ namespace CompData
 
         protected string providerString;
         private DbProviderFactory _dbProviderFactory;
+
+        private DataSet dataSet = new DataSet();
+        #endregion
+
+        #region get/set
+        public DataSet DataSet()
+        {
+            return dataSet;
+        }
         #endregion
 
         #region ctor
@@ -32,11 +41,13 @@ namespace CompData
         #endregion
 
         #region Interface Implmentierung Allgemein
-
-
+        public void AddTabletoDataSet(DataTable dataTable)
+        {
+            dataSet.Tables.Add(dataTable);
+        }
         #endregion
 
-        
+
 
         #region Interface Implementierung Connected
         public void Open()
