@@ -62,7 +62,6 @@ namespace Test
             dbDataReader.Close();
             _iDatabase.AddTabletoDataSet(dataTableAbilities);
 
-            string test = _iDatabase.DataSet().Tables["Champs"].Rows[0].ItemArray[1].ToString();
             // Overview starten
             Application.Run(_overview as Form);
 
