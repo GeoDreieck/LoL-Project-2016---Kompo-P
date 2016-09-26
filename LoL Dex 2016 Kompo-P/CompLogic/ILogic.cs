@@ -7,8 +7,24 @@ namespace CompLogic
 
     public interface ILogic
     {
-        string[,] GetChampnames();
+        #region Champs
+        string[,] GetChampNames();
 
-        string GetChampStats(int id);
+        string GetChampInfos(int id, int infonumber);
+
+        List<List<object>> GetAbilitiesData(int id);
+
+        object GetChampIcon(int id);
+        #endregion
+
+        #region Items
+        string[,] GetItemNames();
+
+        string GetItemInfos(int id, int infonumber);
+
+        object GetItemIcon(int id);
+
+        List<object> GetIconsforParentitems(int id);
+        #endregion
     }
 }
