@@ -26,8 +26,8 @@ namespace Start.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"C:\\Users\\Julian\\Source\\Repos\\LoL-Pr" +
-            "oject-2016---Kompo-P\\LoL Dex 2016 Database.mdb\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=\"C:\\Users\\Manu\\Downloads\\LoL Dex 201" +
+            "6 Database.mdb\"")]
         public string LoL_Dex_2016_DatabaseConnectionString {
             get {
                 return ((string)(this["LoL_Dex_2016_DatabaseConnectionString"]));
