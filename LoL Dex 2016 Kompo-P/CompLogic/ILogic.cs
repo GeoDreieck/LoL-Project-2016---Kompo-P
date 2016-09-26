@@ -7,8 +7,8 @@ namespace CompLogic
 
     public interface ILogic
     {
+        string[,] GetChampnames();
 
-        void SelectCar(int iCar, ref DataTable dataTable);
-        void InsertCar(int iCar);
+        string GetChampStats(int id);
     }
 }

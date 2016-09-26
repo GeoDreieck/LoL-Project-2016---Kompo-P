@@ -26,14 +26,24 @@ namespace CompLogic
         #region methods
         // Implmentierung Interfaces
 
-        public void SelectCar(int iCar, ref DataTable datatable)
+        public string[,] GetChampnames()
         {
-            //_iDatabase.SelectCar(iCar, ref datatable);
+            string test = _iDatabase.DataSet().Tables["Champs"].Rows[0].ItemArray[1].ToString();
+            int length = _iDatabase.DataSet().Tables["Champs"].Rows.Count;
+            string[,] champnames = new string[length,2];
+
+            for(int i = 0; i < length; i++)
+            {
+                champnames[i,0] = _iDatabase.DataSet().Tables["Champs"].Rows[i].ItemArray[0].ToString();
+                champnames[i,1] = _iDatabase.DataSet().Tables["Champs"].Rows[i].ItemArray[1].ToString();
+            }
+
+            return champnames;
         }
 
-        public void InsertCar(int iCar)
+        public string GetChampStats(int id)
         {
-            //_iDatabase.InsertCar(iCar);
+            return _iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[0].ToString();
         }
         #endregion
     }
