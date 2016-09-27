@@ -30,43 +30,18 @@
         {
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.listView2 = new System.Windows.Forms.ListView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 28;
-            this.listBox1.Items.AddRange(new object[] {
-            "0000",
-            "0001",
-            "0010",
-            "0011",
-            "0100",
-            "0101",
-            "0110",
-            "0111",
-            "1000",
-            "1001",
-            "1010",
-            "1011",
-            "1100",
-            "1101",
-            "1110",
-            "1111"});
-            this.listBox1.Location = new System.Drawing.Point(72, 201);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(123, 312);
-            this.listBox1.TabIndex = 14;
             // 
             // listView2
             // 
@@ -130,16 +105,36 @@
             this.button3.Text = "Build ";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView1.LabelEdit = true;
+            this.listView1.Location = new System.Drawing.Point(72, 201);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(161, 322);
+            this.listView1.TabIndex = 20;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "ID";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Champion_name";
+            // 
             // Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 568);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Items";
@@ -153,12 +148,14 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

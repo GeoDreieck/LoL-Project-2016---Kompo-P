@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listView2 = new System.Windows.Forms.ListView();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,51 +100,52 @@
             // 
             // listView2
             // 
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewGroup2.Header = "ListViewGroup";
-            listViewGroup2.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Right;
-            listViewGroup2.Name = "listViewGroup2";
-            this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
-            this.listView2.Location = new System.Drawing.Point(274, 111);
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.listView2.LabelEdit = true;
+            this.listView2.Location = new System.Drawing.Point(309, 114);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(401, 392);
             this.listView2.TabIndex = 6;
             this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             // 
-            // listBox1
+            // columnHeader1
             // 
-            this.listBox1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 28;
-            this.listBox1.Items.AddRange(new object[] {
-            "Ahri",
-            "Akali",
-            "Ashe",
-            "Aatrox",
-            "Amumu",
-            "Bard",
-            "Darius",
-            "Draven",
-            "Diana",
-            "Evelynn",
-            "Elise",
-            "Fiddlesticks"});
-            this.listBox1.Location = new System.Drawing.Point(31, 181);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(170, 312);
-            this.listBox1.TabIndex = 7;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Champion_name";
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView1.LabelEdit = true;
+            this.listView1.Location = new System.Drawing.Point(31, 170);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(161, 336);
+            this.listView1.TabIndex = 7;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "ID";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Champion_name";
             // 
             // Champions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(687, 515);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(762, 546);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button4);
@@ -165,7 +168,11 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
 
 
     }

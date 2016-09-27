@@ -28,42 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
             this.listView2 = new System.Windows.Forms.ListView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 28;
-            this.listBox1.Items.AddRange(new object[] {
-            "Flash",
-            "Ghost",
-            "Teleport",
-            "Ignite",
-            "Clearity"});
-            this.listBox1.Location = new System.Drawing.Point(68, 184);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(170, 312);
-            this.listBox1.TabIndex = 21;
-            // 
             // listView2
             // 
-            listViewGroup5.Header = "ListViewGroup";
-            listViewGroup5.Name = "listViewGroup1";
-            listViewGroup6.Header = "ListViewGroup";
-            listViewGroup6.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Right;
-            listViewGroup6.Name = "listViewGroup2";
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup2.Header = "ListViewGroup";
+            listViewGroup2.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Right;
+            listViewGroup2.Name = "listViewGroup2";
             this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup5,
-            listViewGroup6});
+            listViewGroup1,
+            listViewGroup2});
             this.listView2.Location = new System.Drawing.Point(311, 114);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(401, 392);
@@ -103,12 +89,32 @@
             this.button1.Text = "Stats";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView1.LabelEdit = true;
+            this.listView1.Location = new System.Drawing.Point(68, 170);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(161, 336);
+            this.listView1.TabIndex = 21;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "ID";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Champion_name";
+            // 
             // Summoner_Spells
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(781, 535);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
@@ -123,10 +129,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
