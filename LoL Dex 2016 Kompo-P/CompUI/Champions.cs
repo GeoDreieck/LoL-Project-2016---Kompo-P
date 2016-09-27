@@ -47,6 +47,11 @@ namespace CompUI
 
         }
 
+        private void LView_Champnames_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         
     }
 }
