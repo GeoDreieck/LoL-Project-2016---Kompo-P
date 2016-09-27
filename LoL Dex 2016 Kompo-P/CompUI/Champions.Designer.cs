@@ -28,65 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.stats_btn = new System.Windows.Forms.Button();
+            this.spells_btn = new System.Windows.Forms.Button();
+            this.tipps_btn = new System.Windows.Forms.Button();
+            this.story_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.lView_Kontent = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lView_Champnames = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // stats_btn
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(309, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 29);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Stats";
-            this.button1.UseVisualStyleBackColor = false;
+            this.stats_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.stats_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.stats_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stats_btn.Location = new System.Drawing.Point(309, 26);
+            this.stats_btn.Name = "stats_btn";
+            this.stats_btn.Size = new System.Drawing.Size(168, 29);
+            this.stats_btn.TabIndex = 0;
+            this.stats_btn.Text = "Stats";
+            this.stats_btn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // spells_btn
             // 
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(309, 51);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 29);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Spells";
-            this.button2.UseVisualStyleBackColor = false;
+            this.spells_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.spells_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.spells_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.spells_btn.Location = new System.Drawing.Point(309, 51);
+            this.spells_btn.Name = "spells_btn";
+            this.spells_btn.Size = new System.Drawing.Size(168, 29);
+            this.spells_btn.TabIndex = 1;
+            this.spells_btn.Text = "Spells";
+            this.spells_btn.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // tipps_btn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(474, 26);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(168, 29);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Tipps";
-            this.button3.UseVisualStyleBackColor = false;
+            this.tipps_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.tipps_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tipps_btn.Location = new System.Drawing.Point(474, 26);
+            this.tipps_btn.Name = "tipps_btn";
+            this.tipps_btn.Size = new System.Drawing.Size(168, 29);
+            this.tipps_btn.TabIndex = 2;
+            this.tipps_btn.Text = "Tipps";
+            this.tipps_btn.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // story_btn
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(474, 52);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(168, 29);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Story";
-            this.button4.UseVisualStyleBackColor = false;
+            this.story_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.story_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.story_btn.Location = new System.Drawing.Point(474, 52);
+            this.story_btn.Name = "story_btn";
+            this.story_btn.Size = new System.Drawing.Size(168, 29);
+            this.story_btn.TabIndex = 3;
+            this.story_btn.Text = "Story";
+            this.story_btn.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -98,18 +98,18 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // listView2
+            // lView_Kontent
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lView_Kontent.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView2.LabelEdit = true;
-            this.listView2.Location = new System.Drawing.Point(309, 114);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(401, 392);
-            this.listView2.TabIndex = 6;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            this.lView_Kontent.LabelEdit = true;
+            this.lView_Kontent.Location = new System.Drawing.Point(309, 114);
+            this.lView_Kontent.Name = "lView_Kontent";
+            this.lView_Kontent.Size = new System.Drawing.Size(401, 392);
+            this.lView_Kontent.TabIndex = 6;
+            this.lView_Kontent.UseCompatibleStateImageBehavior = false;
+            this.lView_Kontent.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -119,17 +119,18 @@
             // 
             this.columnHeader2.Text = "Champion_name";
             // 
-            // listView1
+            // lView_Champnames
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lView_Champnames.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(31, 170);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(161, 336);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lView_Champnames.LabelEdit = true;
+            this.lView_Champnames.Location = new System.Drawing.Point(31, 170);
+            this.lView_Champnames.Name = "lView_Champnames";
+            this.lView_Champnames.Size = new System.Drawing.Size(161, 336);
+            this.lView_Champnames.TabIndex = 7;
+            this.lView_Champnames.UseCompatibleStateImageBehavior = false;
+            this.lView_Champnames.SelectedIndexChanged += new System.EventHandler(this.LView_Champnames_SelectedIndexChanged);
             // 
             // columnHeader3
             // 
@@ -145,13 +146,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(762, 546);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.lView_Champnames);
+            this.Controls.Add(this.lView_Kontent);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.story_btn);
+            this.Controls.Add(this.tipps_btn);
+            this.Controls.Add(this.spells_btn);
+            this.Controls.Add(this.stats_btn);
             this.Name = "Champions";
             this.Text = "Champions";
             this.Load += new System.EventHandler(this.Champions_Load);
@@ -162,15 +163,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button stats_btn;
+        private System.Windows.Forms.Button spells_btn;
+        private System.Windows.Forms.Button tipps_btn;
+        private System.Windows.Forms.Button story_btn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView lView_Kontent;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lView_Champnames;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
 
