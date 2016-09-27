@@ -30,79 +30,79 @@
         {
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lView_Content = new System.Windows.Forms.ListView();
+            this.special_btn = new System.Windows.Forms.Button();
+            this.items_btn = new System.Windows.Forms.Button();
+            this.rules_btn = new System.Windows.Forms.Button();
+            this.monster_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lView_fields = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listView2
+            // lView_Content
             // 
             listViewGroup1.Header = "ListViewGroup";
             listViewGroup1.Name = "listViewGroup1";
             listViewGroup2.Header = "ListViewGroup";
             listViewGroup2.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Right;
             listViewGroup2.Name = "listViewGroup2";
-            this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            this.lView_Content.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2});
-            this.listView2.Location = new System.Drawing.Point(289, 103);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(401, 392);
-            this.listView2.TabIndex = 13;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.lView_Content.Location = new System.Drawing.Point(289, 103);
+            this.lView_Content.Name = "lView_Content";
+            this.lView_Content.Size = new System.Drawing.Size(401, 392);
+            this.lView_Content.TabIndex = 13;
+            this.lView_Content.UseCompatibleStateImageBehavior = false;
             // 
-            // button4
+            // special_btn
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(489, 44);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(168, 29);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Special";
-            this.button4.UseVisualStyleBackColor = false;
+            this.special_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.special_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.special_btn.Location = new System.Drawing.Point(489, 44);
+            this.special_btn.Name = "special_btn";
+            this.special_btn.Size = new System.Drawing.Size(168, 29);
+            this.special_btn.TabIndex = 11;
+            this.special_btn.Text = "Special";
+            this.special_btn.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // items_btn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(489, 18);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(168, 29);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Items";
-            this.button3.UseVisualStyleBackColor = false;
+            this.items_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.items_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.items_btn.Location = new System.Drawing.Point(489, 18);
+            this.items_btn.Name = "items_btn";
+            this.items_btn.Size = new System.Drawing.Size(168, 29);
+            this.items_btn.TabIndex = 10;
+            this.items_btn.Text = "Items";
+            this.items_btn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // rules_btn
             // 
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(324, 43);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 29);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Rules";
-            this.button2.UseVisualStyleBackColor = false;
+            this.rules_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.rules_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rules_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rules_btn.Location = new System.Drawing.Point(324, 43);
+            this.rules_btn.Name = "rules_btn";
+            this.rules_btn.Size = new System.Drawing.Size(168, 29);
+            this.rules_btn.TabIndex = 9;
+            this.rules_btn.Text = "Rules";
+            this.rules_btn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // monster_btn
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(324, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 29);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Monster";
-            this.button1.UseVisualStyleBackColor = false;
+            this.monster_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.monster_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.monster_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.monster_btn.Location = new System.Drawing.Point(324, 18);
+            this.monster_btn.Name = "monster_btn";
+            this.monster_btn.Size = new System.Drawing.Size(168, 29);
+            this.monster_btn.TabIndex = 8;
+            this.monster_btn.Text = "Monster";
+            this.monster_btn.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -113,17 +113,17 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // listView1
+            // lView_fields
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lView_fields.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(46, 159);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(161, 336);
-            this.listView1.TabIndex = 14;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lView_fields.LabelEdit = true;
+            this.lView_fields.Location = new System.Drawing.Point(46, 159);
+            this.lView_fields.Name = "lView_fields";
+            this.lView_fields.Size = new System.Drawing.Size(161, 336);
+            this.lView_fields.TabIndex = 14;
+            this.lView_fields.UseCompatibleStateImageBehavior = false;
             // 
             // columnHeader3
             // 
@@ -138,13 +138,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 512);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.lView_fields);
+            this.Controls.Add(this.lView_Content);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.special_btn);
+            this.Controls.Add(this.items_btn);
+            this.Controls.Add(this.rules_btn);
+            this.Controls.Add(this.monster_btn);
             this.Name = "Fields";
             this.Text = "Fields";
             this.Load += new System.EventHandler(this.Fields_Load);
@@ -155,13 +155,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView lView_Content;
+        private System.Windows.Forms.Button special_btn;
+        private System.Windows.Forms.Button items_btn;
+        private System.Windows.Forms.Button rules_btn;
+        private System.Windows.Forms.Button monster_btn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lView_fields;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
     }
