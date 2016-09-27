@@ -17,6 +17,8 @@ namespace CompUI
         #region fields
         // Assoziation zur Komponente CompLogic
         private ILogic _iLogic;
+
+        int index;
         #endregion
 
         public Champions(ILogic iLogic)
@@ -36,8 +38,14 @@ namespace CompUI
                 idchampPair = new ListViewItem(champnames[i, 0]);
                 idchampPair.SubItems.Add(champnames[i, 1]);
 
-                listView_Champnames.Items.AddRange(new ListViewItem[] { idchampPair });
+                lView_Champnames.Items.AddRange(new ListViewItem[] { idchampPair });
             }
+
+            lView_Champnames.FindItemWithText("1").Selected = true;
+            index = lView_Champnames.Items.IndexOf(lView_Champnames.SelectedItems[0]);
+
+            stats_btn.PerformClick();
+            ChampIconBox.BackgroundImage = _iLogic.GetChampIcon(index);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -45,8 +53,9 @@ namespace CompUI
 
         }
 
-        private void ChampIDAndNameslistBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void lView_Champnames_SelectedIndexChanged(object sender, EventArgs e)
         {
+            stats_btn.PerformClick();
 
         }
 
@@ -60,6 +69,12 @@ namespace CompUI
 
         }
 
-        
+        private void stats_btn_Click(object sender, EventArgs e)
+        {
+            string maininfo = _iLogic.GetChampInfos(index, 1);
+
+            lView_Content.Items.Clear();
+            lView_Content.Items.Add(maininfo);
+        }
     }
 }

@@ -32,14 +32,14 @@
             this.spells_btn = new System.Windows.Forms.Button();
             this.tipps_btn = new System.Windows.Forms.Button();
             this.story_btn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lView_Kontent = new System.Windows.Forms.ListView();
+            this.ChampIconBox = new System.Windows.Forms.PictureBox();
+            this.lView_Content = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lView_Champnames = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            ((System.ComponentModel.ISupportInitialize)(this.ChampIconBox)).BeginInit();
             this.SuspendLayout();
             // 
             // stats_btn
@@ -53,6 +53,7 @@
             this.stats_btn.TabIndex = 0;
             this.stats_btn.Text = "Stats";
             this.stats_btn.UseVisualStyleBackColor = false;
+            this.stats_btn.Click += new System.EventHandler(this.stats_btn_Click);
             // 
             // spells_btn
             // 
@@ -88,28 +89,28 @@
             this.story_btn.Text = "Story";
             this.story_btn.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // ChampIconBox
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 115);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.ChampIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ChampIconBox.Location = new System.Drawing.Point(31, 30);
+            this.ChampIconBox.Name = "ChampIconBox";
+            this.ChampIconBox.Size = new System.Drawing.Size(170, 115);
+            this.ChampIconBox.TabIndex = 4;
+            this.ChampIconBox.TabStop = false;
+            this.ChampIconBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // lView_Kontent
+            // lView_Content
             // 
-            this.lView_Kontent.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lView_Content.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.lView_Kontent.LabelEdit = true;
-            this.lView_Kontent.Location = new System.Drawing.Point(309, 114);
-            this.lView_Kontent.Name = "lView_Kontent";
-            this.lView_Kontent.Size = new System.Drawing.Size(401, 392);
-            this.lView_Kontent.TabIndex = 6;
-            this.lView_Kontent.UseCompatibleStateImageBehavior = false;
-            this.lView_Kontent.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
+            this.lView_Content.LabelEdit = true;
+            this.lView_Content.Location = new System.Drawing.Point(309, 114);
+            this.lView_Content.Name = "lView_Content";
+            this.lView_Content.Size = new System.Drawing.Size(401, 392);
+            this.lView_Content.TabIndex = 6;
+            this.lView_Content.UseCompatibleStateImageBehavior = false;
+            this.lView_Content.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -122,23 +123,25 @@
             // lView_Champnames
             // 
             this.lView_Champnames.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4});
+            this.id,
+            this.name});
             this.lView_Champnames.LabelEdit = true;
             this.lView_Champnames.Location = new System.Drawing.Point(31, 170);
+            this.lView_Champnames.MultiSelect = false;
             this.lView_Champnames.Name = "lView_Champnames";
             this.lView_Champnames.Size = new System.Drawing.Size(161, 336);
             this.lView_Champnames.TabIndex = 7;
             this.lView_Champnames.UseCompatibleStateImageBehavior = false;
+            this.lView_Champnames.View = System.Windows.Forms.View.Details;
             this.lView_Champnames.SelectedIndexChanged += new System.EventHandler(this.LView_Champnames_SelectedIndexChanged);
             // 
-            // columnHeader3
+            // id
             // 
-            this.columnHeader3.Text = "ID";
+            this.id.Text = "ID";
             // 
-            // columnHeader4
+            // name
             // 
-            this.columnHeader4.Text = "Champion_name";
+            this.name.Text = "Championname";
             // 
             // Champions
             // 
@@ -147,8 +150,8 @@
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(762, 546);
             this.Controls.Add(this.lView_Champnames);
-            this.Controls.Add(this.lView_Kontent);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lView_Content);
+            this.Controls.Add(this.ChampIconBox);
             this.Controls.Add(this.story_btn);
             this.Controls.Add(this.tipps_btn);
             this.Controls.Add(this.spells_btn);
@@ -156,7 +159,7 @@
             this.Name = "Champions";
             this.Text = "Champions";
             this.Load += new System.EventHandler(this.Champions_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChampIconBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,13 +170,13 @@
         private System.Windows.Forms.Button spells_btn;
         private System.Windows.Forms.Button tipps_btn;
         private System.Windows.Forms.Button story_btn;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListView lView_Kontent;
+        private System.Windows.Forms.PictureBox ChampIconBox;
+        private System.Windows.Forms.ListView lView_Content;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ListView lView_Champnames;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.ColumnHeader name;
 
 
     }
