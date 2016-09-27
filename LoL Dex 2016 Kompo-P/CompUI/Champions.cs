@@ -50,7 +50,7 @@ namespace CompUI
 
             //Öffne Stats des ersten Items
             stats_btn.PerformClick();
-            ChampIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 6), true);
+            ChampIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 7), true);
         }
 
         private void ChampIconBox_Click(object sender, EventArgs e)
@@ -64,17 +64,57 @@ namespace CompUI
 
         }
 
-        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void stats_btn_Click(object sender, EventArgs e)
         {
-            string maininfo = _iLogic.GetChampInfos(index, 1);
+            MainContentPanel.Controls.Clear();
+            TextBox statsstextbox = new TextBox();
+            MainContentPanel.Controls.Add(statsstextbox);
+            statsstextbox.Size = MainContentPanel.Size;
+            statsstextbox.Name = "Stats";
+            statsstextbox.Multiline = true;
+            statsstextbox.ScrollBars = ScrollBars.Vertical;
+            statsstextbox.WordWrap = true;
 
-            lView_Content.Items.Clear();
-            lView_Content.Items.Add(maininfo);
+            string maininfo = _iLogic.GetChampInfos(index, 2);
+
+            statsstextbox.Text = maininfo;
+        }
+
+        private void tipps_btn_Click(object sender, EventArgs e)
+        {
+            MainContentPanel.Controls.Clear();
+            TextBox tippstextbox = new TextBox();
+            MainContentPanel.Controls.Add(tippstextbox);
+            tippstextbox.Size = MainContentPanel.Size;
+            tippstextbox.Name = "Stats";
+            tippstextbox.Multiline = true;
+            tippstextbox.ScrollBars = ScrollBars.Vertical;
+            tippstextbox.WordWrap = true;
+
+            string maininfo = _iLogic.GetChampInfos(index, 3);
+
+            tippstextbox.Text = maininfo;
+        }
+
+        private void story_btn_Click(object sender, EventArgs e)
+        {
+            MainContentPanel.Controls.Clear();
+            TextBox storytextbox = new TextBox();
+            MainContentPanel.Controls.Add(storytextbox);
+            storytextbox.Size = MainContentPanel.Size;
+            storytextbox.Name = "Stats";
+            storytextbox.Multiline = true;
+            storytextbox.ScrollBars = ScrollBars.Vertical;
+            storytextbox.WordWrap = true;
+
+            string maininfo = _iLogic.GetChampInfos(index, 4);
+
+            storytextbox.Text = maininfo;
+        }
+
+        private void spells_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
