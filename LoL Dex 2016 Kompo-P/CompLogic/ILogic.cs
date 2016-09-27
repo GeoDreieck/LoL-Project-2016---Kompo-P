@@ -26,5 +26,8 @@ namespace CompLogic
 
         List<object> GetIconsforParentitems(int id);
         #endregion
+
+        #region Runes
+        #endregion
     }
 }

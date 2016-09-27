@@ -62,6 +62,13 @@ namespace Test
             dbDataReader.Close();
             _iDatabase.AddTabletoDataSet(dataTableAbilities);
 
+            //GetChampNames Test
+            string[,] testarray = _iLogic.GetChampNames();
+            for(int i = 0; i < (testarray.Length/2); i++)
+            {
+                Console.WriteLine(testarray[i,0] + ": " + testarray[i,1]);
+            }
+
             // Overview starten
             Application.Run(_overview as Form);
 
