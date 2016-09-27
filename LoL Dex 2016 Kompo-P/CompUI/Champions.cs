@@ -60,6 +60,7 @@ namespace CompUI
 
         private void lView_Champnames_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
             stats_btn.PerformClick();
 
         }
