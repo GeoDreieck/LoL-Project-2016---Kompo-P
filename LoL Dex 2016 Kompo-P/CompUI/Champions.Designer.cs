@@ -91,10 +91,11 @@
             // 
             // ChampIconBox
             // 
+            this.ChampIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ChampIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ChampIconBox.Location = new System.Drawing.Point(31, 30);
+            this.ChampIconBox.Location = new System.Drawing.Point(31, 12);
             this.ChampIconBox.Name = "ChampIconBox";
-            this.ChampIconBox.Size = new System.Drawing.Size(170, 115);
+            this.ChampIconBox.Size = new System.Drawing.Size(133, 133);
             this.ChampIconBox.TabIndex = 4;
             this.ChampIconBox.TabStop = false;
             this.ChampIconBox.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -129,19 +130,21 @@
             this.lView_Champnames.Location = new System.Drawing.Point(31, 170);
             this.lView_Champnames.MultiSelect = false;
             this.lView_Champnames.Name = "lView_Champnames";
-            this.lView_Champnames.Size = new System.Drawing.Size(161, 336);
+            this.lView_Champnames.Size = new System.Drawing.Size(133, 336);
             this.lView_Champnames.TabIndex = 7;
             this.lView_Champnames.UseCompatibleStateImageBehavior = false;
             this.lView_Champnames.View = System.Windows.Forms.View.Details;
-            this.lView_Champnames.SelectedIndexChanged += new System.EventHandler(this.LView_Champnames_SelectedIndexChanged);
+            this.lView_Champnames.SelectedIndexChanged += new System.EventHandler(this.lView_Champnames_SelectedIndexChanged);
             // 
             // id
             // 
             this.id.Text = "ID";
+            this.id.Width = 40;
             // 
             // name
             // 
-            this.name.Text = "Championname";
+            this.name.Text = "Champions";
+            this.name.Width = 150;
             // 
             // Champions
             // 

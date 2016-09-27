@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 using CompLogic;
 
@@ -45,7 +46,8 @@ namespace CompUI
             index = lView_Champnames.Items.IndexOf(lView_Champnames.SelectedItems[0]);
 
             stats_btn.PerformClick();
-            ChampIconBox.BackgroundImage = _iLogic.GetChampIcon(index);
+            string imagedirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\Images\\";
+            ChampIconBox.BackgroundImage = Image.FromFile(imagedirectory + _iLogic.GetChampInfos(index, 6), true);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -60,11 +62,6 @@ namespace CompUI
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LView_Champnames_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
