@@ -7,14 +7,16 @@ namespace CompLogic
 
     public interface ILogic
     {
+        #region get/set
+        string Imagdirectorypath();
+        #endregion
+
         #region Champs
         string[,] GetChampNames();
 
         string GetChampInfos(int id, int infonumber);
 
         List<List<object>> GetAbilitiesData(int id);
-
-        object GetChampIcon(int id);
         #endregion
 
         #region Items
@@ -22,9 +24,7 @@ namespace CompLogic
 
         string GetItemInfos(int id, int infonumber);
 
-        object GetItemIcon(int id);
-
-        List<object> GetIconsforParentitems(int id);
+        List<string> GetIconsforParentitems(int id);
         #endregion
 
         #region Runes

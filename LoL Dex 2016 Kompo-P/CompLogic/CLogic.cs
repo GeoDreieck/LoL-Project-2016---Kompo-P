@@ -13,13 +13,22 @@ namespace CompLogic
 
         #region fields
         private IDatabase _iDatabase;
+        string _imagedirectorypath;
         #endregion
 
         #region ctor
         // Dependency injection ctor
-        public CLogic(IDatabase iDatabase)
+        public CLogic(IDatabase iDatabase, string imgdirpath)
         {
             _iDatabase = iDatabase;
+            _imagedirectorypath = imgdirpath;
+        }
+        #endregion
+
+        #region get/set
+        public string Imagdirectorypath()
+        {
+            return _imagedirectorypath;
         }
         #endregion
 
@@ -66,11 +75,6 @@ namespace CompLogic
 
             return abilitylist;
         }
-
-        public object GetChampIcon(int id)
-        {
-            return _iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[7];
-        }
         #endregion
 
         #region Items
@@ -93,19 +97,14 @@ namespace CompLogic
             return _iDatabase.DataSet().Tables["Items"].Rows[id].ItemArray[infonumber + 1].ToString();
         }
 
-        public object GetItemIcon(int id)
+        public List<string> GetIconsforParentitems(int id)
         {
-            return _iDatabase.DataSet().Tables["Items"].Rows[id].ItemArray[5];
-        }
-
-        public List<object> GetIconsforParentitems(int id)
-        {
-            List<object> iconlist = new List<object>();
+            List<string> iconlist = new List<string>();
             DataRow[] result = _iDatabase.DataSet().Tables["Items"].Select("ItemAID == id");
 
             for(int i = 0; i < result.Length; i++)
             {
-                iconlist.Add(_iDatabase.DataSet().Tables["Items"].Rows[Convert.ToInt32(result[i].ItemArray[2].ToString())].ItemArray[5]);
+                iconlist.Add(_iDatabase.DataSet().Tables["Items"].Rows[Convert.ToInt32(result[i].ItemArray[2].ToString())].ItemArray[5].ToString());
             }
 
             return iconlist; 

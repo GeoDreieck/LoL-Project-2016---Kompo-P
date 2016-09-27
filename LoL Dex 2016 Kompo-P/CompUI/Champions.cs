@@ -31,9 +31,11 @@ namespace CompUI
 
         private void Champions_Load(object sender, EventArgs e)
         {
+            //Variablen erstellen
             string[,] champnames = _iLogic.GetChampNames();
             ListViewItem idchampPair;
 
+            //Listview füllen
             for(int i = 0; i < (champnames.Length/champnames.Rank); i++)
             {
                 idchampPair = new ListViewItem(champnames[i, 0]);
@@ -42,15 +44,16 @@ namespace CompUI
                 lView_Champnames.Items.AddRange(new ListViewItem[] { idchampPair });
             }
 
+            //Erstes Item der Listview
             lView_Champnames.FindItemWithText("1").Selected = true;
             index = lView_Champnames.Items.IndexOf(lView_Champnames.SelectedItems[0]);
 
+            //Öffne Stats des ersten Items
             stats_btn.PerformClick();
-            string imagedirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\Images\\";
-            ChampIconBox.BackgroundImage = Image.FromFile(imagedirectory + _iLogic.GetChampInfos(index, 6), true);
+            ChampIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 6), true);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void ChampIconBox_Click(object sender, EventArgs e)
         {
 
         }

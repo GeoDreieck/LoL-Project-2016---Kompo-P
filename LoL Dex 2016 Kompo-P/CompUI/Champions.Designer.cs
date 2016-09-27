@@ -98,7 +98,7 @@
             this.ChampIconBox.Size = new System.Drawing.Size(133, 133);
             this.ChampIconBox.TabIndex = 4;
             this.ChampIconBox.TabStop = false;
-            this.ChampIconBox.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.ChampIconBox.Click += new System.EventHandler(this.ChampIconBox_Click);
             // 
             // lView_Content
             // 

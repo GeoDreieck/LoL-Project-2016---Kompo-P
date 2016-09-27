@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Common;
 using System.Windows.Forms;
+using System.IO;
 
 using CompUI;
 using CompLogic;
@@ -41,7 +42,8 @@ namespace Test
             DataSet dataSet = new DataSet();
 
             // Mittlere Schicht CompLogic wird es zweites erzugt
-            _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase);
+            string imagedirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\Images\\";
+            _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase, imagedirectory);
 
             _overview = AFactoryIForms.CreateInstance("Overview", _iLogic);
 
