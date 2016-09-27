@@ -28,8 +28,15 @@ namespace CompUI
 
         private void Champions_Load(object sender, EventArgs e)
         {
+            string[,] champnames = _iLogic.GetChampNames();
+            ListViewItem idchampPair;
 
-            
+            for(int i = 0; i < (champnames.Length/champnames.Rank); i++)
+            {
+                idchampPair = new ListViewItem(champnames[i, 0]);
+                idchampPair.SubItems.Add(champnames[i, 1]);
+
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -37,7 +44,7 @@ namespace CompUI
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ChampIDAndNameslistBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
