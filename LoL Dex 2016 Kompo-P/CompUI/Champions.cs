@@ -36,6 +36,7 @@ namespace CompUI
                 idchampPair = new ListViewItem(champnames[i, 0]);
                 idchampPair.SubItems.Add(champnames[i, 1]);
 
+                listView_Champnames.Items.AddRange(new ListViewItem[] { idchampPair });
             }
         }
 
