@@ -30,31 +30,31 @@
         {
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.lView_Content = new System.Windows.Forms.ListView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.spells_btn = new System.Windows.Forms.Button();
+            this.stats_btn = new System.Windows.Forms.Button();
+            this.lView_Runes = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listView2
+            // lView_Content
             // 
             listViewGroup1.Header = "ListViewGroup";
             listViewGroup1.Name = "listViewGroup1";
             listViewGroup2.Header = "ListViewGroup";
             listViewGroup2.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Right;
             listViewGroup2.Name = "listViewGroup2";
-            this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            this.lView_Content.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2});
-            this.listView2.Location = new System.Drawing.Point(304, 101);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(401, 392);
-            this.listView2.TabIndex = 13;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.lView_Content.Location = new System.Drawing.Point(304, 101);
+            this.lView_Content.Name = "lView_Content";
+            this.lView_Content.Size = new System.Drawing.Size(401, 392);
+            this.lView_Content.TabIndex = 13;
+            this.lView_Content.UseCompatibleStateImageBehavior = false;
             // 
             // pictureBox1
             // 
@@ -65,41 +65,41 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // spells_btn
             // 
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(509, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 29);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Spells";
-            this.button2.UseVisualStyleBackColor = false;
+            this.spells_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.spells_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.spells_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.spells_btn.Location = new System.Drawing.Point(509, 45);
+            this.spells_btn.Name = "spells_btn";
+            this.spells_btn.Size = new System.Drawing.Size(168, 29);
+            this.spells_btn.TabIndex = 9;
+            this.spells_btn.Text = "Spells";
+            this.spells_btn.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // stats_btn
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(316, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 29);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Stats";
-            this.button1.UseVisualStyleBackColor = false;
+            this.stats_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.stats_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.stats_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stats_btn.Location = new System.Drawing.Point(316, 45);
+            this.stats_btn.Name = "stats_btn";
+            this.stats_btn.Size = new System.Drawing.Size(168, 29);
+            this.stats_btn.TabIndex = 8;
+            this.stats_btn.Text = "Stats";
+            this.stats_btn.UseVisualStyleBackColor = false;
             // 
-            // listView1
+            // lView_Runes
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lView_Runes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(61, 160);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(161, 336);
-            this.listView1.TabIndex = 14;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lView_Runes.LabelEdit = true;
+            this.lView_Runes.Location = new System.Drawing.Point(61, 160);
+            this.lView_Runes.Name = "lView_Runes";
+            this.lView_Runes.Size = new System.Drawing.Size(161, 336);
+            this.lView_Runes.TabIndex = 14;
+            this.lView_Runes.UseCompatibleStateImageBehavior = false;
             // 
             // columnHeader3
             // 
@@ -114,11 +114,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 508);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.lView_Runes);
+            this.Controls.Add(this.lView_Content);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.spells_btn);
+            this.Controls.Add(this.stats_btn);
             this.Name = "Creeps";
             this.Text = "Creeps";
             this.Load += new System.EventHandler(this.Creeps_Load);
@@ -129,11 +129,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView lView_Content;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button spells_btn;
+        private System.Windows.Forms.Button stats_btn;
+        private System.Windows.Forms.ListView lView_Runes;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
     }

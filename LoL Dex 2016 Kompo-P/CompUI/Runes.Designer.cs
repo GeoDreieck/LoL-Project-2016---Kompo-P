@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
-            this.listView2 = new System.Windows.Forms.ListView();
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
+            this.lView_Content = new System.Windows.Forms.ListView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.rune_level_box = new System.Windows.Forms.ComboBox();
+            this.rune_proberty_box = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lView_Runes = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listView2
+            // lView_Content
             // 
-            listViewGroup3.Header = "ListViewGroup";
-            listViewGroup3.Name = "listViewGroup1";
-            listViewGroup4.Header = "ListViewGroup";
-            listViewGroup4.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Right;
-            listViewGroup4.Name = "listViewGroup2";
-            this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3,
-            listViewGroup4});
-            this.listView2.Location = new System.Drawing.Point(295, 109);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(401, 392);
-            this.listView2.TabIndex = 13;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "listViewGroup1";
+            listViewGroup2.Header = "ListViewGroup";
+            listViewGroup2.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Right;
+            listViewGroup2.Name = "listViewGroup2";
+            this.lView_Content.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1,
+            listViewGroup2});
+            this.lView_Content.Location = new System.Drawing.Point(295, 109);
+            this.lView_Content.Name = "lView_Content";
+            this.lView_Content.Size = new System.Drawing.Size(401, 392);
+            this.lView_Content.TabIndex = 13;
+            this.lView_Content.UseCompatibleStateImageBehavior = false;
             // 
             // pictureBox1
             // 
@@ -67,38 +67,36 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // rune_level_box
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.rune_level_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rune_level_box.FormattingEnabled = true;
+            this.rune_level_box.Items.AddRange(new object[] {
             "Alle",
             "Stufe 1",
             "Stufe 2",
             "Stufe 3"});
-            this.comboBox1.Location = new System.Drawing.Point(354, 57);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 15;
-            this.comboBox1.Tag = "";
-            this.comboBox1.SelectedIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.rune_level_box.Location = new System.Drawing.Point(354, 57);
+            this.rune_level_box.Name = "rune_level_box";
+            this.rune_level_box.Size = new System.Drawing.Size(121, 21);
+            this.rune_level_box.TabIndex = 15;
+            this.rune_level_box.Tag = "";
+            this.rune_level_box.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // rune_proberty_box
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.rune_proberty_box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rune_proberty_box.FormattingEnabled = true;
+            this.rune_proberty_box.Items.AddRange(new object[] {
             "Alle",
             "Essenzen",
             "Glyphen",
             "Marks",
             "Seals"});
-            this.comboBox2.Location = new System.Drawing.Point(510, 57);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 16;
-            this.comboBox2.SelectedIndex = 0;
+            this.rune_proberty_box.Location = new System.Drawing.Point(510, 57);
+            this.rune_proberty_box.Name = "rune_proberty_box";
+            this.rune_proberty_box.Size = new System.Drawing.Size(121, 21);
+            this.rune_proberty_box.TabIndex = 16;
             // 
             // label1
             // 
@@ -120,17 +118,18 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Runen - Art";
             // 
-            // listView1
+            // lView_Runes
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lView_Runes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4});
-            this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(52, 165);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(161, 336);
-            this.listView1.TabIndex = 19;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lView_Runes.LabelEdit = true;
+            this.lView_Runes.Location = new System.Drawing.Point(52, 165);
+            this.lView_Runes.Name = "lView_Runes";
+            this.lView_Runes.Size = new System.Drawing.Size(161, 336);
+            this.lView_Runes.TabIndex = 19;
+            this.lView_Runes.UseCompatibleStateImageBehavior = false;
+            this.lView_Runes.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader3
             // 
@@ -145,12 +144,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 525);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lView_Runes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.rune_proberty_box);
+            this.Controls.Add(this.rune_level_box);
+            this.Controls.Add(this.lView_Content);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Runes";
             this.Text = "Runes";
@@ -163,13 +162,13 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView lView_Content;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox rune_level_box;
+        private System.Windows.Forms.ComboBox rune_proberty_box;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lView_Runes;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
     }
