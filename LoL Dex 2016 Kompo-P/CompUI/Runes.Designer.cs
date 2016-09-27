@@ -28,53 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
             this.listView2 = new System.Windows.Forms.ListView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 19;
-            this.listBox1.Items.AddRange(new object[] {
-            "1x Essenz Attack Damage",
-            "1x Essenz Attack Speed",
-            "1x Essenz Magic Damage",
-            "1x Essenz Movement Speed",
-            "1x Essenz Manareg",
-            "1x Glyphe Magic Damage",
-            "1x Glyphe Attack Speed",
-            "1x Glyphe Movement Speed",
-            "1x Gylphe Attack Damage",
-            "1x Glyphe Manareg",
-            "1x Seal Attack Damage",
-            "1x Seal Attack Speed",
-            "1x Seal Movement Speed",
-            "1x Seal Manareg"});
-            this.listBox1.Location = new System.Drawing.Point(52, 178);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(209, 308);
-            this.listBox1.TabIndex = 14;
-            // 
             // listView2
             // 
-            listViewGroup9.Header = "ListViewGroup";
-            listViewGroup9.Name = "listViewGroup1";
-            listViewGroup10.Header = "ListViewGroup";
-            listViewGroup10.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Right;
-            listViewGroup10.Name = "listViewGroup2";
+            listViewGroup3.Header = "ListViewGroup";
+            listViewGroup3.Name = "listViewGroup1";
+            listViewGroup4.Header = "ListViewGroup";
+            listViewGroup4.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Right;
+            listViewGroup4.Name = "listViewGroup2";
             this.listView2.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup9,
-            listViewGroup10});
+            listViewGroup3,
+            listViewGroup4});
             this.listView2.Location = new System.Drawing.Point(295, 109);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(401, 392);
@@ -104,6 +81,8 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 15;
             this.comboBox1.Tag = "";
+            this.comboBox1.SelectedIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -119,6 +98,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 16;
+            this.comboBox2.SelectedIndex = 0;
             // 
             // label1
             // 
@@ -140,16 +120,36 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Runen - Art";
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listView1.LabelEdit = true;
+            this.listView1.Location = new System.Drawing.Point(52, 165);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(161, 336);
+            this.listView1.TabIndex = 19;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "ID";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Champion_name";
+            // 
             // Runes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 525);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.listView2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Runes";
@@ -163,12 +163,14 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }
