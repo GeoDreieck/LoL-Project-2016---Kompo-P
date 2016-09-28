@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
-            this.lView_Content = new System.Windows.Forms.ListView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.RunesIconBox = new System.Windows.Forms.PictureBox();
             this.rune_level_box = new System.Windows.Forms.ComboBox();
             this.rune_proberty_box = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,33 +36,18 @@
             this.lView_Runes = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.MainContentPanel = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.RunesIconBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // lView_Content
+            // RunesIconBox
             // 
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewGroup2.Header = "ListViewGroup";
-            listViewGroup2.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Right;
-            listViewGroup2.Name = "listViewGroup2";
-            this.lView_Content.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
-            this.lView_Content.Location = new System.Drawing.Point(295, 109);
-            this.lView_Content.Name = "lView_Content";
-            this.lView_Content.Size = new System.Drawing.Size(401, 392);
-            this.lView_Content.TabIndex = 13;
-            this.lView_Content.UseCompatibleStateImageBehavior = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(52, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 115);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.RunesIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RunesIconBox.Location = new System.Drawing.Point(52, 28);
+            this.RunesIconBox.Name = "RunesIconBox";
+            this.RunesIconBox.Size = new System.Drawing.Size(170, 115);
+            this.RunesIconBox.TabIndex = 12;
+            this.RunesIconBox.TabStop = false;
             // 
             // rune_level_box
             // 
@@ -81,7 +63,7 @@
             this.rune_level_box.Size = new System.Drawing.Size(121, 21);
             this.rune_level_box.TabIndex = 15;
             this.rune_level_box.Tag = "";
-            this.rune_level_box.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.rune_level_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // rune_proberty_box
             // 
@@ -97,6 +79,7 @@
             this.rune_proberty_box.Name = "rune_proberty_box";
             this.rune_proberty_box.Size = new System.Drawing.Size(121, 21);
             this.rune_proberty_box.TabIndex = 16;
+            this.rune_proberty_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // label1
             // 
@@ -139,31 +122,36 @@
             // 
             this.columnHeader4.Text = "Champion_name";
             // 
+            // MainContentPanel
+            // 
+            this.MainContentPanel.Location = new System.Drawing.Point(253, 165);
+            this.MainContentPanel.Name = "MainContentPanel";
+            this.MainContentPanel.Size = new System.Drawing.Size(463, 336);
+            this.MainContentPanel.TabIndex = 20;
+            // 
             // Runes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 525);
+            this.Controls.Add(this.MainContentPanel);
             this.Controls.Add(this.lView_Runes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rune_proberty_box);
             this.Controls.Add(this.rune_level_box);
-            this.Controls.Add(this.lView_Content);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.RunesIconBox);
             this.Name = "Runes";
             this.Text = "Runes";
             this.Load += new System.EventHandler(this.Runes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RunesIconBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView lView_Content;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox RunesIconBox;
         private System.Windows.Forms.ComboBox rune_level_box;
         private System.Windows.Forms.ComboBox rune_proberty_box;
         private System.Windows.Forms.Label label1;
@@ -171,5 +159,6 @@
         private System.Windows.Forms.ListView lView_Runes;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Panel MainContentPanel;
     }
 }

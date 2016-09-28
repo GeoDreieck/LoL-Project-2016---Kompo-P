@@ -55,6 +55,8 @@ namespace Test
             dbDataReader = _iDatabase.ExecuteQuery(sql);
             dataTableChamps.Load(dbDataReader);
             dbDataReader.Close();
+            dataTableChamps.DefaultView.Sort = "ID";
+            dataTableChamps = dataTableChamps.DefaultView.ToTable();
             _iDatabase.AddTabletoDataSet(dataTableChamps);
 
             sql = string.Format("SELECT * FROM Abilities;");
@@ -62,6 +64,8 @@ namespace Test
             dbDataReader = _iDatabase.ExecuteQuery(sql);
             dataTableAbilities.Load(dbDataReader);
             dbDataReader.Close();
+            dataTableAbilities.DefaultView.Sort = "ID";
+            dataTableAbilities = dataTableAbilities.DefaultView.ToTable();
             _iDatabase.AddTabletoDataSet(dataTableAbilities);
 
             //GetChampNames Test

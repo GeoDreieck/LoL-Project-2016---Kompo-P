@@ -47,17 +47,6 @@ namespace CompUI
             //Erstes Item der Listview
             lView_Champnames.FindItemWithText("1").Selected = true;
             index = lView_Champnames.Items.IndexOf(lView_Champnames.SelectedItems[0]);
-
-            /*
-            //Öffne Stats des ersten Items
-            stats_btn.PerformClick();
-            ChampIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 7), true);
-             * */
-        }
-
-        private void ChampIconBox_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void lView_Champnames_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,8 +60,6 @@ namespace CompUI
                 stats_btn.PerformClick();
                 ChampIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 7), true);
             }
-            
-
         }
 
         private void stats_btn_Click(object sender, EventArgs e)
@@ -126,37 +113,59 @@ namespace CompUI
         private void spells_btn_Click(object sender, EventArgs e)
         {
             MainContentPanel.Controls.Clear();
-            ListView abilitiesListView = new ListView();
+            DataGridView abilitiesListView = new DataGridView();
             MainContentPanel.Controls.Add(abilitiesListView);
             abilitiesListView.Size = MainContentPanel.Size;
             abilitiesListView.Name = "Abilities";
-            abilitiesListView.Scrollable = true;
-            abilitiesListView.View = View.Details;
+            abilitiesListView.ScrollBars = ScrollBars.Both;
+            abilitiesListView.Dock = DockStyle.Fill;
+            abilitiesListView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            abilitiesListView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            abilitiesListView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
             List<List<string>> abilityslist = _iLogic.GetAbilitiesData(index);
             ImageList imagelist = new ImageList();
-            string directorypath= _iLogic.Imagdirectorypath();
-            
-            for(int i = 0; i < abilityslist.Count; i++)
-            {
-                imagelist.Images.Add(Image.FromFile(directorypath + abilityslist[i][5], true));
-            }
+            string directorypath = _iLogic.Imagdirectorypath();
 
-            abilitiesListView.LargeImageList = imagelist;
-            abilitiesListView.SmallImageList = imagelist;
+            abilitiesListView.Columns.Add(new DataGridViewImageColumn()
+            {
+                HeaderText = "",
+                ReadOnly = true,
+                FillWeight = 25,
+                Width = 64,
+            });
+            abilitiesListView.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                HeaderText = "Abilityname",
+                ReadOnly = true,
+                FillWeight = 75,
+                Width = 100
+            });
+            abilitiesListView.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                HeaderText = "Effect",
+                ReadOnly = true,
+                FillWeight = 125,
+                Width = 300
+            });
+            abilitiesListView.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                HeaderText = "Cooldown",
+                ReadOnly = true,
+                FillWeight = 175,
+                Width = 150
+            });
+            abilitiesListView.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                HeaderText = "Cost",
+                ReadOnly = true,
+                FillWeight = 225,
+                Width = 150
+            });
 
             for (int i = 0; i < abilityslist.Count; i++)
             {
-                ListViewItem abilityitem = new ListViewItem()
-                {
-                    ImageIndex = i
-                };
-                abilityitem.SubItems.Add(abilityslist[i][1]);
-                abilityitem.SubItems.Add(abilityslist[i][2]);
-                abilityitem.SubItems.Add(abilityslist[i][3]);
-                abilityitem.SubItems.Add(abilityslist[i][4]);
-                
-
-                abilitiesListView.Items.Add(abilityitem);
+                abilitiesListView.Rows.Add(Image.FromFile(directorypath + abilityslist[i][4], true), abilityslist[i][0], abilityslist[i][1], abilityslist[i][2], abilityslist[i][3]);
             }
         }
     }

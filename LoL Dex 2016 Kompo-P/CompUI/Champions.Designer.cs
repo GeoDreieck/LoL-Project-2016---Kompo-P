@@ -100,7 +100,6 @@
             this.ChampIconBox.Size = new System.Drawing.Size(133, 133);
             this.ChampIconBox.TabIndex = 4;
             this.ChampIconBox.TabStop = false;
-            this.ChampIconBox.Click += new System.EventHandler(this.ChampIconBox_Click);
             // 
             // lView_Champnames
             // 
@@ -128,9 +127,9 @@
             // 
             // MainContentPanel
             // 
-            this.MainContentPanel.Location = new System.Drawing.Point(309, 170);
+            this.MainContentPanel.Location = new System.Drawing.Point(182, 106);
             this.MainContentPanel.Name = "MainContentPanel";
-            this.MainContentPanel.Size = new System.Drawing.Size(401, 273);
+            this.MainContentPanel.Size = new System.Drawing.Size(568, 400);
             this.MainContentPanel.TabIndex = 8;
             // 
             // Champions
