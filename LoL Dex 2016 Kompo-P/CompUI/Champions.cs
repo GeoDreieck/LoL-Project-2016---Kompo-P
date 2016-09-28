@@ -48,9 +48,11 @@ namespace CompUI
             lView_Champnames.FindItemWithText("1").Selected = true;
             index = lView_Champnames.Items.IndexOf(lView_Champnames.SelectedItems[0]);
 
+            /*
             //Öffne Stats des ersten Items
             stats_btn.PerformClick();
             ChampIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 7), true);
+             * */
         }
 
         private void ChampIconBox_Click(object sender, EventArgs e)
@@ -60,8 +62,16 @@ namespace CompUI
 
         private void lView_Champnames_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lView_Champnames.SelectedIndices.Count <= 0)
+                return;
+
+            if(lView_Champnames.SelectedIndices[0]>= 0)
+            {
+                index = lView_Champnames.SelectedIndices[0];
+                stats_btn.PerformClick();
+                ChampIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 7), true);
+            }
             
-            stats_btn.PerformClick();
 
         }
 
