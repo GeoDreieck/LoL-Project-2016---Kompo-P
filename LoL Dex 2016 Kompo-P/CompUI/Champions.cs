@@ -97,7 +97,7 @@ namespace CompUI
             TextBox tippstextbox = new TextBox();
             MainContentPanel.Controls.Add(tippstextbox);
             tippstextbox.Size = MainContentPanel.Size;
-            tippstextbox.Name = "Stats";
+            tippstextbox.Name = "Tipps";
             tippstextbox.Multiline = true;
             tippstextbox.ScrollBars = ScrollBars.Vertical;
             tippstextbox.WordWrap = true;
@@ -113,7 +113,7 @@ namespace CompUI
             TextBox storytextbox = new TextBox();
             MainContentPanel.Controls.Add(storytextbox);
             storytextbox.Size = MainContentPanel.Size;
-            storytextbox.Name = "Stats";
+            storytextbox.Name = "Story";
             storytextbox.Multiline = true;
             storytextbox.ScrollBars = ScrollBars.Vertical;
             storytextbox.WordWrap = true;
@@ -125,7 +125,39 @@ namespace CompUI
 
         private void spells_btn_Click(object sender, EventArgs e)
         {
+            MainContentPanel.Controls.Clear();
+            ListView abilitiesListView = new ListView();
+            MainContentPanel.Controls.Add(abilitiesListView);
+            abilitiesListView.Size = MainContentPanel.Size;
+            abilitiesListView.Name = "Abilities";
+            abilitiesListView.Scrollable = true;
+            abilitiesListView.View = View.Details;
+            List<List<string>> abilityslist = _iLogic.GetAbilitiesData(index);
+            ImageList imagelist = new ImageList();
+            string directorypath= _iLogic.Imagdirectorypath();
+            
+            for(int i = 0; i < abilityslist.Count; i++)
+            {
+                imagelist.Images.Add(Image.FromFile(directorypath + abilityslist[i][5], true));
+            }
 
+            abilitiesListView.LargeImageList = imagelist;
+            abilitiesListView.SmallImageList = imagelist;
+
+            for (int i = 0; i < abilityslist.Count; i++)
+            {
+                ListViewItem abilityitem = new ListViewItem()
+                {
+                    ImageIndex = i
+                };
+                abilityitem.SubItems.Add(abilityslist[i][1]);
+                abilityitem.SubItems.Add(abilityslist[i][2]);
+                abilityitem.SubItems.Add(abilityslist[i][3]);
+                abilityitem.SubItems.Add(abilityslist[i][4]);
+                
+
+                abilitiesListView.Items.Add(abilityitem);
+            }
         }
     }
 }
