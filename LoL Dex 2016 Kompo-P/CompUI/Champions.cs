@@ -58,7 +58,7 @@ namespace CompUI
             {
                 index = lView_Champnames.SelectedIndices[0];
                 stats_btn.PerformClick();
-                ChampIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 7), true);
+                ChampIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 6), true);
             }
         }
 
@@ -105,7 +105,7 @@ namespace CompUI
             storytextbox.ScrollBars = ScrollBars.Vertical;
             storytextbox.WordWrap = true;
 
-            string maininfo = _iLogic.GetChampInfos(index, 4);
+            string maininfo = _iLogic.GetChampInfos(index, 3);
 
             storytextbox.Text = maininfo;
         }

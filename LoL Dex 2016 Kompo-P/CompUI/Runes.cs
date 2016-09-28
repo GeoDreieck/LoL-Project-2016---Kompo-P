@@ -71,7 +71,7 @@ namespace CompUI
                 statsstextbox.Text = maininfo;
 
 
-                RunesIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 7), true);
+                RunesIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetRunesInfos(index, 4), true);
             }
         }
 

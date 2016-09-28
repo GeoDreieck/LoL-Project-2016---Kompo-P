@@ -75,7 +75,7 @@ namespace CompUI
             specialstextbox.ScrollBars = ScrollBars.Vertical;
             specialstextbox.WordWrap = true;
 
-            string maininfo = _iLogic.GetChampInfos(index, 3);
+            string maininfo = _iLogic.GetItemInfos(index, 3);
 
             specialstextbox.Text = maininfo;
         }

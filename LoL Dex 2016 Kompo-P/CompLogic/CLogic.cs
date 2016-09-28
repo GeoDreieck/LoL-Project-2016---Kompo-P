@@ -58,8 +58,8 @@ namespace CompLogic
         public List<List<string>> GetAbilitiesData(int id)
         {
             List<List<string>> abilitylist = new List<List<string>>();
-            int firstAbilityID = Convert.ToInt32(_iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[5].ToString());
-            int numberofAbilitys = Convert.ToInt32(_iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[6].ToString());
+            int firstAbilityID = Convert.ToInt32(_iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[4].ToString());
+            int numberofAbilitys = Convert.ToInt32(_iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[5].ToString());
 
             for (int i = 0; i < numberofAbilitys; i++)
             {
@@ -69,7 +69,6 @@ namespace CompLogic
                     ability.Add(_iDatabase.DataSet().Tables["Abilities"].Rows[firstAbilityID + i].ItemArray[i2 + 1].ToString());
                 }
                 abilitylist.Add(ability);
-                //ability.Clear();
             }
 
             return abilitylist;
@@ -99,7 +98,7 @@ namespace CompLogic
         public List<string> GetIconsforParentitems(int id)
         {
             List<string> iconlist = new List<string>();
-            DataRow[] result = _iDatabase.DataSet().Tables["ItemAbuildsIntoItemB"].Select("ItemAID ==" + id);
+            DataRow[] result = _iDatabase.DataSet().Tables["ItemAbuildsIntoItemB"].Select("ItemAID = " + id);
 
             for(int i = 0; i < result.Length; i++)
             {
