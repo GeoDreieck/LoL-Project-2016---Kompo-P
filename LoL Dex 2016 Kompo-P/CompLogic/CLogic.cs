@@ -126,19 +126,41 @@ namespace CompLogic
 
         public string[,] GetSelectedRunesNames(string kind, string level)
         {
+            string[,] RunesNamesIDPairArray;
+
             int length;
+            if (level == "Stufe 3")
+                level = "3";
+            if (level == "Stufe 2")
+                level = "2";
+            if (level == "Stufe 1")
+                level = "1";
 
-            DataRow[] result = _iDatabase.DataSet().Tables["Runes"].Select("RuneKind ==" + kind + " && TierLevel ==" + level);
-            length = result.Length;
+            DataRow[] result;
+            if (kind == "Alle" && level != "Alle")
+                result = _iDatabase.DataSet().Tables["Runes"].Select("TierLevel = " + level);
+            else
+                if(kind != "Alle" && level == "Alle")
+                    result = _iDatabase.DataSet().Tables["Runes"].Select("RuneKind = '" + kind+ "'");
+                else 
+                     if(kind != "Alle" && level != "Alle")
+                     {
+                         result = _iDatabase.DataSet().Tables["Runes"].Select("(RuneKind = '" + kind + "') AND (TierLevel = " + level+ ")");
+                         
+                     }
+                     else
+                     {
+                        result = _iDatabase.DataSet().Tables["Runes"].Select();
+                     }
 
-            string[,] RunesNamesIDPairArray = new string[length, 2];
+                length = result.Length;
 
+            RunesNamesIDPairArray = new string[length, 2];
             for (int i = 0; i < length; i++)
             {
                 RunesNamesIDPairArray[i, 0] = result[i].ItemArray[0].ToString();
                 RunesNamesIDPairArray[i, 1] = result[i].ItemArray[1].ToString();
             }
-
             return RunesNamesIDPairArray;
         }
 
