@@ -52,22 +52,22 @@ namespace CompLogic
 
         public string GetChampInfos(int id, int infonumber)
         {
-            return _iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[infonumber ].ToString();
+            return _iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[infonumber].ToString();
         }
 
-        public List<List<object>> GetAbilitiesData(int id)
+        public List<List<string>> GetAbilitiesData(int id)
         {
-            List<List<object>> abilitylist = new List<List<object>>();
+            List<List<string>> abilitylist = new List<List<string>>();
             int firstAbilityID = Convert.ToInt32(_iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[5].ToString());
             int numberofAbilitys = Convert.ToInt32(_iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[6].ToString());
 
-            List<object> ability = new List<object>();
+            List<string> ability = new List<string>();
 
             for (int i = 0; i < numberofAbilitys; i++)
             {
                 for (int i2 = 0; i2 < 5; i2++)
                 {
-                    ability.Add(_iDatabase.DataSet().Tables["Abilities"].Rows[firstAbilityID + i2].ItemArray[i2 + 1]);
+                    ability.Add(_iDatabase.DataSet().Tables["Abilities"].Rows[firstAbilityID + i2].ItemArray[i2 + 1].ToString());
                 }
                 abilitylist.Add(ability);
                 ability.Clear();

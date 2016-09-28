@@ -117,10 +117,5 @@ namespace CompUI
         {
 
         }
-
-        private void tipps_btn_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
