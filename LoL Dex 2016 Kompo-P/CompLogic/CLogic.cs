@@ -61,16 +61,15 @@ namespace CompLogic
             int firstAbilityID = Convert.ToInt32(_iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[5].ToString());
             int numberofAbilitys = Convert.ToInt32(_iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[6].ToString());
 
-            List<string> ability = new List<string>();
-
             for (int i = 0; i < numberofAbilitys; i++)
             {
+                List<string> ability = new List<string>();
                 for (int i2 = 0; i2 < 5; i2++)
                 {
-                    ability.Add(_iDatabase.DataSet().Tables["Abilities"].Rows[firstAbilityID + i2].ItemArray[i2 + 1].ToString());
+                    ability.Add(_iDatabase.DataSet().Tables["Abilities"].Rows[firstAbilityID + i].ItemArray[i2 + 1].ToString());
                 }
                 abilitylist.Add(ability);
-                ability.Clear();
+                //ability.Clear();
             }
 
             return abilitylist;
@@ -94,13 +93,13 @@ namespace CompLogic
 
         public string GetItemInfos(int id, int infonumber)
         {
-            return _iDatabase.DataSet().Tables["Items"].Rows[id].ItemArray[infonumber + 1].ToString();
+            return _iDatabase.DataSet().Tables["Items"].Rows[id].ItemArray[infonumber].ToString();
         }
 
         public List<string> GetIconsforParentitems(int id)
         {
             List<string> iconlist = new List<string>();
-            DataRow[] result = _iDatabase.DataSet().Tables["Items"].Select("ItemAID == id");
+            DataRow[] result = _iDatabase.DataSet().Tables["ItemAbuildsIntoItemB"].Select("ItemAID ==" + id);
 
             for(int i = 0; i < result.Length; i++)
             {
@@ -112,7 +111,42 @@ namespace CompLogic
         #endregion
 
         #region Runes
+        public string[,] GetAllRunesNames()
+        {
+            int length = _iDatabase.DataSet().Tables["Runes"].Rows.Count;
+            string[,] runesnames = new string[length, 2];
 
+            for (int i = 0; i < length; i++)
+            {
+                runesnames[i, 0] = _iDatabase.DataSet().Tables["Runes"].Rows[i].ItemArray[0].ToString();
+                runesnames[i, 1] = _iDatabase.DataSet().Tables["Runes"].Rows[i].ItemArray[1].ToString();
+            }
+
+            return runesnames;
+        }
+
+        public string[,] GetSelectedRunesNames(string kind, string level)
+        {
+            int length;
+
+            DataRow[] result = _iDatabase.DataSet().Tables["Runes"].Select("RuneKind ==" + kind + " && TierLevel ==" + level);
+            length = result.Length;
+
+            string[,] RunesNamesIDPairArray = new string[length, 2];
+
+            for (int i = 0; i < length; i++)
+            {
+                RunesNamesIDPairArray[i, 0] = result[i].ItemArray[0].ToString();
+                RunesNamesIDPairArray[i, 1] = result[i].ItemArray[1].ToString();
+            }
+
+            return RunesNamesIDPairArray;
+        }
+
+        public string GetRunesInfos(int id, int infonumber)
+        {
+            return _iDatabase.DataSet().Tables["Runes"].Rows[id].ItemArray[infonumber].ToString();
+        }
         #endregion
 
         #endregion

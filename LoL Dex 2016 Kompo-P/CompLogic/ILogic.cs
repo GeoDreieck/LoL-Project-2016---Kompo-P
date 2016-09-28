@@ -28,6 +28,11 @@ namespace CompLogic
         #endregion
 
         #region Runes
+        string[,] GetAllRunesNames();
+
+        string[,] GetSelectedRunesNames(string kind, string level);
+
+        string GetRunesInfos(int id, int infonumber);
         #endregion
     }
 }
