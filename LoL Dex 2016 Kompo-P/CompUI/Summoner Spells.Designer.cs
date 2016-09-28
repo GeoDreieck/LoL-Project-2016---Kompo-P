@@ -35,8 +35,8 @@
             this.maps_btn = new System.Windows.Forms.Button();
             this.stats_btn = new System.Windows.Forms.Button();
             this.lView_Spells = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Summoner_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,22 +92,25 @@
             // lView_Spells
             // 
             this.lView_Spells.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4});
+            this.ID,
+            this.Summoner_Name});
             this.lView_Spells.LabelEdit = true;
             this.lView_Spells.Location = new System.Drawing.Point(68, 170);
             this.lView_Spells.Name = "lView_Spells";
             this.lView_Spells.Size = new System.Drawing.Size(161, 336);
             this.lView_Spells.TabIndex = 21;
+            this.lView_Spells.View = System.Windows.Forms.View.Details;
             this.lView_Spells.UseCompatibleStateImageBehavior = false;
             // 
-            // columnHeader3
+            // ID
             // 
-            this.columnHeader3.Text = "ID";
+            this.ID.Text = "ID";
+            this.ID.Width = 30;
             // 
-            // columnHeader4
+            // Summoner_Name
             // 
-            this.columnHeader4.Text = "Champion_name";
+            this.Summoner_Name.Text = "Summoner Name";
+            this.Summoner_Name.Width = 150;
             // 
             // Summoner_Spells
             // 
@@ -134,7 +137,7 @@
         private System.Windows.Forms.Button maps_btn;
         private System.Windows.Forms.Button stats_btn;
         private System.Windows.Forms.ListView lView_Spells;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader Summoner_Name;
     }
 }

@@ -33,8 +33,8 @@
             this.stats_btn = new System.Windows.Forms.Button();
             this.build_btn = new System.Windows.Forms.Button();
             this.lView_Items = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Itemname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MainContentPanel = new System.Windows.Forms.Panel();
             this.ParentItemPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.ItemIconBox)).BeginInit();
@@ -83,23 +83,26 @@
             // lView_Items
             // 
             this.lView_Items.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4});
+            this.ID,
+            this.Itemname});
             this.lView_Items.LabelEdit = true;
             this.lView_Items.Location = new System.Drawing.Point(72, 201);
             this.lView_Items.Name = "lView_Items";
             this.lView_Items.Size = new System.Drawing.Size(161, 322);
             this.lView_Items.TabIndex = 20;
             this.lView_Items.UseCompatibleStateImageBehavior = false;
+            this.lView_Items.View = System.Windows.Forms.View.Details;
             this.lView_Items.SelectedIndexChanged += new System.EventHandler(this.lView_Items_SelectedIndexChanged);
             // 
-            // columnHeader3
+            // ID
             // 
-            this.columnHeader3.Text = "ID";
+            this.ID.Text = "ID";
+            this.ID.Width = 30;
             // 
-            // columnHeader4
+            // Itemname
             // 
-            this.columnHeader4.Text = "Champion_name";
+            this.Itemname.Text = "Itemname";
+            this.Itemname.Width = 150;
             // 
             // MainContentPanel
             // 
@@ -141,8 +144,8 @@
         private System.Windows.Forms.Button stats_btn;
         private System.Windows.Forms.Button build_btn;
         private System.Windows.Forms.ListView lView_Items;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader Itemname;
         private System.Windows.Forms.Panel MainContentPanel;
         private System.Windows.Forms.Panel ParentItemPanel;
     }

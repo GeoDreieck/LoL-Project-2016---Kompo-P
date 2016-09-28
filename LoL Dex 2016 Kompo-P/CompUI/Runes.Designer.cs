@@ -34,14 +34,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lView_Runes = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Runenname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MainContentPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.RunesIconBox)).BeginInit();
             this.SuspendLayout();
             // 
             // RunesIconBox
             // 
+            this.RunesIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.RunesIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.RunesIconBox.Location = new System.Drawing.Point(52, 28);
             this.RunesIconBox.Name = "RunesIconBox";
@@ -63,6 +64,8 @@
             this.rune_level_box.Size = new System.Drawing.Size(121, 21);
             this.rune_level_box.TabIndex = 15;
             this.rune_level_box.Tag = "";
+            //Combox1.SelectedIndex = Combox1.FindStringExact("test1")
+            this.rune_level_box.SelectedIndex = this.rune_level_box.FindStringExact("Alle");
             this.rune_level_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // rune_proberty_box
@@ -79,6 +82,7 @@
             this.rune_proberty_box.Name = "rune_proberty_box";
             this.rune_proberty_box.Size = new System.Drawing.Size(121, 21);
             this.rune_proberty_box.TabIndex = 16;
+            this.rune_proberty_box.SelectedIndex = this.rune_proberty_box.FindStringExact("Alle");
             this.rune_proberty_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // label1
@@ -104,23 +108,26 @@
             // lView_Runes
             // 
             this.lView_Runes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4});
+            this.ID,
+            this.Runenname});
             this.lView_Runes.LabelEdit = true;
             this.lView_Runes.Location = new System.Drawing.Point(52, 165);
             this.lView_Runes.Name = "lView_Runes";
             this.lView_Runes.Size = new System.Drawing.Size(161, 336);
             this.lView_Runes.TabIndex = 19;
             this.lView_Runes.UseCompatibleStateImageBehavior = false;
+            this.lView_Runes.View = System.Windows.Forms.View.Details;
             this.lView_Runes.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // columnHeader3
+            // ID
             // 
-            this.columnHeader3.Text = "ID";
+            this.ID.Text = "ID";
+            this.ID.Width = 30;
             // 
-            // columnHeader4
+            // Runenname
             // 
-            this.columnHeader4.Text = "Champion_name";
+            this.Runenname.Text = "Runenname";
+            this.Runenname.Width = 150;
             // 
             // MainContentPanel
             // 
@@ -157,8 +164,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView lView_Runes;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader Runenname;
         private System.Windows.Forms.Panel MainContentPanel;
     }
 }
