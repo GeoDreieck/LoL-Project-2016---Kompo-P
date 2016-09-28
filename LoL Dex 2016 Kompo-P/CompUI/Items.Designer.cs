@@ -42,6 +42,7 @@
             // 
             // ItemIconBox
             // 
+            this.ItemIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ItemIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ItemIconBox.Location = new System.Drawing.Point(72, 50);
             this.ItemIconBox.Name = "ItemIconBox";
