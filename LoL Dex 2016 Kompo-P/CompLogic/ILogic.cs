@@ -16,7 +16,7 @@ namespace CompLogic
 
         string GetChampInfos(int id, int infonumber);
 
-        List<List<object>> GetAbilitiesData(int id);
+        List<List<string>> GetAbilitiesData(int id);
         #endregion
 
         #region Items

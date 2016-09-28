@@ -29,6 +29,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Start\Test.csproj",
 		{A29C117B-6773-4671-B240-087FC0944A72} = {A29C117B-6773-4671-B240-087FC0944A72}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{7C2602CC-D126-4247-8818-2B9C5AC07868}"
+	ProjectSection(SolutionItems) = preProject
+		..\Images\Aatrox.png = ..\Images\Aatrox.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
