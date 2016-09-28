@@ -104,7 +104,7 @@ namespace CompUI
                 stats_btn.PerformClick();
                 ItemIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetItemInfos(index, 5), true);
 
-                List<string> iconlist = _iLogic.GetIconsforParentitems(index);
+                List<string> iconlist = _iLogic.GetIconsforParentitems(index+1);
                 ParentItemPanel.Controls.Clear();
 
                 for (int i = 0; i < iconlist.Count; i++)

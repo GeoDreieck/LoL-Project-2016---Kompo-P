@@ -102,7 +102,7 @@ namespace CompLogic
 
             for(int i = 0; i < result.Length; i++)
             {
-                iconlist.Add(_iDatabase.DataSet().Tables["Items"].Rows[Convert.ToInt32(result[i].ItemArray[2].ToString())].ItemArray[5].ToString());
+                iconlist.Add(_iDatabase.DataSet().Tables["Items"].Rows[Convert.ToInt32(result[i].ItemArray[1].ToString())-1].ItemArray[5].ToString());
             }
 
             return iconlist; 

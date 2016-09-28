@@ -30,7 +30,6 @@
         {
             this.stats_btn = new System.Windows.Forms.Button();
             this.spells_btn = new System.Windows.Forms.Button();
-            this.tipps_btn = new System.Windows.Forms.Button();
             this.story_btn = new System.Windows.Forms.Button();
             this.ChampIconBox = new System.Windows.Forms.PictureBox();
             this.lView_Champnames = new System.Windows.Forms.ListView();
@@ -45,7 +44,7 @@
             this.stats_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.stats_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.stats_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stats_btn.Location = new System.Drawing.Point(309, 26);
+            this.stats_btn.Location = new System.Drawing.Point(182, 42);
             this.stats_btn.Name = "stats_btn";
             this.stats_btn.Size = new System.Drawing.Size(168, 29);
             this.stats_btn.TabIndex = 0;
@@ -58,7 +57,7 @@
             this.spells_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.spells_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.spells_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.spells_btn.Location = new System.Drawing.Point(309, 55);
+            this.spells_btn.Location = new System.Drawing.Point(356, 42);
             this.spells_btn.Name = "spells_btn";
             this.spells_btn.Size = new System.Drawing.Size(168, 29);
             this.spells_btn.TabIndex = 1;
@@ -66,24 +65,11 @@
             this.spells_btn.UseVisualStyleBackColor = false;
             this.spells_btn.Click += new System.EventHandler(this.spells_btn_Click);
             // 
-            // tipps_btn
-            // 
-            this.tipps_btn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tipps_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.tipps_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.tipps_btn.Location = new System.Drawing.Point(477, 26);
-            this.tipps_btn.Name = "tipps_btn";
-            this.tipps_btn.Size = new System.Drawing.Size(168, 29);
-            this.tipps_btn.TabIndex = 2;
-            this.tipps_btn.Text = "Tipps";
-            this.tipps_btn.UseVisualStyleBackColor = false;
-            this.tipps_btn.Click += new System.EventHandler(this.tipps_btn_Click);
-            // 
             // story_btn
             // 
             this.story_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.story_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.story_btn.Location = new System.Drawing.Point(477, 55);
+            this.story_btn.Location = new System.Drawing.Point(530, 42);
             this.story_btn.Name = "story_btn";
             this.story_btn.Size = new System.Drawing.Size(168, 29);
             this.story_btn.TabIndex = 3;
@@ -142,7 +128,6 @@
             this.Controls.Add(this.lView_Champnames);
             this.Controls.Add(this.ChampIconBox);
             this.Controls.Add(this.story_btn);
-            this.Controls.Add(this.tipps_btn);
             this.Controls.Add(this.spells_btn);
             this.Controls.Add(this.stats_btn);
             this.Name = "Champions";
@@ -157,7 +142,6 @@
 
         private System.Windows.Forms.Button stats_btn;
         private System.Windows.Forms.Button spells_btn;
-        private System.Windows.Forms.Button tipps_btn;
         private System.Windows.Forms.Button story_btn;
         private System.Windows.Forms.PictureBox ChampIconBox;
         private System.Windows.Forms.ListView lView_Champnames;

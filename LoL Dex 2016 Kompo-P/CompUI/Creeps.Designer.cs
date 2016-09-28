@@ -34,9 +34,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.spells_btn = new System.Windows.Forms.Button();
             this.stats_btn = new System.Windows.Forms.Button();
-            this.lView_Runes = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lView_creeps = new System.Windows.Forms.ListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CreepName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,32 +89,36 @@
             this.stats_btn.Text = "Stats";
             this.stats_btn.UseVisualStyleBackColor = false;
             // 
-            // lView_Runes
+            // lView_creeps
             // 
-            this.lView_Runes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4});
-            this.lView_Runes.LabelEdit = true;
-            this.lView_Runes.Location = new System.Drawing.Point(61, 160);
-            this.lView_Runes.Name = "lView_Runes";
-            this.lView_Runes.Size = new System.Drawing.Size(161, 336);
-            this.lView_Runes.TabIndex = 14;
-            this.lView_Runes.UseCompatibleStateImageBehavior = false;
+            this.lView_creeps.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.CreepName});
+            this.lView_creeps.LabelEdit = true;
+            this.lView_creeps.Location = new System.Drawing.Point(61, 160);
+            this.lView_creeps.Name = "lView_creeps";
+            this.lView_creeps.Size = new System.Drawing.Size(161, 336);
+            this.lView_creeps.TabIndex = 14;
+            this.lView_creeps.UseCompatibleStateImageBehavior = false;
+            this.lView_creeps.View = System.Windows.Forms.View.Details;
+            this.lView_creeps.SelectedIndexChanged += new System.EventHandler(this.lView_creeps_SelectedIndexChanged);
             // 
-            // columnHeader3
+            // ID
             // 
-            this.columnHeader3.Text = "ID";
+            this.ID.Text = "ID";
+            this.ID.Width = 30;
             // 
-            // columnHeader4
+            // CreepName
             // 
-            this.columnHeader4.Text = "Champion_name";
+            this.CreepName.Text = "Creep Name";
+            this.CreepName.Width = 150;
             // 
             // Creeps
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 508);
-            this.Controls.Add(this.lView_Runes);
+            this.Controls.Add(this.lView_creeps);
             this.Controls.Add(this.lView_Content);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.spells_btn);
@@ -133,8 +137,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button spells_btn;
         private System.Windows.Forms.Button stats_btn;
-        private System.Windows.Forms.ListView lView_Runes;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ListView lView_creeps;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader CreepName;
     }
 }

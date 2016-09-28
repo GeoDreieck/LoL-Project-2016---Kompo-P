@@ -30,5 +30,10 @@ namespace CompUI
         {
 
         }
+
+        private void lView_creeps_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
