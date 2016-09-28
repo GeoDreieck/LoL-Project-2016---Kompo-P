@@ -107,7 +107,6 @@
             this.lView_Champnames.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.name});
-            this.lView_Champnames.LabelEdit = true;
             this.lView_Champnames.Location = new System.Drawing.Point(31, 170);
             this.lView_Champnames.MultiSelect = false;
             this.lView_Champnames.Name = "lView_Champnames";
