@@ -52,7 +52,7 @@ namespace CompLogic
 
         public string GetChampInfos(int id, int infonumber)
         {
-            return _iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[infonumber].ToString();
+            return _iDatabase.DataSet().Tables["Champs"].Rows[id].ItemArray[infonumber ].ToString();
         }
 
         public List<List<object>> GetAbilitiesData(int id)
