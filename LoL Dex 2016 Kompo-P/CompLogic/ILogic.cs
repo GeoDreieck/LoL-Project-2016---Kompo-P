@@ -34,5 +34,9 @@ namespace CompLogic
 
         string GetRunesInfos(int id, int infonumber);
         #endregion
+
+        #region Masterie
+        string GetTree(int treenumber);
+        #endregion
     }
 }
