@@ -68,6 +68,51 @@ namespace Test
             dataTableAbilities = dataTableAbilities.DefaultView.ToTable();
             _iDatabase.AddTabletoDataSet(dataTableAbilities);
 
+            sql = string.Format("SELECT * FROM Items;");
+            DataTable dataTableItems = new DataTable("Items");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableItems.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableItems.DefaultView.Sort = "ID";
+            dataTableItems = dataTableItems.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableItems);
+
+            sql = string.Format("SELECT * FROM Runes;");
+            DataTable dataTableRunes = new DataTable("Runes");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableRunes.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableRunes.DefaultView.Sort = "ID";
+            dataTableRunes = dataTableRunes.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableRunes);
+
+            sql = string.Format("SELECT * FROM ItemAbuildIntoItemB;");
+            DataTable dataTableItemAbuildIntoItemB = new DataTable("ItemAbuildIntoItemB");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableItemAbuildIntoItemB.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableItemAbuildIntoItemB.DefaultView.Sort = "ID";
+            dataTableItemAbuildIntoItemB = dataTableItemAbuildIntoItemB.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableItemAbuildIntoItemB);
+
+            sql = string.Format("SELECT * FROM Masteries;");
+            DataTable dataTableMasteries = new DataTable("Masteries");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableMasteries.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableMasteries.DefaultView.Sort = "ID";
+            dataTableMasteries = dataTableMasteries.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableMasteries);
+
+            sql = string.Format("SELECT * FROM SummonerSpells;");
+            DataTable dataTableSummonerSpells = new DataTable("SummonerSpells");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableSummonerSpells.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableSummonerSpells.DefaultView.Sort = "ID";
+            dataTableSummonerSpells = dataTableSummonerSpells.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableSummonerSpells);
+
             //GetChampNames Test
             string[,] testarray = _iLogic.GetChampNames();
             for(int i = 0; i < (testarray.Length/2); i++)
