@@ -50,7 +50,7 @@ namespace CompUI
 
             //Öffne Stats des ersten Items
             stats_btn.PerformClick();
-            ChampIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 6), true);
+            ChampIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetChampInfos(index, 7), true);
         }
 
         private void ChampIconBox_Click(object sender, EventArgs e)
@@ -75,6 +75,11 @@ namespace CompUI
 
             lView_Content.Items.Clear();
             lView_Content.Items.Add(maininfo);
+        }
+
+        private void tipps_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

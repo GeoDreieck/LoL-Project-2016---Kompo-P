@@ -77,6 +77,7 @@
             this.tipps_btn.TabIndex = 2;
             this.tipps_btn.Text = "Tipps";
             this.tipps_btn.UseVisualStyleBackColor = false;
+            this.tipps_btn.Click += new System.EventHandler(this.tipps_btn_Click);
             // 
             // story_btn
             // 
