@@ -28,7 +28,9 @@ namespace CompUI
 
         private void Masteries_Load(object sender, EventArgs e)
         {
-
+            Tree1.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetTree(1), true);
+            Tree2.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetTree(2), true);
+            Tree3.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetTree(3), true);
         }
     }
 }

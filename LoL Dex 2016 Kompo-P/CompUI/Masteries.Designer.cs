@@ -28,63 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.Tree1 = new System.Windows.Forms.PictureBox();
+            this.Tree2 = new System.Windows.Forms.PictureBox();
+            this.Tree3 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Tree1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tree2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tree3)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // Tree1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(57, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 408);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.Tree1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Tree1.Location = new System.Drawing.Point(57, 47);
+            this.Tree1.Name = "Tree1";
+            this.Tree1.Size = new System.Drawing.Size(210, 408);
+            this.Tree1.TabIndex = 0;
+            this.Tree1.TabStop = false;
             // 
-            // pictureBox2
+            // Tree2
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(283, 47);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(210, 408);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.Tree2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Tree2.Location = new System.Drawing.Point(283, 47);
+            this.Tree2.Name = "Tree2";
+            this.Tree2.Size = new System.Drawing.Size(210, 408);
+            this.Tree2.TabIndex = 1;
+            this.Tree2.TabStop = false;
             // 
-            // pictureBox3
+            // Tree3
             // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox3.Location = new System.Drawing.Point(509, 47);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(210, 408);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.Tree3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Tree3.Location = new System.Drawing.Point(509, 47);
+            this.Tree3.Name = "Tree3";
+            this.Tree3.Size = new System.Drawing.Size(210, 408);
+            this.Tree3.TabIndex = 2;
+            this.Tree3.TabStop = false;
             // 
             // Masteries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 483);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Tree3);
+            this.Controls.Add(this.Tree2);
+            this.Controls.Add(this.Tree1);
             this.Name = "Masteries";
             this.Text = "Masteries";
             this.Load += new System.EventHandler(this.Masteries_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tree1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tree2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Tree3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox Tree1;
+        private System.Windows.Forms.PictureBox Tree2;
+        private System.Windows.Forms.PictureBox Tree3;
     }
 }
