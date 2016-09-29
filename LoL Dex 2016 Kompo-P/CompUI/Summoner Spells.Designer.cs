@@ -88,7 +88,7 @@
             // Summoner_Spells
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = global::CompUI.Properties.Resources.Unbenannt1;
+            this.BackgroundImage = global::CompUI.Properties.Resources.MainBackground;
             this.ClientSize = new System.Drawing.Size(781, 535);
             this.Controls.Add(this.CooldownContentPanel);
             this.Controls.Add(this.MainContentPanel);

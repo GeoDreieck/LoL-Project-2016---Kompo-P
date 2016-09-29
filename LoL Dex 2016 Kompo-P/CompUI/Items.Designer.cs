@@ -126,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::CompUI.Properties.Resources.Unbenannt1;
+            this.BackgroundImage = global::CompUI.Properties.Resources.MainBackground;
             this.ClientSize = new System.Drawing.Size(850, 568);
             this.Controls.Add(this.ParentItemPanel);
             this.Controls.Add(this.MainContentPanel);

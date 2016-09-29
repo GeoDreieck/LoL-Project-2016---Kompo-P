@@ -140,6 +140,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 525);
+            this.BackgroundImage = global::CompUI.Properties.Resources.MainBackground;
             this.Controls.Add(this.MainContentPanel);
             this.Controls.Add(this.lView_Runes);
             this.Controls.Add(this.label2);
@@ -153,6 +154,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.RunesIconBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
 
         }
 
