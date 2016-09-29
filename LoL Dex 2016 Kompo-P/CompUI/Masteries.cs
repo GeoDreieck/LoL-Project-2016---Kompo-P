@@ -460,5 +460,10 @@ namespace CompUI
                 timer.Stop();
             }
         }
+
+        private void FuryPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
