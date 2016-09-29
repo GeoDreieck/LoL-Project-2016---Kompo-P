@@ -278,5 +278,10 @@ namespace CompUI
             System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
             ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(39));
         }
+
+        private void FuryPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

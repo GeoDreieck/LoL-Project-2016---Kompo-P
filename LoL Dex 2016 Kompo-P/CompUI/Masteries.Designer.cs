@@ -412,6 +412,7 @@
             this.FuryPanel.Name = "FuryPanel";
             this.FuryPanel.Size = new System.Drawing.Size(41, 40);
             this.FuryPanel.TabIndex = 3;
+            this.FuryPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.FuryPanel_Paint);
             this.FuryPanel.MouseHover += new System.EventHandler(this.FuryPanel_MouseHover);
             // 
             // Sorcerypanel
