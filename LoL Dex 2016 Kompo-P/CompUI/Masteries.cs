@@ -26,6 +26,8 @@ namespace CompUI
             InitializeComponent();
 
             _iLogic = iLogic;
+
+            
         }
 
         private void Masteries_Load(object sender, EventArgs e)
@@ -33,6 +35,9 @@ namespace CompUI
             Tree1.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetTree(1), true);
             Tree2.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetTree(2), true);
             Tree3.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetTree(3), true);
+
+            timer.Tick += timer_Tick;
+            timer.Start();
         }
 
         private void timer_Tick(object sender, EventArgs e)

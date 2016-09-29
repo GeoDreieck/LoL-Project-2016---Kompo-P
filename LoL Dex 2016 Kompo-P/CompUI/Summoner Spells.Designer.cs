@@ -39,6 +39,7 @@
             // 
             // SpellsIconBox
             // 
+            this.SpellsIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.SpellsIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.SpellsIconBox.Location = new System.Drawing.Point(68, 33);
             this.SpellsIconBox.Name = "SpellsIconBox";
@@ -81,7 +82,7 @@
             // 
             this.CooldownContentPanel.Location = new System.Drawing.Point(268, 170);
             this.CooldownContentPanel.Name = "CooldownContentPanel";
-            this.CooldownContentPanel.Size = new System.Drawing.Size(136, 49);
+            this.CooldownContentPanel.Size = new System.Drawing.Size(222, 28);
             this.CooldownContentPanel.TabIndex = 23;
             // 
             // Summoner_Spells

@@ -73,5 +73,5 @@ namespace CompUI
                 CreepsIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetCreepInfos(index, 5), true);
             }
         }
-    }
+      }
 }

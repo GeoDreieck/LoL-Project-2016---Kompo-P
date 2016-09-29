@@ -38,6 +38,7 @@
             // 
             // CreepsIconBox
             // 
+            this.CreepsIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.CreepsIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.CreepsIconBox.Location = new System.Drawing.Point(61, 20);
             this.CreepsIconBox.Name = "CreepsIconBox";

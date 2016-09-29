@@ -107,6 +107,8 @@
             // 
             // MainContentPanel
             // 
+            this.MainContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MainContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.MainContentPanel.Location = new System.Drawing.Point(261, 201);
             this.MainContentPanel.Name = "MainContentPanel";
             this.MainContentPanel.Size = new System.Drawing.Size(566, 322);
