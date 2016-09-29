@@ -64,7 +64,6 @@
             this.rune_level_box.Size = new System.Drawing.Size(121, 21);
             this.rune_level_box.TabIndex = 15;
             this.rune_level_box.Tag = "";
-            this.rune_level_box.SelectedIndex = 0;
             this.rune_level_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // rune_proberty_box
@@ -81,12 +80,12 @@
             this.rune_proberty_box.Name = "rune_proberty_box";
             this.rune_proberty_box.Size = new System.Drawing.Size(121, 21);
             this.rune_proberty_box.TabIndex = 16;
-            this.rune_proberty_box.SelectedIndex = 0;
             this.rune_proberty_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(369, 41);
             this.label1.Name = "label1";
@@ -97,6 +96,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(532, 41);
             this.label2.Name = "label2";
@@ -139,8 +139,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 525);
             this.BackgroundImage = global::CompUI.Properties.Resources.MainBackground;
+            this.ClientSize = new System.Drawing.Size(748, 525);
             this.Controls.Add(this.MainContentPanel);
             this.Controls.Add(this.lView_Runes);
             this.Controls.Add(this.label2);
@@ -148,14 +148,14 @@
             this.Controls.Add(this.rune_proberty_box);
             this.Controls.Add(this.rune_level_box);
             this.Controls.Add(this.RunesIconBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Runes";
             this.Text = "Runes";
             this.Load += new System.EventHandler(this.Runes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RunesIconBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
 
         }
 

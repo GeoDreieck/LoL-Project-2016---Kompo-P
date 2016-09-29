@@ -135,13 +135,13 @@
             this.Controls.Add(this.stats_btn);
             this.Controls.Add(this.special_btn);
             this.Controls.Add(this.ItemIconBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Items";
             this.Text = "Items";
             this.Load += new System.EventHandler(this.Items_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ItemIconBox)).EndInit();
             this.ResumeLayout(false);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
 
         }
 
