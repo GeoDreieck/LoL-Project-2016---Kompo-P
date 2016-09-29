@@ -64,6 +64,7 @@ namespace CompUI
                 statsstextbox.Multiline = true;
                 statsstextbox.ScrollBars = ScrollBars.Vertical;
                 statsstextbox.WordWrap = true;
+                statsstextbox.ReadOnly = true;
 
                 string maininfo = _iLogic.GetSummonerSpellsInfo(index, 2);
 
@@ -76,6 +77,7 @@ namespace CompUI
                 cooldownstextbox.Name = "Stats";
                 cooldownstextbox.Multiline = true;
                 cooldownstextbox.WordWrap = true;
+                cooldownstextbox.ReadOnly = true;
 
                 string cooldowninfo = "Cooldown: " + _iLogic.GetSummonerSpellsInfo(index, 3);
 

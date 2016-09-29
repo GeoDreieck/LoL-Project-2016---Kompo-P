@@ -45,9 +45,9 @@
             this.ItemIconBox.BackColor = System.Drawing.Color.Transparent;
             this.ItemIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ItemIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ItemIconBox.Location = new System.Drawing.Point(72, 50);
+            this.ItemIconBox.Location = new System.Drawing.Point(31, 12);
             this.ItemIconBox.Name = "ItemIconBox";
-            this.ItemIconBox.Size = new System.Drawing.Size(170, 115);
+            this.ItemIconBox.Size = new System.Drawing.Size(133, 133);
             this.ItemIconBox.TabIndex = 12;
             this.ItemIconBox.TabStop = false;
             // 
@@ -87,7 +87,7 @@
             this.ID,
             this.Itemname});
             this.lView_Items.LabelEdit = true;
-            this.lView_Items.Location = new System.Drawing.Point(72, 201);
+            this.lView_Items.Location = new System.Drawing.Point(31, 170);
             this.lView_Items.Name = "lView_Items";
             this.lView_Items.Size = new System.Drawing.Size(161, 322);
             this.lView_Items.TabIndex = 20;

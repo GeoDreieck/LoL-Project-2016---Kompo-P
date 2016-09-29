@@ -72,26 +72,11 @@ namespace CompUI
             statsstextbox.Multiline = true;
             statsstextbox.ScrollBars = ScrollBars.Vertical;
             statsstextbox.WordWrap = true;
+            statsstextbox.ReadOnly = true;
 
             string maininfo = _iLogic.GetChampInfos(index, 2);
 
             statsstextbox.Text = maininfo;
-        }
-
-        private void tipps_btn_Click(object sender, EventArgs e)
-        {
-            MainContentPanel.Controls.Clear();
-            TextBox tippstextbox = new TextBox();
-            MainContentPanel.Controls.Add(tippstextbox);
-            tippstextbox.Size = MainContentPanel.Size;
-            tippstextbox.Name = "Tipps";
-            tippstextbox.Multiline = true;
-            tippstextbox.ScrollBars = ScrollBars.Vertical;
-            tippstextbox.WordWrap = true;
-
-            string maininfo = _iLogic.GetChampInfos(index, 3);
-
-            tippstextbox.Text = maininfo;
         }
 
         private void story_btn_Click(object sender, EventArgs e)
@@ -104,6 +89,7 @@ namespace CompUI
             storytextbox.Multiline = true;
             storytextbox.ScrollBars = ScrollBars.Vertical;
             storytextbox.WordWrap = true;
+            storytextbox.ReadOnly = true;
 
             string maininfo = _iLogic.GetChampInfos(index, 3);
 
@@ -122,6 +108,7 @@ namespace CompUI
             abilitiesListView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             abilitiesListView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             abilitiesListView.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            abilitiesListView.ReadOnly = true;
 
             List<List<string>> abilityslist = _iLogic.GetAbilitiesData(index);
             ImageList imagelist = new ImageList();

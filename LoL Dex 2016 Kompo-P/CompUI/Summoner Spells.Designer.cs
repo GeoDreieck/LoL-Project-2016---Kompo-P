@@ -41,9 +41,9 @@
             // 
             this.SpellsIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.SpellsIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.SpellsIconBox.Location = new System.Drawing.Point(68, 33);
+            this.SpellsIconBox.Location = new System.Drawing.Point(31, 12);
             this.SpellsIconBox.Name = "SpellsIconBox";
-            this.SpellsIconBox.Size = new System.Drawing.Size(170, 115);
+            this.SpellsIconBox.Size = new System.Drawing.Size(133, 133);
             this.SpellsIconBox.TabIndex = 19;
             this.SpellsIconBox.TabStop = false;
             // 
@@ -53,7 +53,7 @@
             this.ID,
             this.Summoner_Name});
             this.lView_Spells.LabelEdit = true;
-            this.lView_Spells.Location = new System.Drawing.Point(68, 170);
+            this.lView_Spells.Location = new System.Drawing.Point(31, 170);
             this.lView_Spells.Name = "lView_Spells";
             this.lView_Spells.Size = new System.Drawing.Size(161, 336);
             this.lView_Spells.TabIndex = 21;

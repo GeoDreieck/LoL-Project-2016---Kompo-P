@@ -58,6 +58,7 @@ namespace CompUI
             statsstextbox.Multiline = true;
             statsstextbox.ScrollBars = ScrollBars.Vertical;
             statsstextbox.WordWrap = true;
+            statsstextbox.ReadOnly = true;
 
             string maininfo = _iLogic.GetItemInfos(index, 2);
 
@@ -74,6 +75,7 @@ namespace CompUI
             specialstextbox.Multiline = true;
             specialstextbox.ScrollBars = ScrollBars.Vertical;
             specialstextbox.WordWrap = true;
+            specialstextbox.ReadOnly = true;
 
             string maininfo = _iLogic.GetItemInfos(index, 3);
 

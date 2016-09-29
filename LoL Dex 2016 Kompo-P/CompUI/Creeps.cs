@@ -65,6 +65,7 @@ namespace CompUI
                 creepsstatbox.Multiline = true;
                 creepsstatbox.ScrollBars = ScrollBars.Vertical;
                 creepsstatbox.WordWrap = true;
+                creepsstatbox.ReadOnly = true;
 
                 string maininfo = "Spawntime: " + _iLogic.GetCreepInfos(index, 2) + "\n Buff: " + _iLogic.GetCreepInfos(index, 3) + "\n Gold: " + _iLogic.GetCreepInfos(index, 4);
 

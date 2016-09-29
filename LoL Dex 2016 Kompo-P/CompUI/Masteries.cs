@@ -38,6 +38,7 @@ namespace CompUI
 
             timer.Tick += timer_Tick;
             timer.Start();
+            Masterieinfo.ReadOnly = true;
         }
 
         private void timer_Tick(object sender, EventArgs e)

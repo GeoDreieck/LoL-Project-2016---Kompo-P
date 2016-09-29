@@ -6,8 +6,6 @@ namespace CompData
 {
     internal class CDatabaseAccess : ADatabase
     {
-
-
         #region ctor
         internal CDatabaseAccess(string connectionString)
         {
@@ -16,24 +14,5 @@ namespace CompData
             this.Create(connectionString, providerString);
         }
         #endregion
-
-        #region Implementierung der Abstrakte Methoden SQL Befehle sind DB spezifisch
-        internal override string GetSqlGetMake()
-        {
-            return "SELECT DISTINCT hersteller FROM autos ORDER BY hersteller;";
-        }
-
-        internal override string GetSqlGetModel(string make)
-        {
-            return string.Format(
-                "SELECT DISTINCT modell FROM autos WHERE hersteller='{0}' ORDER BY modell;", make);
-        }
-        
-        #endregion
-
-        #region Implementierung Schnittstellenmethoden
-
-        #endregion
-
     }
 }

@@ -33,19 +33,17 @@ namespace LoL_Dex_2016
             _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionString);
             _iDatabase.Open();
 
+            // Für CompData wird alles erzeugt, was zum lokalem Abspeichern der DB notwendig ist.
             DbDataReader dbDataReader;
-
             string sql;
-
             DataSet dataSet = new DataSet();
 
             // Mittlere Schicht CompLogic wird es zweites erzugt
             string imagedirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\Images\\";
             _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase, imagedirectory);
 
-            _overview = AFactoryIForms.CreateInstance("Overview", _iLogic);
-
             // Oberste Schicht CompUI
+            _overview = AFactoryIForms.CreateInstance("Overview", _iLogic);
 
             //Daten aus der Datenbank laden
             sql = string.Format("SELECT * FROM Champs;");

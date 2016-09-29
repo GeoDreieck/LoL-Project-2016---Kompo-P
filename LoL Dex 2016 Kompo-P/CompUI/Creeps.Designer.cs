@@ -40,9 +40,9 @@
             // 
             this.CreepsIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.CreepsIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.CreepsIconBox.Location = new System.Drawing.Point(61, 20);
+            this.CreepsIconBox.Location = new System.Drawing.Point(31, 12);
             this.CreepsIconBox.Name = "CreepsIconBox";
-            this.CreepsIconBox.Size = new System.Drawing.Size(170, 115);
+            this.CreepsIconBox.Size = new System.Drawing.Size(133, 133);
             this.CreepsIconBox.TabIndex = 12;
             this.CreepsIconBox.TabStop = false;
             // 
@@ -52,7 +52,7 @@
             this.ID,
             this.CreepName});
             this.lView_creeps.LabelEdit = true;
-            this.lView_creeps.Location = new System.Drawing.Point(61, 160);
+            this.lView_creeps.Location = new System.Drawing.Point(31, 171);
             this.lView_creeps.Name = "lView_creeps";
             this.lView_creeps.Size = new System.Drawing.Size(161, 336);
             this.lView_creeps.TabIndex = 14;

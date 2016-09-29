@@ -44,9 +44,9 @@
             // 
             this.RunesIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.RunesIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.RunesIconBox.Location = new System.Drawing.Point(52, 28);
+            this.RunesIconBox.Location = new System.Drawing.Point(31, 12);
             this.RunesIconBox.Name = "RunesIconBox";
-            this.RunesIconBox.Size = new System.Drawing.Size(170, 115);
+            this.RunesIconBox.Size = new System.Drawing.Size(133, 133);
             this.RunesIconBox.TabIndex = 12;
             this.RunesIconBox.TabStop = false;
             // 
@@ -64,8 +64,7 @@
             this.rune_level_box.Size = new System.Drawing.Size(121, 21);
             this.rune_level_box.TabIndex = 15;
             this.rune_level_box.Tag = "";
-            //Combox1.SelectedIndex = Combox1.FindStringExact("test1")
-            this.rune_level_box.SelectedIndex = this.rune_level_box.FindStringExact("Alle");
+            this.rune_level_box.SelectedIndex = 0;
             this.rune_level_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // rune_proberty_box
@@ -82,7 +81,7 @@
             this.rune_proberty_box.Name = "rune_proberty_box";
             this.rune_proberty_box.Size = new System.Drawing.Size(121, 21);
             this.rune_proberty_box.TabIndex = 16;
-            this.rune_proberty_box.SelectedIndex = this.rune_proberty_box.FindStringExact("Alle");
+            this.rune_proberty_box.SelectedIndex = 0;
             this.rune_proberty_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // label1
@@ -111,7 +110,7 @@
             this.ID,
             this.Runenname});
             this.lView_Runes.LabelEdit = true;
-            this.lView_Runes.Location = new System.Drawing.Point(52, 165);
+            this.lView_Runes.Location = new System.Drawing.Point(31, 170);
             this.lView_Runes.Name = "lView_Runes";
             this.lView_Runes.Size = new System.Drawing.Size(161, 336);
             this.lView_Runes.TabIndex = 19;

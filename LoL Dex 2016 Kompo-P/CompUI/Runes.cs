@@ -65,6 +65,7 @@ namespace CompUI
                 statsstextbox.Multiline = true;
                 statsstextbox.ScrollBars = ScrollBars.Vertical;
                 statsstextbox.WordWrap = true;
+                statsstextbox.ReadOnly = true;
 
                 string maininfo =  _iLogic.GetRunesInfos(index, 2) + " " + _iLogic.GetRunesInfos(index, 3);
 
