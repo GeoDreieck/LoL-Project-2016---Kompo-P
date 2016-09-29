@@ -127,7 +127,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.BackgroundImage = global::CompUI.Properties.Resources.tamil_flower_actress_white_wallpaper_babies_flowers_73639;
             this.ClientSize = new System.Drawing.Size(365, 355);
             this.Controls.Add(this.Items_Button);
             this.Controls.Add(this.Masterie_Button);

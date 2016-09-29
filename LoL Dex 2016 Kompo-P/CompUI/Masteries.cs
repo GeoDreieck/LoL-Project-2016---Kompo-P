@@ -17,6 +17,8 @@ namespace CompUI
         #region fields
         // Assoziation zur Komponente CompLogic
         private ILogic _iLogic;
+
+        private Timer timer = new Timer();
         #endregion
 
         public Masteries(ILogic iLogic)
@@ -33,250 +35,430 @@ namespace CompUI
             Tree3.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetTree(3), true);
         }
 
-        private void FuryPanel_MouseHover(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
         {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(0));
-        }
+            Rectangle r;
+            int i = 0;
+            try
+            {
+                r = FuryPanel.RectangleToScreen(FuryPanel.ClientRectangle);
+            
+            
 
-        private void Sorcerypanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(1));
-        }
+            if (r.Contains(MousePosition))
+            {
+                Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+            }
+            else
+            {
+                i++;
+                r = Sorcerypanel.RectangleToScreen(Sorcerypanel.ClientRectangle);
 
-        private void ExposeWeaknesspanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(5));
-        }
+                if (r.Contains(MousePosition))
+                {
+                    Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                }
+                else
+                {
+                    i++;
+                    r = DoubleEdgedSwordpanel.RectangleToScreen(DoubleEdgedSwordpanel.ClientRectangle);
 
-        private void Feastpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(4));
-        }
+                    if (r.Contains(MousePosition))
+                    {
+                        Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(4, 2);
+                    }
+                    else
+                    {
+                        i++;
+                        r = Feastpanel.RectangleToScreen(Feastpanel.ClientRectangle);
 
-        private void DoubleEdgedSwordpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(3));
-        }
+                        if (r.Contains(MousePosition))
+                        {
+                            Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(3, 2);
+                        }
+                        else
+                        {
+                            i++;
+                            r = ExposeWeaknesspanel.RectangleToScreen(ExposeWeaknesspanel.ClientRectangle);
 
-        private void Vampirismpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(6));
-        }
+                            if (r.Contains(MousePosition))
+                            {
+                                Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                            }
+                            else
+                            {
+                                i++;
+                                r = Vampirismpanel.RectangleToScreen(Vampirismpanel.ClientRectangle);
 
-        private void NaturalTalentpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(7));
-        }
+                                if (r.Contains(MousePosition))
+                                {
+                                    Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                }
+                                else
+                                {
+                                    i++;
+                                    r = NaturalTalentpanel.RectangleToScreen(NaturalTalentpanel.ClientRectangle);
 
-        private void Oppressorpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(9));
-        }
+                                    if (r.Contains(MousePosition))
+                                    {
+                                        Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                    }
+                                    else
+                                    {
+                                        i++;
+                                        r = BountyHunterpanel.RectangleToScreen(BountyHunterpanel.ClientRectangle);
 
-        private void BountyHunterpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(8));
-        }
+                                        if (r.Contains(MousePosition))
+                                        {
+                                            Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                        }
+                                        else
+                                        {
+                                            i++;
+                                            r = Oppressorpanel.RectangleToScreen(Oppressorpanel.ClientRectangle);
 
-        private void BatteringBlowspanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(10));
-        }
+                                            if (r.Contains(MousePosition))
+                                            {
+                                                Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                            }
+                                            else
+                                            {
+                                                i++;
+                                                r = BatteringBlowspanel.RectangleToScreen(BatteringBlowspanel.ClientRectangle);
 
-        private void PiercingThoughtspanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(11));
-        }
+                                                if (r.Contains(MousePosition))
+                                                {
+                                                    Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                }
+                                                else
+                                                {
+                                                    i++;
+                                                    r = PiercingThoughtspanel.RectangleToScreen(PiercingThoughtspanel.ClientRectangle);
 
-        private void DeathfireTouchpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(14));
-        }
+                                                    if (r.Contains(MousePosition))
+                                                    {
+                                                        Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                    }
+                                                    else
+                                                    {
+                                                        i++;
+                                                        r = WarlordsBloodlustpanel.RectangleToScreen(WarlordsBloodlustpanel.ClientRectangle);
 
-        private void FervorofBattlepanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(13));
-        }
+                                                        if (r.Contains(MousePosition))
+                                                        {
+                                                            Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                        }
+                                                        else
+                                                        {
+                                                            i++;
+                                                            r = FervorofBattlepanel.RectangleToScreen(FervorofBattlepanel.ClientRectangle);
 
-        private void WarlordsBloodlustpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(12));
-        }
+                                                            if (r.Contains(MousePosition))
+                                                            {
+                                                                Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                            }
+                                                            else
+                                                            {
+                                                                i++;
+                                                                r = DeathfireTouchpanel.RectangleToScreen(DeathfireTouchpanel.ClientRectangle);
 
-        private void Wandererpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(15));
-        }
+                                                                if (r.Contains(MousePosition))
+                                                                {
+                                                                    Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                }
+                                                                else
+                                                                {
+                                                                    i++;
+                                                                    r = Wandererpanel.RectangleToScreen(Wandererpanel.ClientRectangle);
 
-        private void Savagerypanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(16));
-        }
+                                                                    if (r.Contains(MousePosition))
+                                                                    {
+                                                                        Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        i++;
+                                                                        r = Savagerypanel.RectangleToScreen(Savagerypanel.ClientRectangle);
 
-        private void Assassinpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(19));
-        }
+                                                                        if (r.Contains(MousePosition))
+                                                                        {
+                                                                            Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            i++;
+                                                                            r = RunicAffinitypanel.RectangleToScreen(RunicAffinitypanel.ClientRectangle);
 
-        private void SecretStashpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(18));
-        }
+                                                                            if (r.Contains(MousePosition))
+                                                                            {
+                                                                                Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                i++;
+                                                                                r = SecretStashpanel.RectangleToScreen(SecretStashpanel.ClientRectangle);
 
-        private void RunicAffinitypanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(17));
-        }
+                                                                                if (r.Contains(MousePosition))
+                                                                                {
+                                                                                    Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                }
+                                                                                else
+                                                                                {
+                                                                                    i++;
+                                                                                    r = Assassinpanel.RectangleToScreen(Assassinpanel.ClientRectangle);
 
-        private void Mercilesspanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(20));
-        }
+                                                                                    if (r.Contains(MousePosition))
+                                                                                    {
+                                                                                        Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                    }
+                                                                                    else
+                                                                                    {
+                                                                                        i++;
+                                                                                        r = Mercilesspanel.RectangleToScreen(Mercilesspanel.ClientRectangle);
 
-        private void Meditationpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(21));
-        }
+                                                                                        if (r.Contains(MousePosition))
+                                                                                        {
+                                                                                            Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                        }
+                                                                                        else
+                                                                                        {
+                                                                                            i++;
+                                                                                            r = Meditationpanel.RectangleToScreen(Meditationpanel.ClientRectangle);
 
-        private void DangerousGamepanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(23));
-        }
+                                                                                            if (r.Contains(MousePosition))
+                                                                                            {
+                                                                                                Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                                i++;
+                                                                                                r = Banditpanel.RectangleToScreen(Banditpanel.ClientRectangle);
 
-        private void Banditpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(22));
-        }
+                                                                                                if (r.Contains(MousePosition))
+                                                                                                {
+                                                                                                    Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                }
+                                                                                                else
+                                                                                                {
+                                                                                                    i++;
+                                                                                                    r = DangerousGamepanel.RectangleToScreen(DangerousGamepanel.ClientRectangle);
 
-        private void Precisionpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(24));
-        }
+                                                                                                    if (r.Contains(MousePosition))
+                                                                                                    {
+                                                                                                        Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                    }
+                                                                                                    else
+                                                                                                    {
+                                                                                                        i++;
+                                                                                                        r = Precisionpanel.RectangleToScreen(Precisionpanel.ClientRectangle);
 
-        private void Intelligencepanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(25));
-        }
+                                                                                                        if (r.Contains(MousePosition))
+                                                                                                        {
+                                                                                                            Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                        }
+                                                                                                        else
+                                                                                                        {
+                                                                                                            i++;
+                                                                                                            r = Intelligencepanel.RectangleToScreen(Intelligencepanel.ClientRectangle);
 
-        private void WindspeakersBlessingpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(28));
-        }
+                                                                                                            if (r.Contains(MousePosition))
+                                                                                                            {
+                                                                                                                Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                            }
+                                                                                                            else
+                                                                                                            {
+                                                                                                                i++;
+                                                                                                                r = Stormraiderssurgepanel.RectangleToScreen(Stormraiderssurgepanel.ClientRectangle);
 
-        private void ThunderlordsDecreepanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(27));
-        }
+                                                                                                                if (r.Contains(MousePosition))
+                                                                                                                {
+                                                                                                                    Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                }
+                                                                                                                else
+                                                                                                                {
+                                                                                                                    i++;
+                                                                                                                    r = ThunderlordsDecreepanel.RectangleToScreen(ThunderlordsDecreepanel.ClientRectangle);
 
-        private void Stormraiderssurgepanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(26));
-        }
+                                                                                                                    if (r.Contains(MousePosition))
+                                                                                                                    {
+                                                                                                                        Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                    }
+                                                                                                                    else
+                                                                                                                    {
+                                                                                                                        i++;
+                                                                                                                        r = WindspeakersBlessingpanel.RectangleToScreen(WindspeakersBlessingpanel.ClientRectangle);
 
-        private void Recoverypanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(29));
-        }
+                                                                                                                        if (r.Contains(MousePosition))
+                                                                                                                        {
+                                                                                                                            Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                        }
+                                                                                                                        else
+                                                                                                                        {
+                                                                                                                            i++;
+                                                                                                                            r = Recoverypanel.RectangleToScreen(Recoverypanel.ClientRectangle);
 
-        private void Unyieldingpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(30));
-        }
+                                                                                                                            if (r.Contains(MousePosition))
+                                                                                                                            {
+                                                                                                                                Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                            }
+                                                                                                                            else
+                                                                                                                            {
+                                                                                                                                i++;
+                                                                                                                                r = Unyieldingpanel.RectangleToScreen(Unyieldingpanel.ClientRectangle);
 
-        private void ToughSkinpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(32));
-        }
+                                                                                                                                if (r.Contains(MousePosition))
+                                                                                                                                {
+                                                                                                                                    Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                }
+                                                                                                                                else
+                                                                                                                                {
+                                                                                                                                    i++;
+                                                                                                                                    r = Explorerpanel.RectangleToScreen(Explorerpanel.ClientRectangle);
 
-        private void Explorerpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(31));
-        }
+                                                                                                                                    if (r.Contains(MousePosition))
+                                                                                                                                    {
+                                                                                                                                        Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                    }
+                                                                                                                                    else
+                                                                                                                                    {
+                                                                                                                                        i++;
+                                                                                                                                        r = ToughSkinpanel.RectangleToScreen(ToughSkinpanel.ClientRectangle);
 
-        private void RunicArmorpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(33));
-        }
+                                                                                                                                        if (r.Contains(MousePosition))
+                                                                                                                                        {
+                                                                                                                                            Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                        }
+                                                                                                                                        else
+                                                                                                                                        {
+                                                                                                                                            i++;
+                                                                                                                                            r = RunicArmorpanel.RectangleToScreen(RunicArmorpanel.ClientRectangle);
 
-        private void VeteransScarspanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(34));
-        }
+                                                                                                                                            if (r.Contains(MousePosition))
+                                                                                                                                            {
+                                                                                                                                                Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                            }
+                                                                                                                                            else
+                                                                                                                                            {
+                                                                                                                                                i++;
+                                                                                                                                                r = VeteransScarspanel.RectangleToScreen(VeteransScarspanel.ClientRectangle);
 
-        private void Perseverancepanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(36));
-        }
+                                                                                                                                                if (r.Contains(MousePosition))
+                                                                                                                                                {
+                                                                                                                                                    Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                                }
+                                                                                                                                                else
+                                                                                                                                                {
+                                                                                                                                                    i++;
+                                                                                                                                                    r = Insightpanel.RectangleToScreen(Insightpanel.ClientRectangle);
 
-        private void Insightpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(35));
-        }
+                                                                                                                                                    if (r.Contains(MousePosition))
+                                                                                                                                                    {
+                                                                                                                                                        Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                                    }
+                                                                                                                                                    else
+                                                                                                                                                    {
+                                                                                                                                                        i++;
+                                                                                                                                                        r = Perseverancepanel.RectangleToScreen(Perseverancepanel.ClientRectangle);
 
-        private void Swiftnesspanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(37));
-        }
+                                                                                                                                                        if (r.Contains(MousePosition))
+                                                                                                                                                        {
+                                                                                                                                                            Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                                        }
+                                                                                                                                                        else
+                                                                                                                                                        {
+                                                                                                                                                            i++;
+                                                                                                                                                            r = Swiftnesspanel.RectangleToScreen(Swiftnesspanel.ClientRectangle);
 
-        private void LegendaryGuardianpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(38));
-        }
+                                                                                                                                                            if (r.Contains(MousePosition))
+                                                                                                                                                            {
+                                                                                                                                                                Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                                            }
+                                                                                                                                                            else
+                                                                                                                                                            {
+                                                                                                                                                                i++;
+                                                                                                                                                                r = LegendaryGuardianpanel.RectangleToScreen(LegendaryGuardianpanel.ClientRectangle);
 
-        private void BondofStonepanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(41));
-        }
+                                                                                                                                                                if (r.Contains(MousePosition))
+                                                                                                                                                                {
+                                                                                                                                                                    Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                                                }
+                                                                                                                                                                else
+                                                                                                                                                                {
+                                                                                                                                                                    i++;
+                                                                                                                                                                    r = GraspoftheUndyingpanel.RectangleToScreen(GraspoftheUndyingpanel.ClientRectangle);
 
-        private void StrengthoftheAgespanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(40));
-        }
+                                                                                                                                                                    if (r.Contains(MousePosition))
+                                                                                                                                                                    {
+                                                                                                                                                                        Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                                                    }
+                                                                                                                                                                    else
+                                                                                                                                                                    {
+                                                                                                                                                                        i++;
+                                                                                                                                                                        r = StrengthoftheAgespanel.RectangleToScreen(StrengthoftheAgespanel.ClientRectangle);
 
-        private void GraspoftheUndyingpanel_MouseHover(object sender, EventArgs e)
-        {
-            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
-            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(39));
+                                                                                                                                                                        if (r.Contains(MousePosition))
+                                                                                                                                                                        {
+                                                                                                                                                                            Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                                                        }
+                                                                                                                                                                        else
+                                                                                                                                                                        {
+                                                                                                                                                                            i++;
+                                                                                                                                                                            r = BondofStonepanel.RectangleToScreen(BondofStonepanel.ClientRectangle);
+
+                                                                                                                                                                            if (r.Contains(MousePosition))
+                                                                                                                                                                            {
+                                                                                                                                                                                Masterieinfo.Text = _iLogic.GetMasterieInfo(i, 1) + ": " + _iLogic.GetMasterieInfo(i, 2);
+                                                                                                                                                                            }
+                                                                                                                                                                            else
+                                                                                                                                                                            {
+
+                                                                                                                                                                            }
+                                                                                                                                                                        }
+                                                                                                                                                                    }
+                                                                                                                                                                }
+                                                                                                                                                            }
+                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            }
+            catch
+            {
+                timer.Stop();
+            }
         }
     }
 }
