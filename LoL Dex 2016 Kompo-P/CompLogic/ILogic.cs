@@ -37,6 +37,7 @@ namespace CompLogic
 
         #region Masterie
         string GetTree(int treenumber);
+        string GetMasterieInfo(int id);
         #endregion
     }
 }

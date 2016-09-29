@@ -153,6 +153,7 @@
             this.FuryPanel.Name = "FuryPanel";
             this.FuryPanel.Size = new System.Drawing.Size(41, 40);
             this.FuryPanel.TabIndex = 3;
+            this.FuryPanel.MouseHover += new System.EventHandler(this.FuryPanel_MouseHover);
             // 
             // Sorcerypanel
             // 
@@ -162,6 +163,7 @@
             this.Sorcerypanel.Name = "Sorcerypanel";
             this.Sorcerypanel.Size = new System.Drawing.Size(41, 40);
             this.Sorcerypanel.TabIndex = 4;
+            this.Sorcerypanel.MouseHover += new System.EventHandler(this.Sorcerypanel_MouseHover);
             // 
             // ExposeWeaknesspanel
             // 
@@ -171,6 +173,7 @@
             this.ExposeWeaknesspanel.Name = "ExposeWeaknesspanel";
             this.ExposeWeaknesspanel.Size = new System.Drawing.Size(41, 40);
             this.ExposeWeaknesspanel.TabIndex = 4;
+            this.ExposeWeaknesspanel.MouseHover += new System.EventHandler(this.ExposeWeaknesspanel_MouseHover);
             // 
             // Feastpanel
             // 
@@ -180,6 +183,7 @@
             this.Feastpanel.Name = "Feastpanel";
             this.Feastpanel.Size = new System.Drawing.Size(41, 40);
             this.Feastpanel.TabIndex = 4;
+            this.Feastpanel.MouseHover += new System.EventHandler(this.Feastpanel_MouseHover);
             // 
             // DoubleEdgedSwordpanel
             // 
@@ -189,6 +193,7 @@
             this.DoubleEdgedSwordpanel.Name = "DoubleEdgedSwordpanel";
             this.DoubleEdgedSwordpanel.Size = new System.Drawing.Size(41, 40);
             this.DoubleEdgedSwordpanel.TabIndex = 4;
+            this.DoubleEdgedSwordpanel.MouseHover += new System.EventHandler(this.DoubleEdgedSwordpanel_MouseHover);
             // 
             // Vampirismpanel
             // 
@@ -198,6 +203,7 @@
             this.Vampirismpanel.Name = "Vampirismpanel";
             this.Vampirismpanel.Size = new System.Drawing.Size(41, 40);
             this.Vampirismpanel.TabIndex = 4;
+            this.Vampirismpanel.MouseHover += new System.EventHandler(this.Vampirismpanel_MouseHover);
             // 
             // NaturalTalentpanel
             // 
@@ -207,6 +213,7 @@
             this.NaturalTalentpanel.Name = "NaturalTalentpanel";
             this.NaturalTalentpanel.Size = new System.Drawing.Size(41, 40);
             this.NaturalTalentpanel.TabIndex = 4;
+            this.NaturalTalentpanel.MouseHover += new System.EventHandler(this.NaturalTalentpanel_MouseHover);
             // 
             // Oppressorpanel
             // 
@@ -216,6 +223,7 @@
             this.Oppressorpanel.Name = "Oppressorpanel";
             this.Oppressorpanel.Size = new System.Drawing.Size(41, 40);
             this.Oppressorpanel.TabIndex = 4;
+            this.Oppressorpanel.MouseHover += new System.EventHandler(this.Oppressorpanel_MouseHover);
             // 
             // BountyHunterpanel
             // 
@@ -225,6 +233,7 @@
             this.BountyHunterpanel.Name = "BountyHunterpanel";
             this.BountyHunterpanel.Size = new System.Drawing.Size(41, 40);
             this.BountyHunterpanel.TabIndex = 4;
+            this.BountyHunterpanel.MouseHover += new System.EventHandler(this.BountyHunterpanel_MouseHover);
             // 
             // BatteringBlowspanel
             // 
@@ -234,6 +243,7 @@
             this.BatteringBlowspanel.Name = "BatteringBlowspanel";
             this.BatteringBlowspanel.Size = new System.Drawing.Size(41, 40);
             this.BatteringBlowspanel.TabIndex = 4;
+            this.BatteringBlowspanel.MouseHover += new System.EventHandler(this.BatteringBlowspanel_MouseHover);
             // 
             // PiercingThoughtspanel
             // 
@@ -243,6 +253,7 @@
             this.PiercingThoughtspanel.Name = "PiercingThoughtspanel";
             this.PiercingThoughtspanel.Size = new System.Drawing.Size(41, 40);
             this.PiercingThoughtspanel.TabIndex = 4;
+            this.PiercingThoughtspanel.MouseHover += new System.EventHandler(this.PiercingThoughtspanel_MouseHover);
             // 
             // DeathfireTouchpanel
             // 
@@ -252,6 +263,7 @@
             this.DeathfireTouchpanel.Name = "DeathfireTouchpanel";
             this.DeathfireTouchpanel.Size = new System.Drawing.Size(41, 40);
             this.DeathfireTouchpanel.TabIndex = 4;
+            this.DeathfireTouchpanel.MouseHover += new System.EventHandler(this.DeathfireTouchpanel_MouseHover);
             // 
             // FervorofBattlepanel
             // 
@@ -261,6 +273,7 @@
             this.FervorofBattlepanel.Name = "FervorofBattlepanel";
             this.FervorofBattlepanel.Size = new System.Drawing.Size(41, 40);
             this.FervorofBattlepanel.TabIndex = 4;
+            this.FervorofBattlepanel.MouseHover += new System.EventHandler(this.FervorofBattlepanel_MouseHover);
             // 
             // WarlordsBloodlustpanel
             // 
@@ -269,6 +282,7 @@
             this.WarlordsBloodlustpanel.Name = "WarlordsBloodlustpanel";
             this.WarlordsBloodlustpanel.Size = new System.Drawing.Size(41, 40);
             this.WarlordsBloodlustpanel.TabIndex = 4;
+            this.WarlordsBloodlustpanel.MouseHover += new System.EventHandler(this.WarlordsBloodlustpanel_MouseHover);
             // 
             // Wandererpanel
             // 
@@ -278,6 +292,7 @@
             this.Wandererpanel.Name = "Wandererpanel";
             this.Wandererpanel.Size = new System.Drawing.Size(41, 40);
             this.Wandererpanel.TabIndex = 5;
+            this.Wandererpanel.MouseHover += new System.EventHandler(this.Wandererpanel_MouseHover);
             // 
             // Savagerypanel
             // 
@@ -287,6 +302,7 @@
             this.Savagerypanel.Name = "Savagerypanel";
             this.Savagerypanel.Size = new System.Drawing.Size(41, 40);
             this.Savagerypanel.TabIndex = 4;
+            this.Savagerypanel.MouseHover += new System.EventHandler(this.Savagerypanel_MouseHover);
             // 
             // Assassinpanel
             // 
@@ -296,6 +312,7 @@
             this.Assassinpanel.Name = "Assassinpanel";
             this.Assassinpanel.Size = new System.Drawing.Size(41, 40);
             this.Assassinpanel.TabIndex = 4;
+            this.Assassinpanel.MouseHover += new System.EventHandler(this.Assassinpanel_MouseHover);
             // 
             // SecretStashpanel
             // 
@@ -305,6 +322,7 @@
             this.SecretStashpanel.Name = "SecretStashpanel";
             this.SecretStashpanel.Size = new System.Drawing.Size(41, 40);
             this.SecretStashpanel.TabIndex = 4;
+            this.SecretStashpanel.MouseHover += new System.EventHandler(this.SecretStashpanel_MouseHover);
             // 
             // RunicAffinitypanel
             // 
@@ -314,6 +332,7 @@
             this.RunicAffinitypanel.Name = "RunicAffinitypanel";
             this.RunicAffinitypanel.Size = new System.Drawing.Size(41, 40);
             this.RunicAffinitypanel.TabIndex = 4;
+            this.RunicAffinitypanel.MouseHover += new System.EventHandler(this.RunicAffinitypanel_MouseHover);
             // 
             // Mercilesspanel
             // 
@@ -323,6 +342,7 @@
             this.Mercilesspanel.Name = "Mercilesspanel";
             this.Mercilesspanel.Size = new System.Drawing.Size(41, 40);
             this.Mercilesspanel.TabIndex = 4;
+            this.Mercilesspanel.MouseHover += new System.EventHandler(this.Mercilesspanel_MouseHover);
             // 
             // Meditationpanel
             // 

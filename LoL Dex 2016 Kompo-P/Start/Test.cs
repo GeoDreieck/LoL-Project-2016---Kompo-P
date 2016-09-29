@@ -102,6 +102,15 @@ namespace Test
             dataTableMasterie = dataTableMasterie.DefaultView.ToTable();
             _iDatabase.AddTabletoDataSet(dataTableMasterie);
 
+            sql = string.Format("SELECT * FROM Masterietrees;");
+            DataTable dataTableMasterietrees = new DataTable("Masterietrees");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableMasterietrees.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableMasterietrees.DefaultView.Sort = "ID";
+            dataTableMasterietrees = dataTableMasterietrees.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableMasterietrees);
+
             sql = string.Format("SELECT * FROM SummonerSpells;");
             DataTable dataTableSummonerSpells = new DataTable("SummonerSpells");
             dbDataReader = _iDatabase.ExecuteQuery(sql);
