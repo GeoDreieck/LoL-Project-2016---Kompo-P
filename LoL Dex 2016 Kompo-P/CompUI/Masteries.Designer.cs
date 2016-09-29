@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            
-
             this.Wandererpanel = new System.Windows.Forms.Panel();
             this.Savagerypanel = new System.Windows.Forms.Panel();
             this.Assassinpanel = new System.Windows.Forms.Panel();
@@ -528,6 +526,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CompUI.Properties.Resources.Unbenannt1;
             this.ClientSize = new System.Drawing.Size(763, 483);
             this.Controls.Add(this.Masterieinfo);
             this.Controls.Add(this.Tree3);
@@ -582,6 +581,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Tree1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
 
         }
 

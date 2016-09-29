@@ -156,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resolve.jpg" />
+    <None Include="Resources\Unbenannt.JPG" />
     <None Include="Resources\2.PNG" />
     <None Include="Resources\Unbenannt.PNG" />
   </ItemGroup>

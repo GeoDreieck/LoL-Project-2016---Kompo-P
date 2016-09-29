@@ -82,6 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CompUI.Properties.Resources.Unbenannt1;
             this.ClientSize = new System.Drawing.Size(766, 508);
             this.Controls.Add(this.MainContentPanel);
             this.Controls.Add(this.lView_creeps);
@@ -91,6 +92,8 @@
             this.Load += new System.EventHandler(this.Creeps_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CreepsIconBox)).EndInit();
             this.ResumeLayout(false);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
 
         }
 

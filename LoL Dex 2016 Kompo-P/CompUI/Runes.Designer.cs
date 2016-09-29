@@ -64,8 +64,6 @@
             this.rune_level_box.Size = new System.Drawing.Size(121, 21);
             this.rune_level_box.TabIndex = 15;
             this.rune_level_box.Tag = "";
-            //Combox1.SelectedIndex = Combox1.FindStringExact("test1")
-            this.rune_level_box.SelectedIndex = this.rune_level_box.FindStringExact("Alle");
             this.rune_level_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // rune_proberty_box
@@ -82,7 +80,6 @@
             this.rune_proberty_box.Name = "rune_proberty_box";
             this.rune_proberty_box.Size = new System.Drawing.Size(121, 21);
             this.rune_proberty_box.TabIndex = 16;
-            this.rune_proberty_box.SelectedIndex = this.rune_proberty_box.FindStringExact("Alle");
             this.rune_proberty_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // label1
@@ -140,6 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CompUI.Properties.Resources.Unbenannt1;
             this.ClientSize = new System.Drawing.Size(748, 525);
             this.Controls.Add(this.MainContentPanel);
             this.Controls.Add(this.lView_Runes);
@@ -154,6 +152,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.RunesIconBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
 
         }
 
