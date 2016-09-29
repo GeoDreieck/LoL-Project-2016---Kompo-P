@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoL Dex 2016", "LoL Dex 2016\LoL Dex 2016.csproj", "{1110B688-A42E-448F-8DC2-BF7889AE9CD3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D918A802-9A53-44B8-BEBB-754E86FEEC49} = {D918A802-9A53-44B8-BEBB-754E86FEEC49}
+		{68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6} = {68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6}
+		{A29C117B-6773-4671-B240-087FC0944A72} = {A29C117B-6773-4671-B240-087FC0944A72}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompData", "CompData\CompData.csproj", "{68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompLogic", "CompLogic\CompLogic.csproj", "{A29C117B-6773-4671-B240-087FC0944A72}"
+	ProjectSection(ProjectDependencies) = postProject
+		{68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6} = {68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompUI", "CompUI\CompUI.csproj", "{D918A802-9A53-44B8-BEBB-754E86FEEC49}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A29C117B-6773-4671-B240-087FC0944A72} = {A29C117B-6773-4671-B240-087FC0944A72}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Start\Test.csproj", "{07698CB0-5A2C-496E-B4B1-CBD933E571BA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D918A802-9A53-44B8-BEBB-754E86FEEC49} = {D918A802-9A53-44B8-BEBB-754E86FEEC49}
+		{68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6} = {68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6}
+		{A29C117B-6773-4671-B240-087FC0944A72} = {A29C117B-6773-4671-B240-087FC0944A72}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1110B688-A42E-448F-8DC2-BF7889AE9CD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1110B688-A42E-448F-8DC2-BF7889AE9CD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1110B688-A42E-448F-8DC2-BF7889AE9CD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1110B688-A42E-448F-8DC2-BF7889AE9CD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C09E64-EC3B-4CDB-84AD-8FD232EAB9C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A29C117B-6773-4671-B240-087FC0944A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29C117B-6773-4671-B240-087FC0944A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29C117B-6773-4671-B240-087FC0944A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29C117B-6773-4671-B240-087FC0944A72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D918A802-9A53-44B8-BEBB-754E86FEEC49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D918A802-9A53-44B8-BEBB-754E86FEEC49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D918A802-9A53-44B8-BEBB-754E86FEEC49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D918A802-9A53-44B8-BEBB-754E86FEEC49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07698CB0-5A2C-496E-B4B1-CBD933E571BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07698CB0-5A2C-496E-B4B1-CBD933E571BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07698CB0-5A2C-496E-B4B1-CBD933E571BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07698CB0-5A2C-496E-B4B1-CBD933E571BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

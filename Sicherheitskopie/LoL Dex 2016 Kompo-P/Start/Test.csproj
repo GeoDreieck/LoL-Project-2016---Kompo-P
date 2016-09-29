@@ -7,8 +7,8 @@
     <ProjectGuid>{07698CB0-5A2C-496E-B4B1-CBD933E571BA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test</RootNamespace>
-    <AssemblyName>Test</AssemblyName>
+    <RootNamespace>Start</RootNamespace>
+    <AssemblyName>Start</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Testclass.cs" />
+    <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

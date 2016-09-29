@@ -5,19 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Common;
 using System.Windows.Forms;
+using System.IO;
 
 using CompUI;
 using CompLogic;
 using CompData;
 using System.Data;
 
-namespace Start
+namespace LoL_Dex_2016
 {
     class Start
     {
-        /*
         #region fields
         // CompUI
+        Form _overview;
 
         // CompLogic
         private ILogic _iLogic;
@@ -25,139 +26,111 @@ namespace Start
         private IDatabase _iDatabase;
         #endregion
 
-        void Run1()
+        void Run()
         {
-            var connectionString = LoL_Dex_2016.Properties.Settings.Default.LoL_Dex_2016_DatabaseConnectionString;
-
+            // Unterste Schicht CompData wird zuerst erzeugt
+            var connectionString = Properties.Settings.Default.LoL_Dex_2016_DatabaseConnectionString;
             _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionString);
             _iDatabase.Open();
 
-            // Anzahl Fahrzeuge in DB
-            int nCars = (int)_iDatabase.ExecuteScalar("SELECT COUNT(*) FROM autos;");
+            DbDataReader dbDataReader;
 
-            // Liste der Hersteller ---------------------------------------------------------------------------------------
-            DbDataReader dbDataReader = _iDatabase.ExecuteQuery("SELECT DISTINCT hersteller FROM autos ORDER BY hersteller;");
-            // Schleife über ResultSet
-            List<object> listMake = new List<object>();
-            while (dbDataReader.Read())
-            {
-                listMake.Add(dbDataReader[0]);
-            }
-            dbDataReader.Close();
-            object[] objMake = listMake.ToArray(); // UI Control braucht Liste von Objekten
+            string sql;
 
-            dbDataReader = _iDatabase.ExecuteQuery("SELECT DISTINCT hersteller FROM autos ORDER BY hersteller;");
-            DataTable dataTable = new DataTable("Hersteller");
-            dataTable.Load(dbDataReader);
-            dbDataReader.Close();
-            // Anzahl Zeilen
-            int nRows = dataTable.Rows.Count;
-            int nColumns = dataTable.Columns.Count;
-            foreach (DataRow row in dataTable.Rows)
-            {
-                object o = row[0];
-            }
-
-            // Liste der Modelle ------------------------------------------------------------------------------------------
-            // Herstellerauswahl
-            string make = "Audi";
-            // Anzahl Autos von diesem Hersteller
-            string sql = string.Format("SELECT COUNT (*) FROM autos WHERE hersteller='{0}';", make);
-            int nCarsByMake = (int)_iDatabase.ExecuteScalar(sql);
-
-            //CompData
-            sql = string.Format("SELECT DISTINCT modell FROM autos WHERE hersteller='{0}' ORDER BY modell;", make);
-            dbDataReader = _iDatabase.ExecuteQuery(sql);
-            // Schleife über ResultSet
-            //CompLogic
-            List<object> listModel = new List<object>();
-            while (dbDataReader.Read())
-            {
-                listModel.Add(dbDataReader[0]);
-            }
-            dbDataReader.Close();
-            object[] objModel = listMake.ToArray(); // UI Control braucht Liste von Objekten
-                                                    //CompUI
-                                                    // Anzeigen Combobox  
-
-            // Modellauswahl
-            string model = "A4";
-            sql = string.Format("SELECT COUNT (*)  FROM autos WHERE hersteller='{0}' AND modell='{1}';", make, model);
-            int nCarsByMakeAndModel = (int)_iDatabase.ExecuteScalar(sql);
-
-            // Alle Audi A4 selektieren
-            sql = string.Format(
-                "SELECT hersteller,modell,leistung,kraftstoff,zulassung,km,preis,plz " +
-                "FROM autos WHERE hersteller='{0}' AND modell='{1}' ORDER BY preis;", make, model);
-            DataTable dataTableSelectedCars = new DataTable("Cars");
-            dbDataReader = _iDatabase.ExecuteQuery(sql);
-            dataTableSelectedCars.Load(dbDataReader);
-            dbDataReader.Close();
-
-            // Wie geht INSERT UPDATE DELETE ???? --> seeehr aufwääändig
-            dataTableSelectedCars.Clear();
-            DbDataAdapter dbDataAdapter = _iDatabase.CreateDbDataAdapter("SELECT * FROM autos;");
-
-            sql = string.Format(
-            "SELECT hersteller,modell,leistung,kraftstoff,zulassung,km,preis,plz " +
-            "FROM autos WHERE hersteller='{0}' AND modell='{1}' ORDER BY preis;", make, model);
-            nRows = _iDatabase.Fill(sql, dataTableSelectedCars, dbDataAdapter);
-
-            // Datensatz schreiben
-            DataTable dataTableUpdate = new DataTable();
-            sql = string.Format("SELECT * FROM autos;");
-            nRows = _iDatabase.Fill(sql, dataTableUpdate, dbDataAdapter);
-            dataTableUpdate.Clear();
-            DataRow dataRow = dataTableUpdate.NewRow();
-            // Spalte GUID
-            Guid id = Guid.NewGuid();
-
-            dataRow[0] = "1111111111";
-            dataRow[1] = "Opel";      // Hersteller
-            dataRow[2] = "Corsa";    // Modell
-            dataRow[3] = 90;         // Leistung
-            dataRow[4] = "Benzin";   // Kraftstoff
-            dataRow[5] = 2009 - 03 - 23; // Zulassung
-            dataRow[6] = 35000;      // km
-            dataRow[7] = 7500;       // Preis
-            dataRow[8] = 29556;      // PLZ
-            dataRow[9] = -1;         // Anbieter
-            dataRow[10] = "Foto.jpg";
-            dataTableSelectedCars.Rows.Add(dataRow);
-
-            dbDataAdapter.Update(dataTableUpdate);
-
-        }
-
-
-        void Run2()
-        {
-
-            // Dependency Inversion Principle (Umkehrung des Kontrollflusses)
-            _iCar = AFactoryICar.CreateInstance("CCar");
-
-            // Unterste Schicht CompData wird zuerst erzeugt
-            var connectionString = Properties.Settings.Default.ConnectionStringAccess;
-            _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionString);
+            DataSet dataSet = new DataSet();
 
             // Mittlere Schicht CompLogic wird es zweites erzugt
-            _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase, _iCar);
+            string imagedirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\Images\\";
+            _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase, imagedirectory);
+
+            _overview = AFactoryIForms.CreateInstance("Overview", _iLogic);
 
             // Oberste Schicht CompUI
-            _iDialogSearch = AFactoryIForms.CreateInstance("CDialogSearch", _iLogic, _iCar);
-            _iDialogSearchView = AFactoryIForms.CreateInstance("CDialogSearchView", _iLogic, _iCar);
-            _iDialogSell = AFactoryIForms.CreateInstance("CDialogSell", _iLogic, _iCar);
-            _iDialogMain = AFactoryIForms.CreateInstance("CDialogMain", _iLogic, _iCar) as IWindow;
 
-            _iDialogMain.IDialogSearch = _iDialogSearch; // Dependency injection via setter
-            _iDialogMain.IDialogSearchView = _iDialogSearchView;
-            _iDialogMain.IDialogSell = _iDialogSell;
+            //Daten aus der Datenbank laden
+            sql = string.Format("SELECT * FROM Champs;");
+            DataTable dataTableChamps = new DataTable("Champs");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableChamps.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableChamps.DefaultView.Sort = "ID";
+            dataTableChamps = dataTableChamps.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableChamps);
 
-            // CDialogMain starten
-            if (_iDialogMain is Form)
-            {
-                Application.Run(_iDialogMain as Form);
-            }
+            sql = string.Format("SELECT * FROM Abilities;");
+            DataTable dataTableAbilities = new DataTable("Abilities");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableAbilities.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableAbilities.DefaultView.Sort = "ID";
+            dataTableAbilities = dataTableAbilities.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableAbilities);
+
+            sql = string.Format("SELECT * FROM Items;");
+            DataTable dataTableItems = new DataTable("Items");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableItems.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableItems.DefaultView.Sort = "ID";
+            dataTableItems = dataTableItems.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableItems);
+
+            sql = string.Format("SELECT * FROM Runes;");
+            DataTable dataTableRunes = new DataTable("Runes");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableRunes.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableRunes.DefaultView.Sort = "ID";
+            dataTableRunes = dataTableRunes.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableRunes);
+
+            sql = string.Format("SELECT * FROM ItemAbuildsIntoItemB;");
+            DataTable dataTableItemAbuildsIntoItemB = new DataTable("ItemAbuildsIntoItemB");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableItemAbuildsIntoItemB.Load(dbDataReader);
+            dbDataReader.Close();
+            _iDatabase.AddTabletoDataSet(dataTableItemAbuildsIntoItemB);
+
+            sql = string.Format("SELECT * FROM Masterie;");
+            DataTable dataTableMasterie = new DataTable("Masterie");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableMasterie.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableMasterie.DefaultView.Sort = "ID";
+            dataTableMasterie = dataTableMasterie.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableMasterie);
+
+            sql = string.Format("SELECT * FROM Masterietrees;");
+            DataTable dataTableMasterietrees = new DataTable("Masterietrees");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableMasterietrees.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableMasterietrees.DefaultView.Sort = "ID";
+            dataTableMasterietrees = dataTableMasterietrees.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableMasterietrees);
+
+            sql = string.Format("SELECT * FROM SummonerSpells;");
+            DataTable dataTableSummonerSpells = new DataTable("SummonerSpells");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableSummonerSpells.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableSummonerSpells.DefaultView.Sort = "ID";
+            dataTableSummonerSpells = dataTableSummonerSpells.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableSummonerSpells);
+
+            sql = string.Format("SELECT * FROM Creeps;");
+            DataTable dataTableCreeps = new DataTable("Creeps");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableCreeps.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableCreeps.DefaultView.Sort = "ID";
+            dataTableCreeps = dataTableCreeps.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableCreeps);
+
+            // Overview starten
+            Application.Run(_overview as Form);
+
+            _iDatabase.Close();
         }
 
         [STAThread]
@@ -166,9 +139,7 @@ namespace Start
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            new Test().Run2();
-            //  Console.ReadKey();
+            new Start().Run();
         }
-        */
     }
 }
