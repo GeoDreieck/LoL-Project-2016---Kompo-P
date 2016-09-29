@@ -75,12 +75,11 @@ namespace CompUI
                 cooldownstextbox.Size = CooldownContentPanel.Size;
                 cooldownstextbox.Name = "Stats";
                 cooldownstextbox.Multiline = true;
-                cooldownstextbox.ScrollBars = ScrollBars.Vertical;
                 cooldownstextbox.WordWrap = true;
 
                 string cooldowninfo = "Cooldown: " + _iLogic.GetSummonerSpellsInfo(index, 3);
 
-                statsstextbox.Text = cooldowninfo;
+                cooldownstextbox.Text = cooldowninfo;
 
                 SpellsIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetSummonerSpellsInfo(index, 4), true);
             }

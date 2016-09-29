@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            timer.Tick += timer_Tick;
-            timer.Start();
+            
 
             this.Wandererpanel = new System.Windows.Forms.Panel();
             this.Savagerypanel = new System.Windows.Forms.Panel();
