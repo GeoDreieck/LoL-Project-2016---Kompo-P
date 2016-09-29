@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D918A802-9A53-44B8-BEBB-754E86FEEC49}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CompUI</RootNamespace>
+    <AssemblyName>CompUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AFactoryIForms.cs" />
+    <Compile Include="Champions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Champions.Designer.cs">
+      <DependentUpon>Champions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IForms.cs" />
+    <Compile Include="Creeps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creeps.Designer.cs">
+      <DependentUpon>Creeps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fields.Designer.cs">
+      <DependentUpon>Fields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items.Designer.cs">
+      <DependentUpon>Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masteries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masteries.Designer.cs">
+      <DependentUpon>Masteries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Overview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Overview.Designer.cs">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Runes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Runes.Designer.cs">
+      <DependentUpon>Runes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Summoner Spells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Summoner Spells.Designer.cs">
+      <DependentUpon>Summoner Spells.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tipps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tipps.Designer.cs">
+      <DependentUpon>Tipps.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Champions.resx">
+      <DependentUpon>Champions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creeps.resx">
+      <DependentUpon>Creeps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fields.resx">
+      <DependentUpon>Fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items.resx">
+      <DependentUpon>Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masteries.resx">
+      <DependentUpon>Masteries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Overview.resx">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Runes.resx">
+      <DependentUpon>Runes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Summoner Spells.resx">
+      <DependentUpon>Summoner Spells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tipps.resx">
+      <DependentUpon>Tipps.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompLogic\CompLogic.csproj">
+      <Project>{a29c117b-6773-4671-b240-087fc0944a72}</Project>
+      <Name>CompLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tamil-flower-actress-white-wallpaper-babies-flowers-73639.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resolve.jpg" />
+    <None Include="Resources\2.PNG" />
+    <None Include="Resources\Unbenannt.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
