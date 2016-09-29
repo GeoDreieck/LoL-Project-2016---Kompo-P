@@ -63,9 +63,29 @@ namespace CompUI.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2 {
+            get {
+                object obj = ResourceManager.GetObject("2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tamil_flower_actress_white_wallpaper_babies_flowers_73639 {
             get {
                 object obj = ResourceManager.GetObject("tamil-flower-actress-white-wallpaper-babies-flowers-73639", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Unbenannt {
+            get {
+                object obj = ResourceManager.GetObject("Unbenannt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

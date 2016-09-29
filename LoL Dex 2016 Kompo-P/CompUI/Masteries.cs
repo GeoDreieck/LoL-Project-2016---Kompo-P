@@ -152,5 +152,131 @@ namespace CompUI
             System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
             ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(20));
         }
+
+        private void Meditationpanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(21));
+        }
+
+        private void DangerousGamepanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(23));
+        }
+
+        private void Banditpanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(22));
+        }
+
+        private void Precisionpanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(24));
+        }
+
+        private void Intelligencepanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(25));
+        }
+
+        private void WindspeakersBlessingpanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(28));
+        }
+
+        private void ThunderlordsDecreepanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(27));
+        }
+
+        private void Stormraiderssurgepanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(26));
+        }
+
+        private void Recoverypanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(29));
+        }
+
+        private void Unyieldingpanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(30));
+        }
+
+        private void ToughSkinpanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(32));
+        }
+
+        private void Explorerpanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(31));
+        }
+
+        private void RunicArmorpanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(33));
+        }
+
+        private void VeteransScarspanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(34));
+        }
+
+        private void Perseverancepanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(36));
+        }
+
+        private void Insightpanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(35));
+        }
+
+        private void Swiftnesspanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(37));
+        }
+
+        private void LegendaryGuardianpanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(38));
+        }
+
+        private void BondofStonepanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(41));
+        }
+
+        private void StrengthoftheAgespanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(40));
+        }
+
+        private void GraspoftheUndyingpanel_MouseHover(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ToolTip ToolTip = new System.Windows.Forms.ToolTip();
+            ToolTip.SetToolTip(this.FuryPanel, _iLogic.GetMasterieInfo(39));
+        }
     }
 }

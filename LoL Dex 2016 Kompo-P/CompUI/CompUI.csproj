@@ -154,6 +154,11 @@
   <ItemGroup>
     <None Include="Resources\tamil-flower-actress-white-wallpaper-babies-flowers-73639.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resolve.jpg" />
+    <None Include="Resources\2.PNG" />
+    <None Include="Resources\Unbenannt.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
