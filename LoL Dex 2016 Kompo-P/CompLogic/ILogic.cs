@@ -37,7 +37,12 @@ namespace CompLogic
 
         #region Masterie
         string GetTree(int treenumber);
-        string GetMasterieInfo(int id);
+        string GetMasterieInfo(int id, int infonumber);
+        #endregion
+
+        #region Summonerspells
+        string[,] GetSummonerSpellsNames();
+        string GetSummonerSpellsInfo(int id, int infonumber);
         #endregion
     }
 }

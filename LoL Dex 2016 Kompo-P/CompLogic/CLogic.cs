@@ -176,12 +176,33 @@ namespace CompLogic
             return _iDatabase.DataSet().Tables["Masterietrees"].Rows[treenumber-1].ItemArray[2].ToString();
         }
 
-        public string GetMasterieInfo(int id)
+        public string GetMasterieInfo(int id, int infonumber)
         {
-            return _iDatabase.DataSet().Tables["Masterie"].Rows[id].ItemArray[2].ToString();
+            return _iDatabase.DataSet().Tables["Masterie"].Rows[id].ItemArray[infonumber].ToString();
         }
         #endregion
 
+        #region Summonerspells
+
+        #endregion
+        public string[,] GetSummonerSpellsNames()
+        {
+            int length = _iDatabase.DataSet().Tables["SummonerSpells"].Rows.Count;
+            string[,] summonerspellsnames = new string[length, 2];
+
+            for (int i = 0; i < length; i++)
+            {
+                summonerspellsnames[i, 0] = _iDatabase.DataSet().Tables["SummonerSpells"].Rows[i].ItemArray[0].ToString();
+                summonerspellsnames[i, 1] = _iDatabase.DataSet().Tables["SummonerSpells"].Rows[i].ItemArray[1].ToString();
+            }
+
+            return summonerspellsnames;
+        }
+
+        public string GetSummonerSpellsInfo(int id, int infonumber)
+        {
+            return _iDatabase.DataSet().Tables["SummonerSpells"].Rows[id].ItemArray[infonumber].ToString();
+        }
         #endregion
     }
 }
