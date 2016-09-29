@@ -42,6 +42,7 @@
             // 
             // ItemIconBox
             // 
+            this.ItemIconBox.BackColor = System.Drawing.Color.Transparent;
             this.ItemIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ItemIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ItemIconBox.Location = new System.Drawing.Point(72, 50);
@@ -113,6 +114,7 @@
             // 
             // ParentItemPanel
             // 
+            this.ParentItemPanel.BackColor = System.Drawing.Color.Transparent;
             this.ParentItemPanel.Location = new System.Drawing.Point(374, 50);
             this.ParentItemPanel.Name = "ParentItemPanel";
             this.ParentItemPanel.Size = new System.Drawing.Size(438, 115);
