@@ -204,5 +204,26 @@ namespace CompLogic
             return _iDatabase.DataSet().Tables["SummonerSpells"].Rows[id].ItemArray[infonumber].ToString();
         }
         #endregion
+
+        #region Creeps
+        public string[,] GetCreepsNames()
+        {
+            int length = _iDatabase.DataSet().Tables["Creeps"].Rows.Count;
+            string[,] creepnames = new string[length, 2];
+
+            for (int i = 0; i < length; i++)
+            {
+                creepnames[i, 0] = _iDatabase.DataSet().Tables["Creeps"].Rows[i].ItemArray[0].ToString();
+                creepnames[i, 1] = _iDatabase.DataSet().Tables["Creeps"].Rows[i].ItemArray[1].ToString();
+            }
+
+            return creepnames;
+        }
+
+        public string GetCreepInfos(int id, int infonumber)
+        {
+            return _iDatabase.DataSet().Tables["Creeps"].Rows[id].ItemArray[infonumber].ToString();
+        }
+        #endregion
     }
 }
