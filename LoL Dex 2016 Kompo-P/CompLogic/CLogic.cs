@@ -173,7 +173,12 @@ namespace CompLogic
         #region Masterie
         public string GetTree(int treenumber)
         {
-            return _iDatabase.DataSet().Tables["Masterietrees"].Rows[0].ItemArray[treenumber].ToString();
+            return _iDatabase.DataSet().Tables["Masterietrees"].Rows[treenumber-1].ItemArray[2].ToString();
+        }
+
+        public string GetMasterieInfo(int id)
+        {
+            return _iDatabase.DataSet().Tables["Masterie"].Rows[id].ItemArray[2].ToString();
         }
         #endregion
 
