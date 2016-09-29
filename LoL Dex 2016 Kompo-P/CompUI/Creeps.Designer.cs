@@ -28,40 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Right);
-            this.lView_Content = new System.Windows.Forms.ListView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CreepsIconBox = new System.Windows.Forms.PictureBox();
             this.lView_creeps = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.CreepName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.MainContentPanel = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.CreepsIconBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // lView_Content
+            // CreepsIconBox
             // 
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewGroup2.Header = "ListViewGroup";
-            listViewGroup2.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Right;
-            listViewGroup2.Name = "listViewGroup2";
-            this.lView_Content.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2});
-            this.lView_Content.Location = new System.Drawing.Point(282, 178);
-            this.lView_Content.Name = "lView_Content";
-            this.lView_Content.Size = new System.Drawing.Size(448, 318);
-            this.lView_Content.TabIndex = 13;
-            this.lView_Content.UseCompatibleStateImageBehavior = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(61, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 115);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.CreepsIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.CreepsIconBox.Location = new System.Drawing.Point(61, 20);
+            this.CreepsIconBox.Name = "CreepsIconBox";
+            this.CreepsIconBox.Size = new System.Drawing.Size(170, 115);
+            this.CreepsIconBox.TabIndex = 12;
+            this.CreepsIconBox.TabStop = false;
             // 
             // lView_creeps
             // 
@@ -87,28 +69,35 @@
             this.CreepName.Text = "Creep Name";
             this.CreepName.Width = 150;
             // 
+            // MainContentPanel
+            // 
+            this.MainContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.MainContentPanel.Location = new System.Drawing.Point(282, 160);
+            this.MainContentPanel.Name = "MainContentPanel";
+            this.MainContentPanel.Size = new System.Drawing.Size(421, 336);
+            this.MainContentPanel.TabIndex = 15;
+            // 
             // Creeps
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 508);
+            this.Controls.Add(this.MainContentPanel);
             this.Controls.Add(this.lView_creeps);
-            this.Controls.Add(this.lView_Content);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.CreepsIconBox);
             this.Name = "Creeps";
             this.Text = "Creeps";
             this.Load += new System.EventHandler(this.Creeps_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CreepsIconBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView lView_Content;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox CreepsIconBox;
         private System.Windows.Forms.ListView lView_creeps;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader CreepName;
+        private System.Windows.Forms.Panel MainContentPanel;
     }
 }

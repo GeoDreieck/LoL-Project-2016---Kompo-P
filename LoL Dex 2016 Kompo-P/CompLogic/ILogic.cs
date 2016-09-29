@@ -44,5 +44,10 @@ namespace CompLogic
         string[,] GetSummonerSpellsNames();
         string GetSummonerSpellsInfo(int id, int infonumber);
         #endregion
+
+        #region Creeps
+        string[,] GetCreepsNames();
+        string GetCreepInfos(int id, int infonumber);
+        #endregion
     }
 }
