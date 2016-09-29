@@ -127,6 +127,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackgroundImage = global::CompUI.Properties.Resources.Unbenannt1;
             this.ClientSize = new System.Drawing.Size(365, 355);
             this.Controls.Add(this.Items_Button);
             this.Controls.Add(this.Masterie_Button);
@@ -140,7 +141,8 @@
             this.Load += new System.EventHandler(this.Overwiew_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
         }
 
         #endregion

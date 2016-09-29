@@ -87,8 +87,8 @@
             // 
             // Summoner_Spells
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = global::CompUI.Properties.Resources.Unbenannt1;
             this.ClientSize = new System.Drawing.Size(781, 535);
             this.Controls.Add(this.CooldownContentPanel);
             this.Controls.Add(this.MainContentPanel);
@@ -99,6 +99,8 @@
             this.Load += new System.EventHandler(this.Summoner_Spells_load);
             ((System.ComponentModel.ISupportInitialize)(this.SpellsIconBox)).EndInit();
             this.ResumeLayout(false);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
 
         }
 

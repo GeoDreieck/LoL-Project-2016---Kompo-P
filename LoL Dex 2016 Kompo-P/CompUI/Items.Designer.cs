@@ -126,6 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CompUI.Properties.Resources.Unbenannt1;
             this.ClientSize = new System.Drawing.Size(850, 568);
             this.Controls.Add(this.ParentItemPanel);
             this.Controls.Add(this.MainContentPanel);
@@ -139,6 +140,8 @@
             this.Load += new System.EventHandler(this.Items_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ItemIconBox)).EndInit();
             this.ResumeLayout(false);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
 
         }
 
