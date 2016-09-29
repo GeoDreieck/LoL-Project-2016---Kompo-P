@@ -66,11 +66,12 @@ namespace CompUI
                 creepsstatbox.ScrollBars = ScrollBars.Vertical;
                 creepsstatbox.WordWrap = true;
 
-                string maininfo = "Buff: " + _iLogic.GetCreepInfos(index, 2) + "\n Gold: " + _iLogic.GetCreepInfos(index, 3);
+                string maininfo = "Spawntime: " + _iLogic.GetCreepInfos(index, 2) + "\n Buff: " + _iLogic.GetCreepInfos(index, 3) + "\n Gold: " + _iLogic.GetCreepInfos(index, 4);
 
                 creepsstatbox.Text = maininfo;
 
-                CreepsIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetSummonerSpellsInfo(index, 4), true);
+                CreepsIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetCreepInfos(index, 5), true);
             }
+        }
     }
 }

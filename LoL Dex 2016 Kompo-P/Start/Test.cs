@@ -120,6 +120,15 @@ namespace Test
             dataTableSummonerSpells = dataTableSummonerSpells.DefaultView.ToTable();
             _iDatabase.AddTabletoDataSet(dataTableSummonerSpells);
 
+            sql = string.Format("SELECT * FROM Creeps;");
+            DataTable dataTableCreeps = new DataTable("Creeps");
+            dbDataReader = _iDatabase.ExecuteQuery(sql);
+            dataTableCreeps.Load(dbDataReader);
+            dbDataReader.Close();
+            dataTableCreeps.DefaultView.Sort = "ID";
+            dataTableCreeps = dataTableCreeps.DefaultView.ToTable();
+            _iDatabase.AddTabletoDataSet(dataTableCreeps);
+
             //GetChampNames Test
             string[,] testarray = _iLogic.GetChampNames();
             for(int i = 0; i < (testarray.Length/2); i++)
