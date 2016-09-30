@@ -12,12 +12,16 @@ namespace CompData
 {
     internal abstract class ADatabase : IDatabase
     {
-        //Erzeugen von Klassenspezifischen Variablen
+
         #region fields
+        // Objektvariable
         protected string connectionString;
         protected DbConnection _dbConnection;
 
         protected DbCommand _dbCommandSelect;
+        protected DbCommand _dbCommandInsert;
+        protected DbCommand _dbCommandUpdate;
+        protected DbCommand _dbCommandDelete;
 
         protected string providerString;
         private DbProviderFactory _dbProviderFactory;
@@ -26,7 +30,6 @@ namespace CompData
         #endregion
 
         #region get/set
-        //Return dataSet
         public DataSet DataSet()
         {
             return dataSet;
@@ -38,15 +41,15 @@ namespace CompData
         #endregion
 
         #region Interface Implmentierung Allgemein
-        //Fügt einen Table dem Dataset hinzu
         public void AddTabletoDataSet(DataTable dataTable)
         {
             dataSet.Tables.Add(dataTable);
         }
         #endregion
 
+
+
         #region Interface Implementierung Connected
-        //Öffnen der Datenbankverbindung
         public void Open()
         {
             // Ist die Db schon geöffent -> nichts tun
@@ -62,14 +65,12 @@ namespace CompData
             }
         }
 
-        //Schließen der Datenbankverbindung
         public void Close()
         {
             if (_dbConnection.State == ConnectionState.Open)
                 _dbConnection.Close();
         }
 
-        //Executy Select-Command
         public virtual DbDataReader ExecuteQuery(string sql)
         {
             DbDataReader dbDataReader = null;
@@ -85,7 +86,10 @@ namespace CompData
                 throw new Exception(message);
             }
         }
+
         #endregion
+
+        
 
         #region interne Methoden
         internal void Create(string connectionString, string providerString)
@@ -107,6 +111,10 @@ namespace CompData
                 _dbConnection.ConnectionString = connectionString; //
 
                 _dbCommandSelect = this.CreateCommand(_dbConnection);
+
+                _dbCommandInsert = this.CreateCommand(_dbConnection);
+                _dbCommandUpdate = this.CreateCommand(_dbConnection);
+                _dbCommandDelete = this.CreateCommand(_dbConnection);
             }
             catch (Exception exception)
             {
@@ -115,7 +123,6 @@ namespace CompData
                     connectionString, providerString, exception));
             }
         }
-
         private DbCommand CreateCommand(DbConnection dbConnection)
         {
             DbCommand dbCommand = _dbProviderFactory.CreateCommand();
@@ -126,6 +133,7 @@ namespace CompData
             dbCommand.CommandTimeout = 30;
             return dbCommand;
         }
+
         #endregion
 
     }

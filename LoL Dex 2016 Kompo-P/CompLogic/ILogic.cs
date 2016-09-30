@@ -29,7 +29,7 @@ namespace CompLogic
 
         string GetItemInfos(int id, int infonumber);
 
-        List<List<string>> GetIconsforParentitems(int id);
+        List<string> GetIconsforParentitems(int id);
         #endregion
 
         #region Runes

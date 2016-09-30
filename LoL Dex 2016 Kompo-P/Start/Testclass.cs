@@ -29,9 +29,8 @@ namespace Test
         void Run()
         {
             //Test ob die Datenbank erzeugt werden kann
-            string connectionstringrelease = Directory.GetCurrentDirectory() + "\\LoL Dex 2016 Database.mdb";
-            var connectionStringdebug = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\LoL Dex 2016 Database.mdb";
-            _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionStringdebug);
+            var connectionString = Properties.Settings.Default.LoL_Dex_2016_DatabaseConnectionString;
+            _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionString);
             try
             {
                 _iDatabase.Open();
@@ -50,9 +49,8 @@ namespace Test
             //test ob die Logic-Schicht erstellt werden kann
             try
             {
-                string imagedirectoryrelease = Directory.GetCurrentDirectory() + "\\Images\\";
-                string imagedirectorydebug = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\Images\\";
-                _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase, imagedirectorydebug);
+                string imagedirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\Images\\";
+                _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase, imagedirectory);
             }
             catch
             {

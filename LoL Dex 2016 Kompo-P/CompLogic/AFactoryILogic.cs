@@ -16,8 +16,10 @@ namespace CompLogic
 {
     public abstract class AFactoryILogic
     {
+
         public static ILogic CreateInstance(string sDataType, IDatabase iDatabase, string imgdirpath)
         {
+
             switch (sDataType)
             {
                 case ("CLogic"): return new CLogic(iDatabase, imgdirpath);
