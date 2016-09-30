@@ -29,8 +29,9 @@ namespace LoL_Dex_2016
         void Run()
         {
             // Unterste Schicht CompData wird zuerst erzeugt
-            var connectionString = Properties.Settings.Default.LoL_Dex_2016_DatabaseConnectionString;
-            _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionString);
+            string connectionstringrelease = Directory.GetCurrentDirectory() + "\\LoL Dex 2016 Database.mdb";
+            var connectionStringdebug = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\LoL Dex 2016 Database.mdb";
+            _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionstringrelease);
             _iDatabase.Open();
 
             // Für CompData wird alles erzeugt, was zum lokalem Abspeichern der DB notwendig ist.
@@ -39,8 +40,9 @@ namespace LoL_Dex_2016
             DataSet dataSet = new DataSet();
 
             // Mittlere Schicht CompLogic wird es zweites erzugt
-            string imagedirectory = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\Images\\";
-            _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase, imagedirectory);
+            string imagedirectoryrelease = Directory.GetCurrentDirectory() + "\\Images\\";
+            string imagedirectorydebug = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\Images\\";
+            _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase, imagedirectoryrelease);
 
             // Oberste Schicht CompUI
             _overview = AFactoryIForms.CreateInstance("Overview", _iLogic);

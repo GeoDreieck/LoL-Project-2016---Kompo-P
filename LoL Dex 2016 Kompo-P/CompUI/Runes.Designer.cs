@@ -64,6 +64,7 @@
             this.rune_level_box.Size = new System.Drawing.Size(121, 21);
             this.rune_level_box.TabIndex = 15;
             this.rune_level_box.Tag = "";
+            this.rune_level_box.SelectedIndex = 0;
             this.rune_level_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // rune_proberty_box
@@ -80,6 +81,7 @@
             this.rune_proberty_box.Name = "rune_proberty_box";
             this.rune_proberty_box.Size = new System.Drawing.Size(121, 21);
             this.rune_proberty_box.TabIndex = 16;
+            this.rune_proberty_box.SelectedIndex = 0;
             this.rune_proberty_box.SelectedIndexChanged += new System.EventHandler(this.FilterChanged);
             // 
             // RuneLevelLabel
