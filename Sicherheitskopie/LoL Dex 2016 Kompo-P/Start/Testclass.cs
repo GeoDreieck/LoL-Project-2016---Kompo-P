@@ -14,11 +14,11 @@ using System.Data;
 
 namespace Test
 {
-    internal class Testclass
+    class Testclass
     {
         #region fields
         // CompUI
-        IForms _overview;
+        Form _overview;
 
         // CompLogic
         private ILogic _iLogic;
@@ -153,7 +153,7 @@ namespace Test
 
             //Test ob alle Forms geöffnet werden können und wieder schließen.
             string formname = "empty";
-            IForms cr;
+            Form cr;
 
             formname = "Creeps";
             try

@@ -60,12 +60,6 @@
     <Compile Include="Creeps.Designer.cs">
       <DependentUpon>Creeps.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fields.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fields.Designer.cs">
-      <DependentUpon>Fields.cs</DependentUpon>
-    </Compile>
     <Compile Include="Items.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,12 +96,6 @@
     <Compile Include="Summoner Spells.Designer.cs">
       <DependentUpon>Summoner Spells.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tipps.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tipps.Designer.cs">
-      <DependentUpon>Tipps.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Champions.resx">
@@ -115,9 +103,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Creeps.resx">
       <DependentUpon>Creeps.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Fields.resx">
-      <DependentUpon>Fields.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Items.resx">
       <DependentUpon>Items.cs</DependentUpon>
@@ -131,6 +116,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Runes.resx">
       <DependentUpon>Runes.cs</DependentUpon>
@@ -138,12 +124,6 @@
     <EmbeddedResource Include="Summoner Spells.resx">
       <DependentUpon>Summoner Spells.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tipps.resx">
-      <DependentUpon>Tipps.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CompLogic\CompLogic.csproj">
@@ -152,12 +132,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tamil-flower-actress-white-wallpaper-babies-flowers-73639.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resolve.jpg" />
-    <None Include="Resources\2.PNG" />
-    <None Include="Resources\Unbenannt.PNG" />
+    <None Include="Resources\MainBackground.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

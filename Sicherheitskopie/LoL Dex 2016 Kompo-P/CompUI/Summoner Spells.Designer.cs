@@ -39,10 +39,11 @@
             // 
             // SpellsIconBox
             // 
+            this.SpellsIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.SpellsIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.SpellsIconBox.Location = new System.Drawing.Point(68, 33);
+            this.SpellsIconBox.Location = new System.Drawing.Point(31, 12);
             this.SpellsIconBox.Name = "SpellsIconBox";
-            this.SpellsIconBox.Size = new System.Drawing.Size(170, 115);
+            this.SpellsIconBox.Size = new System.Drawing.Size(133, 133);
             this.SpellsIconBox.TabIndex = 19;
             this.SpellsIconBox.TabStop = false;
             // 
@@ -52,7 +53,7 @@
             this.ID,
             this.Summoner_Name});
             this.lView_Spells.LabelEdit = true;
-            this.lView_Spells.Location = new System.Drawing.Point(68, 170);
+            this.lView_Spells.Location = new System.Drawing.Point(31, 170);
             this.lView_Spells.Name = "lView_Spells";
             this.lView_Spells.Size = new System.Drawing.Size(161, 336);
             this.lView_Spells.TabIndex = 21;
@@ -81,13 +82,13 @@
             // 
             this.CooldownContentPanel.Location = new System.Drawing.Point(268, 170);
             this.CooldownContentPanel.Name = "CooldownContentPanel";
-            this.CooldownContentPanel.Size = new System.Drawing.Size(136, 49);
+            this.CooldownContentPanel.Size = new System.Drawing.Size(222, 28);
             this.CooldownContentPanel.TabIndex = 23;
             // 
             // Summoner_Spells
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = global::CompUI.Properties.Resources.MainBackground;
             this.ClientSize = new System.Drawing.Size(781, 535);
             this.Controls.Add(this.CooldownContentPanel);
             this.Controls.Add(this.MainContentPanel);
@@ -98,6 +99,8 @@
             this.Load += new System.EventHandler(this.Summoner_Spells_load);
             ((System.ComponentModel.ISupportInitialize)(this.SpellsIconBox)).EndInit();
             this.ResumeLayout(false);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
 
         }
 

@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Main(string[] args) ist der Einstiegspunkt in das Programm.
+ * Run() wird von der Main-Methode aufgerufen und initialisiert zuerst die Data-Schicht.
+ * Danach wird die Logic-Schicht initialisiert indem AFactoryILogic aufgerufen und ihr die zuvor initialisierte Data-Schicht übergeben wird.
+ * Nach der Logic-Schicht wird die Haupt-Form Overview als erste Form derView-Schicht erzeugt, welche als Hub fungiert von dem die anderen Forms gestartet werden.
+ * Nachdem Overview erzeugt wurde werden alle relevanten Tables aus der Datenbank in ein lokales DataSet geladen um einen schnelleren Zugriff zu gewährleisten.
+ * Zuletzt werden Overview als Haupt-Forms gestartet und nach dem schließen dieser die Datenbank-Verbindung geschlossen.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,11 +23,11 @@ using System.Data;
 
 namespace LoL_Dex_2016
 {
-    class Start
+    internal class Start
     {
         #region fields
         // CompUI
-        Form _overview;
+        IForms _overview;
 
         // CompLogic
         private ILogic _iLogic;
@@ -31,7 +40,7 @@ namespace LoL_Dex_2016
             // Unterste Schicht CompData wird zuerst erzeugt
             string connectionstringrelease = Directory.GetCurrentDirectory() + "\\LoL Dex 2016 Database.mdb";
             var connectionStringdebug = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\LoL Dex 2016 Database.mdb";
-            _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionstringrelease);
+            _iDatabase = AFactoryIDatabase.CreateInstance("CDatabaseAccess", connectionStringdebug);
             _iDatabase.Open();
 
             // Für CompData wird alles erzeugt, was zum lokalem Abspeichern der DB notwendig ist.
@@ -42,7 +51,7 @@ namespace LoL_Dex_2016
             // Mittlere Schicht CompLogic wird es zweites erzugt
             string imagedirectoryrelease = Directory.GetCurrentDirectory() + "\\Images\\";
             string imagedirectorydebug = Directory.GetParent(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName).Parent.FullName + "\\Images\\";
-            _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase, imagedirectoryrelease);
+            _iLogic = AFactoryILogic.CreateInstance("CLogic", _iDatabase, imagedirectorydebug);
 
             // Oberste Schicht CompUI
             _overview = AFactoryIForms.CreateInstance("Overview", _iLogic);

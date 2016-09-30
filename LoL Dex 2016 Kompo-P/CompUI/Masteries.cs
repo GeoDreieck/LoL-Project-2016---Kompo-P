@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Masteries.cs implementiert den ctor und die EventHandler und Fields von dem Masteries-Forms-Object.
+ * Champions_Load wird beim Laden des Forms aufgerufen und läd die BackgroundImages der drei PictureBoxen, bindet den EventHandler an timer.Tick und startet den Timer.
+ * Timer_Tick ist der EventHandler von timer.Tick und überprüft ob die Maus sich gerade in einem Panel befindet und wenn sie das tut, werden die Informationen die zu dem Panel gehören in Masterieinfo geladen.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +18,7 @@ using CompLogic;
 
 namespace CompUI
 {
-    public partial class Masteries : Form, IForms
+    internal partial class Masteries : Form, IForms
     {
         #region fields
         // Assoziation zur Komponente CompLogic
@@ -25,31 +31,41 @@ namespace CompUI
         {
             InitializeComponent();
 
+            //Logic-Abhängigkeit wird eingebunden
             _iLogic = iLogic;
-
-            
         }
 
         private void Masteries_Load(object sender, EventArgs e)
         {
+            //BackgroundImages der drei PictureBoxen von der Logic-Schicht anfordern
             Tree1.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetTree(1), true);
             Tree2.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetTree(2), true);
             Tree3.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetTree(3), true);
 
+            //Für den Timer einen Eventhandler zum Tick-Event hinzufügen und diesen starten
             timer.Tick += timer_Tick;
             timer.Start();
+
+            //Masterieinfo auf ReadOnly stellen
             Masterieinfo.ReadOnly = true;
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
+            //Variablen erstellen
             Rectangle r;
             int i = 0;
+
+            /*
+             Lade immer über PANELNAME.RectangleToScreen(PANELNAME.ClientRectangle)
+             eine Kopie vom Areal eines Panels in ein Rechteck und überprüfe ob die
+             Maus in diesem Gebiet ist. Wenn nicht, überprüfe das nächste Panel und zähle i um 1 hoch;
+             Wenn die Maus in dem Areal eines Panels sich befinden, fordere die passenden Informationen
+             aus der Logic-Schicht an und gebe sie in Masterieinfos aus.              
+             */
             try
             {
                 r = FuryPanel.RectangleToScreen(FuryPanel.ClientRectangle);
-            
-            
 
             if (r.Contains(MousePosition))
             {
@@ -465,11 +481,6 @@ namespace CompUI
             {
                 timer.Stop();
             }
-        }
-
-        private void FuryPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

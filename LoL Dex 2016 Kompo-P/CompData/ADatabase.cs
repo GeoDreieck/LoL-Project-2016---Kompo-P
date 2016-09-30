@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * ADatabase erbt von IDatabase.
+ * Es implementiert die Funktionen von IDatabase, ist aber selber abstrakt.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;

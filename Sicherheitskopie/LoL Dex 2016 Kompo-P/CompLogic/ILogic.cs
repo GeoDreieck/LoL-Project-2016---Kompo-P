@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * ILogic ist ein Interface, das alle Funktionen festlegt, die CLogic implementieren muss.
+ * ILogic kapselt CLogic.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 
@@ -24,7 +29,7 @@ namespace CompLogic
 
         string GetItemInfos(int id, int infonumber);
 
-        List<string> GetIconsforParentitems(int id);
+        List<List<string>> GetIconsforParentitems(int id);
         #endregion
 
         #region Runes

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * ILogic ist ein Interface, das alle Funktionen festlegt, die CLogic implementieren muss.
+ * ILogic kapselt CLogic.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 

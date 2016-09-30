@@ -48,7 +48,6 @@
             this.label1.Size = new System.Drawing.Size(294, 24);
             this.label1.TabIndex = 9;
             this.label1.Text = "League of Legandos Overview";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Champions_Button
             // 
@@ -127,6 +126,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackgroundImage = global::CompUI.Properties.Resources.MainBackground;
             this.ClientSize = new System.Drawing.Size(365, 355);
             this.Controls.Add(this.Items_Button);
             this.Controls.Add(this.Masterie_Button);
@@ -135,6 +135,8 @@
             this.Controls.Add(this.SummonerSpells_Button);
             this.Controls.Add(this.Champions_Button);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Overview";
             this.Text = "Overwiew";
             this.Load += new System.EventHandler(this.Overwiew_Load);

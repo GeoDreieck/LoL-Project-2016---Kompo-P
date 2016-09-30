@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ *AFactoryILogic ist die Factoryklasse, die CLogic erstellt und mit Hilfe von ILogic kapselt.
+ *AFActoryILogic übergibt CLogic ein IDatabase-Object und einen String.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

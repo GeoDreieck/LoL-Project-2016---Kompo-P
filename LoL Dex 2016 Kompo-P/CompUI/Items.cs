@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*
+ * Items.cs implementiert den ctor und die EventHandler und Fields von dem Items-Forms-Object.
+ * Items wird beim Laden des Forms aufgerufen und Füllt die ListView und wählt das erste Item dieser aus.
+ * lView_Items_SelectedIndexChanged wird aufgerufen, wenn sich SelectedIndices der ListView ändert. Sie sorgt dafür, dass das Icon in die PictureBox und die Stats-Infos in eine TextBox geladen werden.
+ * Außerdem werden dynamisch alle Items oben in PictureBoxen angezeigt, die sich aus dem aktuell ausgewählten Item der ListView bauen lassen.
+ * stats_btn_Click ist das Click-Event von stats_btn und erzeugt eine Textbox in die die Stats des ausgewählten Items der ListView geladen werden.
+ * special_btn_Click ist das Click-Event von special_btn und erzeugt eine Textbox in die die speziellen Effekte des ausgewählten Items der ListView geladen werden.
+ * build_btn_Click ist das Click-Event von build_btn und erzeugt eine PictureBox in der Buildtree des ausgewählten Items der ListView geladen wird.
+ * parenticon_Click ist das Click-Event von den von lView_Items_SelectedIndexChanged erstellten PictureBoxen und wählt das Item aus der ListView aus, dass in der PictureBox zu sehen ist.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +23,7 @@ using CompLogic;
 
 namespace CompUI
 {
-    public partial class Items : Form, IForms
+    internal partial class Items : Form, IForms
     {
         #region fields
         // Assoziation zur Komponente CompLogic

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * CDatabaseAccess erbt von ADatabase und darüber von IDatabase.
+ * CDatabaseAccess besteht nur aus einem ctor.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 

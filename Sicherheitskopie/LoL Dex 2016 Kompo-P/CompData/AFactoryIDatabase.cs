@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * AFactoryIDatabase erzeugt CDatabaseAccess und kapselt diesen mit Hilfe von IDatabase.
+ * AFactoryIDatabase übergibt CDatabaseAccess einen String.
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

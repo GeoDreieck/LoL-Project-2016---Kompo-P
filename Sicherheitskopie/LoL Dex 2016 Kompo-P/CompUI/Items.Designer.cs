@@ -45,9 +45,9 @@
             this.ItemIconBox.BackColor = System.Drawing.Color.Transparent;
             this.ItemIconBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ItemIconBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.ItemIconBox.Location = new System.Drawing.Point(72, 50);
+            this.ItemIconBox.Location = new System.Drawing.Point(31, 12);
             this.ItemIconBox.Name = "ItemIconBox";
-            this.ItemIconBox.Size = new System.Drawing.Size(170, 115);
+            this.ItemIconBox.Size = new System.Drawing.Size(133, 133);
             this.ItemIconBox.TabIndex = 12;
             this.ItemIconBox.TabStop = false;
             // 
@@ -87,7 +87,7 @@
             this.ID,
             this.Itemname});
             this.lView_Items.LabelEdit = true;
-            this.lView_Items.Location = new System.Drawing.Point(72, 201);
+            this.lView_Items.Location = new System.Drawing.Point(31, 170);
             this.lView_Items.Name = "lView_Items";
             this.lView_Items.Size = new System.Drawing.Size(161, 322);
             this.lView_Items.TabIndex = 20;
@@ -107,6 +107,8 @@
             // 
             // MainContentPanel
             // 
+            this.MainContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MainContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.MainContentPanel.Location = new System.Drawing.Point(261, 201);
             this.MainContentPanel.Name = "MainContentPanel";
             this.MainContentPanel.Size = new System.Drawing.Size(566, 322);
@@ -124,6 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CompUI.Properties.Resources.MainBackground;
             this.ClientSize = new System.Drawing.Size(850, 568);
             this.Controls.Add(this.ParentItemPanel);
             this.Controls.Add(this.MainContentPanel);
@@ -132,6 +135,8 @@
             this.Controls.Add(this.stats_btn);
             this.Controls.Add(this.special_btn);
             this.Controls.Add(this.ItemIconBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Items";
             this.Text = "Items";
             this.Load += new System.EventHandler(this.Items_Load);

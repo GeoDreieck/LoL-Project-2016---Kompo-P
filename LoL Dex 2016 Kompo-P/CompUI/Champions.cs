@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Champions.cs implementiert den ctor und die EventHandler und Fields von dem Champions-Forms-Object.
+ * Champions_Load wird beim Laden des Forms aufgerufen und Füllt die ListView und wählt das erste Item dieser aus.
+ * lView_Champnames_SelectedIndexChanged wird aufgerufen, wenn sich SelectedIndices der ListView ändert. Sie sorgt dafür, dass das Icon in die PictureBox und die Stats-Infos in eine TextBox geladen werden.
+ * stats_btn_Click ist das Click-Event von stats_btn und erzeugt eine Textbox in die die Stats des ausgewählten Items der ListView geladen werden.
+ * story_btn_Click ist das Click-Event von story_btn und erzeugt eine Textbox in die die Story des ausgewählten Items der ListView geladen werden.
+ * spells_btn_Click ist das Click-Event von spells_btn und erzeugt eine GridBox in die die Infos über die Abilitys des ausgewählten Items der ListView geladen werden.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +22,7 @@ using CompLogic;
 
 namespace CompUI
 {
-    public partial class Champions : Form, IForms
+    internal partial class Champions : Form, IForms
     {
         #region fields
         // Assoziation zur Komponente CompLogic

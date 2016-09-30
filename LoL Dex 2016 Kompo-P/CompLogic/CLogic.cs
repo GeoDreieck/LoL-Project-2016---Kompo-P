@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * CLogic fungiert als Bereitsteller von Funktionen für die View-Schicht und erbt von Ilogic.
+ * Dazu gehören Imagedirectorypath(), welche einen beim erzeugen von CLogic übergebenen String zurückliefert, der auf den Image-Ordner verweist,
+ * und eine Ansammlung an allen Funktionen, die der View-Schicht Informationen aus dem DataSet der Data-Schicht übermittelt.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 

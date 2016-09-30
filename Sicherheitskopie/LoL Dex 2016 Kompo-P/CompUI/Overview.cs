@@ -24,14 +24,12 @@ namespace CompUI
         {
             InitializeComponent();
 
+            //Logic-Abhängigkeit wird eingebunden
             _iLogic = iLogic;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //Ein Klick-Event für jeden Button. Jeder Button ruft beim Klick
+        //AFactoryIForms mit dem passenden String auf, speichert den Rückgabewert in cr und zeige cr an
         private void Creeps_Click(object sender, EventArgs e)
         {
             Form cr = AFactoryIForms.CreateInstance("Creeps", _iLogic);

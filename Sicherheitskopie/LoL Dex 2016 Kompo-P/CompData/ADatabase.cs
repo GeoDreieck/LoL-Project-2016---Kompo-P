@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * ADatabase erbt von IDatabase.
+ * Es implementiert die Funktionen von IDatabase, ist aber selber abstrakt.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
@@ -7,16 +12,12 @@ namespace CompData
 {
     internal abstract class ADatabase : IDatabase
     {
-
+        //Erzeugen von Klassenspezifischen Variablen
         #region fields
-        // Objektvariable
         protected string connectionString;
         protected DbConnection _dbConnection;
 
         protected DbCommand _dbCommandSelect;
-        protected DbCommand _dbCommandInsert;
-        protected DbCommand _dbCommandUpdate;
-        protected DbCommand _dbCommandDelete;
 
         protected string providerString;
         private DbProviderFactory _dbProviderFactory;
@@ -25,6 +26,7 @@ namespace CompData
         #endregion
 
         #region get/set
+        //Return dataSet
         public DataSet DataSet()
         {
             return dataSet;
@@ -35,21 +37,16 @@ namespace CompData
         internal ADatabase() { }
         #endregion
 
-        #region Abstrakte Methoden SQL Befehle sind DB spezifisch
-        internal abstract string GetSqlGetMake();
-        internal abstract string GetSqlGetModel(string make);
-        #endregion
-
         #region Interface Implmentierung Allgemein
+        //Fügt einen Table dem Dataset hinzu
         public void AddTabletoDataSet(DataTable dataTable)
         {
             dataSet.Tables.Add(dataTable);
         }
         #endregion
 
-
-
         #region Interface Implementierung Connected
+        //Öffnen der Datenbankverbindung
         public void Open()
         {
             // Ist die Db schon geöffent -> nichts tun
@@ -65,24 +62,16 @@ namespace CompData
             }
         }
 
+        //Schließen der Datenbankverbindung
         public void Close()
         {
             if (_dbConnection.State == ConnectionState.Open)
                 _dbConnection.Close();
         }
 
-        public virtual object ExecuteScalar(string sql)
-        {
-            _dbCommandSelect.CommandText = sql;
-            object obj = _dbCommandSelect.ExecuteScalar();
-            return obj;
-        }
-
+        //Executy Select-Command
         public virtual DbDataReader ExecuteQuery(string sql)
         {
-            // preconditions
-            //  if( sql == string.Empty )
-
             DbDataReader dbDataReader = null;
             try
             {
@@ -96,105 +85,6 @@ namespace CompData
                 throw new Exception(message);
             }
         }
-
-        #endregion
-
-        #region Interface Implementierung Disconnected
-
-        public virtual DbDataAdapter CreateDbDataAdapter(string dataTableName)
-        {
-
-            DbDataAdapter dbDataAdapter = _dbProviderFactory.CreateDataAdapter();
-
-            DbCommandBuilder dbCommandBuilder = _dbProviderFactory.CreateCommandBuilder();
-            dbCommandBuilder.DataAdapter = dbDataAdapter;  // Dependency Injection
-
-            // Select DbCommand
-            DbCommand dbCommandSelect = _dbProviderFactory.CreateCommand();
-            dbCommandSelect.Connection = _dbConnection;
-            dbCommandSelect.CommandText = "SELECT * FROM " + dataTableName;
-
-            dbDataAdapter.SelectCommand = dbCommandSelect;  // SELECT ohne joins muss von Benutzer definiert
-            dbDataAdapter.InsertCommand = dbCommandBuilder.GetInsertCommand(); // INSERT wird generiert
-            dbDataAdapter.UpdateCommand = dbCommandBuilder.GetUpdateCommand(); // INSERT wird generiert
-            dbDataAdapter.DeleteCommand = dbCommandBuilder.GetDeleteCommand(); // INSERT wird generiert
-
-            return dbDataAdapter;
-        }
-
-        public virtual int Fill(string sql, DataTable dataTable, DbDataAdapter dbDataAdapter)
-        {
-            // preconditions
-            if (sql == string.Empty)
-                throw new Exception(" ADatabase.Fill() sql string is empty or null");
-            if (dataTable == null)
-                throw new Exception(" ADatabase.Fill() dataTable is null");
-            if (dbDataAdapter == null)
-                throw new Exception(" ADatabase.Fill() dbDataAdapter is null");
-            int nRows = 0;
-            try
-            {
-                dbDataAdapter.SelectCommand.CommandText = sql;
-                nRows = dbDataAdapter.Fill(dataTable);
-                // post condition is nRows == 0 zulässig?
-            }
-            catch (Exception exception)
-            {
-                string message = string.Format("ADatabase.Fill() {0} fails\n", sql) + exception.Message;
-                throw new Exception(message);
-            }
-            return nRows;
-        }
-
-        public virtual int Update(DataTable dataTable)
-        {
-            // preconditions
-            if (dataTable == null)
-                throw new Exception(" ADatabase.Fill() dataTable is null");
-
-            DbDataAdapter dbDataAdapter = this.CreateDbDataAdapter(dataTable.TableName);
-            if (dbDataAdapter == null)
-                throw new Exception(" ADatabase.Fill() dbDataAdapter is null");
-
-            int nRows = 0;
-            try
-            {
-                nRows = dbDataAdapter.Update(dataTable);
-                // post condition is nRows == 0 zulässig?
-            }
-            catch (Exception exception)
-            {
-                string message = string.Format("ADatabase.Update() fails\n") + exception.Message;
-                throw new Exception(message);
-            }
-            return nRows;
-        }
-
-
-        public virtual DataTable GetSchema(string dataTableName)
-        {
-            // preconditions
-            if (dataTableName == string.Empty)
-                throw new Exception(" ADatabase.GetSchema() dataTableName is empty or null");
-
-            DbDataAdapter dbDataAdapter = this.CreateDbDataAdapter(dataTableName);
-            if (dbDataAdapter == null)
-                throw new Exception(" ADatabase.Fill() dbDataAdapter is null");
-
-            try
-            {
-                DataTable dataTable = new DataTable();
-                dataTable = dbDataAdapter.FillSchema(dataTable, SchemaType.Source);
-                return dataTable;
-            }
-            catch (Exception exception)
-            {
-                string message = string.Format("ADatabase.GetSchema() {0} fails\n") + exception.Message;
-                throw new Exception(message);
-            }
-        }
-
-
         #endregion
 
         #region interne Methoden
@@ -217,10 +107,6 @@ namespace CompData
                 _dbConnection.ConnectionString = connectionString; //
 
                 _dbCommandSelect = this.CreateCommand(_dbConnection);
-
-                _dbCommandInsert = this.CreateCommand(_dbConnection);
-                _dbCommandUpdate = this.CreateCommand(_dbConnection);
-                _dbCommandDelete = this.CreateCommand(_dbConnection);
             }
             catch (Exception exception)
             {
@@ -229,6 +115,7 @@ namespace CompData
                     connectionString, providerString, exception));
             }
         }
+
         private DbCommand CreateCommand(DbConnection dbConnection)
         {
             DbCommand dbCommand = _dbProviderFactory.CreateCommand();
@@ -239,7 +126,6 @@ namespace CompData
             dbCommand.CommandTimeout = 30;
             return dbCommand;
         }
-
         #endregion
 
     }

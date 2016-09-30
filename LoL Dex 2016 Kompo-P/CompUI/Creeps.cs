@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Creeps.cs implementiert den ctor und die EventHandler und Fields von dem Creepy-Forms-Object.
+ * Creeps wird beim Laden des Forms aufgerufen und Füllt die ListView und wählt das erste Item dieser aus.
+ * lView_creeps_SelectedIndexChanged wird aufgerufen, wenn sich SelectedIndices der ListView ändert. Sie sorgt dafür, dass das Icon in die PictureBox und die Stats-Infos in eine TextBox geladen werden.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +18,7 @@ using CompLogic;
 
 namespace CompUI
 {
-    public partial class Creeps : Form, IForms
+    internal partial class Creeps : Form, IForms
     {
         #region fields
         // Assoziation zur Komponente CompLogic
@@ -65,7 +71,7 @@ namespace CompUI
             //lade die Infos dafür für das Item der ListView und lade das passende Icon in die Picturebox
             if (lView_creeps.SelectedIndices[0] >= 0)
             {
-                //Weiße index den neuen Wert zu
+                //Weise index den neuen Wert zu
                 index = lView_creeps.SelectedIndices[0];
 
                 //Cleare MainContentPanel, erzeuge und binde eine Textbox ans MainContentPanel
@@ -79,7 +85,7 @@ namespace CompUI
                 creepsstatbox.WordWrap = true;
                 creepsstatbox.ReadOnly = true;
 
-                //Vordere den die Infos zu dem ausgewählten ListView-Item bei der Logik-Schicht an und fülle die TextBox damit
+                //Vordere die Infos zu dem ausgewählten ListView-Item bei der Logic-Schicht an und fülle die TextBox damit
                 string maininfo = "Spawntime: " + _iLogic.GetCreepInfos(index, 2) + "\n Buff: " + _iLogic.GetCreepInfos(index, 3) + "\n Gold: " + _iLogic.GetCreepInfos(index, 4);
                 creepsstatbox.Text = maininfo;
 
@@ -87,5 +93,6 @@ namespace CompUI
                 CreepsIconBox.BackgroundImage = Image.FromFile(_iLogic.Imagdirectorypath() + _iLogic.GetCreepInfos(index, 5), true);
             }
         }
+
       }
 }

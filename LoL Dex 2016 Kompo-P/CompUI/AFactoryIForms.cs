@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * AFactoryIForms erstellt je nach übergebenen String sDataType ein bestimmtes Forms-Object und gibt dieses zurück.
+ * AFactoryIForms übergibt den Forms ein ILogic-Object.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +16,7 @@ namespace CompUI
 {
     public abstract class AFactoryIForms
     {
-        public static Form CreateInstance(string sDataType, ILogic iLogic)
+        public static IForms CreateInstance(string sDataType, ILogic iLogic)
         {
 
             switch (sDataType)

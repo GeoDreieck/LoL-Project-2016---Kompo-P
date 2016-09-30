@@ -118,7 +118,7 @@
             this.lView_Runes.TabIndex = 19;
             this.lView_Runes.UseCompatibleStateImageBehavior = false;
             this.lView_Runes.View = System.Windows.Forms.View.Details;
-            this.lView_Runes.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.lView_Runes.SelectedIndexChanged += new System.EventHandler(this.lView_Runes_SelectedIndexChanged);
             // 
             // ID
             // 

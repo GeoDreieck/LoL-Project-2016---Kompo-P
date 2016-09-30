@@ -48,7 +48,6 @@
             this.label1.Size = new System.Drawing.Size(294, 24);
             this.label1.TabIndex = 9;
             this.label1.Text = "League of Legandos Overview";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Champions_Button
             // 
@@ -136,13 +135,14 @@
             this.Controls.Add(this.SummonerSpells_Button);
             this.Controls.Add(this.Champions_Button);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Overview";
             this.Text = "Overwiew";
             this.Load += new System.EventHandler(this.Overwiew_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
+
         }
 
         #endregion

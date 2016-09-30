@@ -12,7 +12,7 @@ using CompLogic;
 
 namespace CompUI
 {
-    public partial class Overview : Form, IForms
+    internal partial class Overview : Form, IForms
     {
 
         #region fields
@@ -24,60 +24,58 @@ namespace CompUI
         {
             InitializeComponent();
 
+            //Logic-Abhängigkeit wird eingebunden
             _iLogic = iLogic;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //Ein Klick-Event für jeden Button. Jeder Button ruft beim Klick
+        //AFactoryIForms mit dem passenden String auf, speichert den Rückgabewert in cr und zeige cr an
         private void Creeps_Click(object sender, EventArgs e)
         {
-            Form cr = AFactoryIForms.CreateInstance("Creeps", _iLogic);
+            IForms cr = AFactoryIForms.CreateInstance("Creeps", _iLogic);
             cr.Show();
         }
 
         private void Masterie_Click(object sender, EventArgs e)
         {
-            Form cr = AFactoryIForms.CreateInstance("Masteries", _iLogic);
+            IForms cr = AFactoryIForms.CreateInstance("Masteries", _iLogic);
             cr.Show();
         }
 
         private void Runes_Click(object sender, EventArgs e)
         {
-            Form ru  = AFactoryIForms.CreateInstance("Runes", _iLogic);
+            IForms ru  = AFactoryIForms.CreateInstance("Runes", _iLogic);
             ru.Show();
         }
 
         private void Items_Click(object sender, EventArgs e)
         {
-            Form it = AFactoryIForms.CreateInstance("Items", _iLogic);
+            IForms it = AFactoryIForms.CreateInstance("Items", _iLogic);
             it.Show();
         }
 
         private void Fields_Click(object sender, EventArgs e)
         {
-            Form field = AFactoryIForms.CreateInstance("Fields", _iLogic);
+           IForms field = AFactoryIForms.CreateInstance("Fields", _iLogic);
             field.Show();
         }
 
         private void Tipps_Click(object sender, EventArgs e)
         {
-            Form tipp = AFactoryIForms.CreateInstance("Tipps", _iLogic);
+            IForms tipp = AFactoryIForms.CreateInstance("Tipps", _iLogic);
             tipp.Show();
         }
 
         private void SummonerSpells_Click(object sender, EventArgs e)
         {
-            Form sm = AFactoryIForms.CreateInstance("Summoner_Spells", _iLogic);
+            IForms sm = AFactoryIForms.CreateInstance("Summoner_Spells", _iLogic);
             sm.Show();
         }
 
         private void Champions_Click(object sender, EventArgs e)
         {
             
-            Form ch = AFactoryIForms.CreateInstance("Champions", _iLogic);
+            IForms ch = AFactoryIForms.CreateInstance("Champions", _iLogic);
             ch.Show();
             
         }
